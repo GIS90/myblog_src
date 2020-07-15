@@ -5,16 +5,16 @@ date: 2018-01-01
 comments: false
 type: about
 ---
-> ### 个人简述
+> #### 个人简述
 
 1991，网名<font color=#D35400 size=7 face="黑体">***PyGo²***</font>(人一定要2一点)，曾任职去哪儿网python开发工程师。
 
-> ### MyLove
+> #### MyLove
 
 <a href="../love/index.html" target="view_window">My Angel</a>
 
 
-> ### 博客统计
+> #### 博客统计
 
 {% raw %}
 <script src="/publicfiles/echarts.min.js"></script>
@@ -62,7 +62,7 @@ type: about
 
 <img src="/images/blog_tags.jpg"  alt="tags cloud" width="88%"/>
 
-> ### 人生经历
+> #### 人生经历
 
 {% raw %}
 
@@ -101,7 +101,7 @@ type: about
 
 {% endraw %}
 
-> ### 相关荣誉
+> #### 相关荣誉
 
 | 时间 | 证书 | 成绩 |
 | :------: | :------: | :------: |
@@ -113,7 +113,7 @@ type: about
 |   2012/12   |    奖学金    |   学院级   |
 |   2012/12   |    优秀实习生    |   校优    |
 
-> ### 个人评价
+> #### 个人评价
 
 - <font color="red">**非程序猿性格**</font>
 本人以幽默，大胆，搞笑为主，性格不闷，善于沟通，干的虽然是程序猿工作，但是具有非程序员的性格，不符合大众程序猿性格，沟通协调方面不是问题，以具备程序猿能力开发为基础。
@@ -122,7 +122,7 @@ type: about
 - <font color="red">**做点事**</font>
 今年终于认识到男人不容易，想认真的做点实实在在的事。
 
-> ### 联系方式
+> #### 联系方式
 
 * ***Github:*** https://github.com/GIS90
 
@@ -130,11 +130,11 @@ type: about
 
 * ***Weibo:*** https://weibo.com/u/1989571513
 
-> ### 简历下载
+> #### 简历下载
 
 {% btn /publicfiles/rusume.docx, 个人简历, download fa-lg fa-fw, 个人简历 %}
 
-> ### 座右铭
+> #### 座右铭
 
 <font color=#1E90FF size=7 face="黑体">*** Enjoy the good lift everyday ！！！***</font>
 

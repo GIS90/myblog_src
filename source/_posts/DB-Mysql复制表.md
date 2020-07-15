@@ -3,7 +3,7 @@ title: Mysql的表复制
 comments: false
 categories:
   - [数据库]
-tags: [Postgresql, Mysql]
+tags: [Mysql]
 top: false
 abbrlink: 34145
 date: 2020-04-15 14:12:43
@@ -14,7 +14,7 @@ keywords: Mysql, 数据库, 复制, 数据
 
 #### 背景
 
-![](/images/article_mysql.jpg)
+![](/images/article_mariadb.jpeg)
 
 {% note primary %}
 玩数据的都会涉及数据库，虽然Navicate带来了许多便利，但是本人还是喜欢使用sql，本篇介绍一下关于表复制的相关sql。
