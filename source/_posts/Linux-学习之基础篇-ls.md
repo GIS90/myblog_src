@@ -13,6 +13,8 @@ updated: 2017-05-15 16:51:42
 
 ![](/images/article_linux_ls.png)
 
+{% label danger@linux %} {% label info@list file %} {% label success@基础教程系列 %} 
+
 {% cq %}
 <font size=6.5 color='red'>list file</font>
 {% endcq %}

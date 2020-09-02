@@ -11,6 +11,8 @@ date: 2018-12-02 21:38:00
 updated: 2019-12-06 10:12:46
 ---
 
+{% label success@Gemini %} {% label danger@Hexo美化 %} {% label info@Next主题优化 %} 
+
 ### 问题简述
 {% note success %}
 <font color="#dd0000">***My blog***</font> 采用Hexo + Next搭建，搭建完之后，看页面居然还是英文，好ugly，身为一名程序猿怎么可以忍呢。在持续一个月的捣鼓中，总结出Next一些通过配置优化的点。

@@ -11,6 +11,8 @@ date: 2017-05-06 20:34:44
 updated: 2017-05-06 20:34:44
 ---
 
+{% label success@Python语法糖 %} {% label info@内置方法 %} {% label danger@any %} {% label default@all %}
+
 ### 总结
 {% note primary %}
 any()：有‘真’为True，全‘假’为False，iterable为空是False

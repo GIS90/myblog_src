@@ -18,6 +18,8 @@ keywords: python, 爬虫, requests, BeautifulSoup, bs4, Title, Keywords, Descrip
 
 <img src="/images/article_kwpachong.jpg" style="border:1.5px solid blue"/>
 
+{% label default@Python实战 %} {% label primary@爬虫教程系列 %}
+
 <!--more-->
 <hr />
 

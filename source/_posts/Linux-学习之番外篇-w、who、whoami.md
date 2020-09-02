@@ -14,6 +14,7 @@ keywords: Linux, w, who, whoami, 用户, id, last
 
 ![](/images/article_w.jpg)
 
+{% label default@Linux %} {% label info@w who whoami%} {% label warning@用户 %} {% label success@番外教程系列 %}
 #### 简介
 {% note danger %}
 简单总结一下<font color="#dd0000" size="5">w、who、whoami</font>，用于显示当前登录Linux的用户信息，在本篇结束的时候又额外赠送了2个命令，关于学习<font size=6.5 color='red'>多多益善。。。。。。</font>。

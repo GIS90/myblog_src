@@ -1,9 +1,9 @@
 ---
-title: Qita-抖音BMG
+title: 抖音BMG
 comments: false
 categories:
-  - []
-tags: []
+  - [生活]
+tags: [音乐]
 top: false
 abbrlink: 16635
 date: 2020-06-30 13:47:57
@@ -39,3 +39,5 @@ keywords:
 - Tony Igy-Astronomia：https://music.163.com/song?id=446154202&userid=555314631
 - 世间美好与你环环相扣：https://music.163.com/song?id=1399664349&userid=555314631
 - Be Your Sun (DJ版)：https://music.163.com/song?id=1386946637&userid=555314631
+- ProgHouse（DJ抖音版）：https://music.163.com/song?id=1401433235&userid=555314631
+- Bingo（DJ抖音版）：https://music.163.com/song?id=22834906&userid=555314631

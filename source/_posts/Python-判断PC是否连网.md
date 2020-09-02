@@ -10,11 +10,13 @@ abbrlink: 19515
 date: 2019-12-31 10:34:17
 updated: 2019-12-31 10:34:17
 desc: 利用Python的socket去测试PC是否连网，socket是开发必备技能之一
-keywords: python, socket, curl, wget, curl, 连网
+keywords: python, socket, curl, wget, 连网
 ---
 
 
 ![](/images/article_python_socket.jpeg)
+
+{% label default@Python %} {% label primary@socket %} {% label success@测试PC是否连网 %} {% label info@Python脚本 %} {% label warning@curl %} {% label danger@wget %}
 
 {% raw %}
 <div class="post_cus_note">life is short, me use Python.</div>

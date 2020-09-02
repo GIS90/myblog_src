@@ -11,6 +11,8 @@ date: 2017-06-22 14:29:04
 updated: 2017-06-22 14:29:04
 ---
 
+{% label success@Python语法糖 %} {% label info@列表推导式 %} {% label danger@装逼语句 %}
+
 #### 定义
 
 {% note primary %}

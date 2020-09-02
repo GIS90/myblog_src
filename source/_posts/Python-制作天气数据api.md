@@ -10,6 +10,8 @@ abbrlink: 53966
 date: 2018-09-24 11:55:30
 ---
 
+{% label default@Python实战 %} {% label primary@天气API %} {% label success@爬虫系列 %} 
+
 ### 简介
     还再找免费的天气API接口吗，这里给你答案
     开发语言：python

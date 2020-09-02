@@ -21,7 +21,11 @@ keywords: ffmpeg, 视频, 音频, 工具, 压缩, 格式转换
 
 FFmpeg：<font size=6 color='red'>我是处理媒介数据方面的专家，我很牛逼，快来用我吧！！！</font>
 我：<font size=6 color='blue'>好的，👌！</font>
+
 {% endnote %}
+
+{% label default@ffmpeg %} {% label primary@视频 %} {% label success@音频 %} {% label info@格式转换 %} {% label danger@压缩 %}
+
 
 <!--more-->
 <hr />

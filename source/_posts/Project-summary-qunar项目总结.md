@@ -13,11 +13,14 @@ keywords: web, python, qunar, 项目, 项目Outage, 项目Wwwhr, 项目Isapi, �
 top: true
 ---
 
+
 {% note primary %}
 Qunar负责的项目汇总。
 
 <font color=#1E90FF size=6 face="黑体">*** 感谢Qunar让我成长 ！！！***</font>
 {% endnote %}
+
+{% label danger@项目总结 %} {% label primary@Qunar %} {% label success@Python实战 %} {% label info@Web %}
 
 <!-- more -->
 <hr />

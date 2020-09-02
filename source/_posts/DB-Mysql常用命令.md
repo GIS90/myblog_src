@@ -2,7 +2,7 @@
 title: Mysql常用命令
 comments: false
 categories:
-  - - 数据库
+  - 数据库
 tags:
   - Mysql
 top: false
@@ -14,6 +14,8 @@ updated: 2020-07-07 21:00:04
 ---
 
 ![](/images/article_mysql.png)
+
+{% label default@Mysql %} {% label primary@select into %} {% label success@create %} {% label info@user %}
 
 {% note primary %}
 记录一下常用的命令，虽然关于查询相关的命令常用（select、order by、where、join等），但是关于建立数据库、建立用户、授权等并不常用的命令，做个整理，也方便了自己进行查询和使用
@@ -48,11 +50,12 @@ create user '用户名'@'XXX.XXX.XX.XXX' IDENTIFIED BY '123456';
 grant all on *.* to '用户名称';
 
 # 所有权限 指定数据库【常用】
-grant * on 数据库名称.* to '用户名称';
+grant all on 数据库名称.* to '用户名称';
 
 # 指定权限 指定数据库
 grant select,insert,update,delete,create on 数据库名称.* to '用户名称';
 
+# 刷新生效
 flush  privileges;
 
 # 查看权限

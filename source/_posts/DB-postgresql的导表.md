@@ -14,6 +14,8 @@ keywords: Postgresql, 导表, psql, 备份, 数据
 
 ![](/images/postgresql.jpg)
 
+{% label info@Postgresql %} {% label warning@psql %} {% label danger@导表 %}
+
 #### 背景
 {% note primary %}
 前面已经介绍了常用的备份与恢复了，接下来介绍一下<font color='red' size=4.5>导表</font>。

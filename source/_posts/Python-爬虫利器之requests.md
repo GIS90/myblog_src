@@ -12,6 +12,8 @@ desc: Python爬虫利器之requests介绍
 keywords: Python, Packages, 爬虫, BeautifulSoup, requests
 ---
 
+{% label default@Python包 %} {% label primary@requests %} {% label success@爬虫教程系列 %} 
+
 ### 背景
 {% note primary %}
 身为一位程序员，没事的时候爬爬糗百笑话、淘宝女郎、小片片。。。。。。有点邪恶了。反正关于<font color='red' size=6.5>爬虫</font>，相信很多人都不陌生，本人没事的时候也写写爬虫的小项目，写过***天气报警、糗百笑话、美女图片。。。。。。***，后续会在博客中挑选个例子写出来。

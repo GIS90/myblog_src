@@ -14,6 +14,8 @@ keywords: linux, cd, 服务器, 命令, shell, bash
 
 ![](/images/article_linux_ps.jpg)
 
+{% label default@Linux %} {% label info@process status %} {% label success@基础教程系列 %}
+
 {% cq %}
 <font size=6.5 color='red'>process status</font>
 {% endcq %}

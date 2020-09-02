@@ -19,6 +19,8 @@ python带你过七夕，让程序猿的七夕不再无趣^_^。
 <img src="/images/article_xinxinxiangying.gif" align=center style="border:3px solid red"/>
 <!-- <img src="images/article_xinxinxiangying.png" style="border:3px solid red"/> -->
 
+{% label default@Python %} {% label primary@实例 %} {% label success@七夕程序 %} {% label danger@turtle %}
+
 <!--more-->
 <hr />
 

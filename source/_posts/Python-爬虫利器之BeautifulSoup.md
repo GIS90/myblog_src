@@ -12,6 +12,8 @@ desc: Python爬虫利器之BeautifulSoup介绍
 keywords: Python, Packages, 爬虫, BeautifulSoup, requests
 ---
 
+{% label info@Python包 %} {% label warning@BeautifulSoup %} {% label danger@爬虫教程系列 %}
+
 ### 背景
 
 {% note primary %}

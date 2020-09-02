@@ -18,6 +18,7 @@ keywords: 影视说, 电视剧, 美国大片, 行尸走肉, 影视, 影视欣赏
 <div class="post_cus_note">《行尸走肉》</div>
 {% endraw %}
 
+{% label default@惊悚 %} {% label primary@科幻 %} {% label success@冒险 %} {% label info@剧情 %} {% label warning@感情 %}
 <!-- more -->
 <hr />
 

@@ -20,6 +20,8 @@ keywords: Python, Packages, 爬虫, BeautifulSoup, requests, 脚本, 程序
 
 <font size=6.5 color='red'>糗百服务器更新中。。。。。。文章暂无</font>
 
+{% label default@Python实战 %} {% label primary@爬虫教程系列 %}
+
 <!--more-->
 <hr />
 

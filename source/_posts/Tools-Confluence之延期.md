@@ -13,12 +13,12 @@ date: 2020-04-16 09:14:11
 updated: 2020-04-16 09:14:11
 ---
 
-
 #### 简述
 
 {% raw %}
 <div class="post_cus_note">关于WIKI Confluence的延期授权</div>
 {% endraw %}
+{% label default@WIKI %} {% label primary@Confluence %} {% label success@授权 %} {% label info@延期 %}
 
 <!--more-->
 <hr />

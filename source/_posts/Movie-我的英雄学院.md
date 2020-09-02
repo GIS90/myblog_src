@@ -17,6 +17,8 @@ updated: 2019-04-01 23:10:49
 <div class="post_cus_note">《我的英雄学院》</div>
 {% endraw %}
 
+{% label default@动漫 %} {% label primary@励志 %} {% label success@成长 %} {% label danger@热血 %}
+
 <!-- more -->
 <hr />
 

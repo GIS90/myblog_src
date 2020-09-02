@@ -11,6 +11,8 @@ abbrlink: 61166
 date: 2015-10-12 15:55:30
 ---
 
+{% label default@Python %} {% label primary@ArcGIS %} {% label success@Python脚本 %} {% label danger@矢量裁剪 %}
+
 {% note primary %}
 今天给大家带来利用python调用ArcGIS函数实现矢量多图层裁剪，出现问题给我留言，帮你解决，不过我都调试好了，问题不大。python的使用我就不叫大家了(主要我也在自学阶段)，代码很少但是很实用，所以把自己的东西跟大家***share***一下，以后会陆续跟大家一起分享交流，希望对大家有帮助。
 {% endnote %}

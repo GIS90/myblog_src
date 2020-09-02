@@ -16,6 +16,8 @@ keywords: Mysql, 数据库, 复制, 数据
 
 ![](/images/article_mariadb.jpeg)
 
+{% label default@Mysql %} {% label primary@表复制 %} {% label success@INSERT INTO %} {% label danger@SELECT * INTO %}
+
 {% note primary %}
 玩数据的都会涉及数据库，虽然Navicate带来了许多便利，但是本人还是喜欢使用sql，本篇介绍一下关于表复制的相关sql。
 {% endnote %}

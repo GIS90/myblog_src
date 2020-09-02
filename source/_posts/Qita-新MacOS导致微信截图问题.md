@@ -3,7 +3,7 @@ title: 新MacOS导致微信截图问题
 comments: false
 categories:
   - [生活]
-  - [不明类别]
+  - [日常问题]
 tags: [Mac]
 top: false
 abbrlink: 17077
@@ -23,6 +23,8 @@ Mac更新了新版的OS之后，发现微信截图除了能获取到微信界面
 <hr />
 
 问题出现的很简单，更新系统前可以使用，更新系统后不能使用了，说明还是系统的问题。直接针对于系统进行排查即可，而且MacOS基于unix开发的，所以跟权限差不多相关。
+
+快捷键： shift + command + 4
 
 #### 解决方案
 

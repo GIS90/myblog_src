@@ -11,6 +11,8 @@ date: 2018-12-26 22:15:34
 updated: 2018-12-26 22:15:34
 ---
 
+{% label primary@Hexo美化 %} {% label primary@Gemini %} {% label info@Next主题优化 %}
+
 <font color="#dd0000" size="4">目标：</font><font color="blue" size="6">美化博文</font>
 
 ### 背景
@@ -195,12 +197,7 @@ Next主题使用的***<font color="#dd0000" size="5">内置tag</font>***，官�
 
     > 示例
 
-    {% label default@default %}
-    {% label primary@primary %}
-    {% label success@success %}
-    {% label info@info %}
-    {% label warning@warning %}
-    {% label danger@danger %}
+    {% label default@default %} {% label primary@primary %} {% label success@success %} {% label info@info %} {% label warning@warning %} {% label danger@danger %}
 
     > 语法糖
 

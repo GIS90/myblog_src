@@ -12,6 +12,8 @@ date: 2019-03-03 21:33:59
 updated: 2019-11-03 21:33:59
 ---
 
+{% label default@Hexo %} {% label danger@SEO优化系列 %} {% label success@google %} 
+
 ### 背景
 {% note primary %}
 博客发布有一段时间了，而且也通过github提供的便利发布到公网上，但是除了直接域名访问，本人没有花钱买域名，只用了一个github免费提供的一个，在google居然搜索不到，只能优化一下网站在google的SEO。

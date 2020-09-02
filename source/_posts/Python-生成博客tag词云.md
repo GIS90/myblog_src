@@ -12,6 +12,8 @@ desc: 利用Python写的一个生成博客tag词云脚本，用于hexo博客关�
 keywords: Python, hexo, 词云, tag, 脚本, 程序
 ---
 
+{% label default@Python %} {% label primary@Tag词云 %} {% label success@Python实例 %} {% label info@Hexo %}
+
 #### 背景
 {% note primary %}
 博客已经了一些技术文章，在写about页面的时候，想把自己tags分类展示在页面上，但是直接写文字，能不能在low点。。。想到了词云，于是写个脚本自动生产博客的词云图片，<font color='red' size=4.5>完美</font>！！！。

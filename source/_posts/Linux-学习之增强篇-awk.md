@@ -18,6 +18,8 @@ awk不止是一个命令，其实更像是一个工具。
 ![](/images/article_awk.jpeg)
 {% endnote %}
 
+{% label default@Linux %} {% label primary@AWK %} {% label success@高级教程系列 %} {% label info@查看日志 %}
+
 <!--more-->
 <hr />
 

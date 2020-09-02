@@ -7,12 +7,14 @@ tags:
   - Python
   - Python程序篇
 top: false
-keywords: 'python, api, 天气, 程序, YouZan, 数据, 脚本, 程序, 数据库, Excel, CSV'
+keywords: 'python, api, 程序, YouZan, 数据, 脚本, 程序, 数据库, Excel, CSV'
 abbrlink: 24462
 date: 2020-02-14 16:47:27
 updated: 2020-02-14 16:47:27
 desc: 获取YouZan的数据进行db或excel存储
 ---
+
+{% label primary@Python实战 %} {% label success@数据存储 %}
 
 #### 背景
 {% note primary %}

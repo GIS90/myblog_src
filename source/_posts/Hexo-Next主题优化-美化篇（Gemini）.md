@@ -11,6 +11,9 @@ abbrlink: 3412
 date: 2018-11-03 10:00:31
 updated: 2019-11-03 10:00:31
 ---
+
+{% label default@Hexo美化 %} {% label primary@Gemini %} {% label info@Next主题优化 %} 
+
 ### 简介
 {% note success %}
 基本用Hexo + Next把网站搭建起来用**run**了，而且Next在theme中github关注量最高，但是在样式上还是有些。。。。。。此博文用来记录对Next主题的一些样式上的更改，<font size="4" color="red">***持续更新中～***</font>。

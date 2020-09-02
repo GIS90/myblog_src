@@ -15,6 +15,8 @@ date: 2016-09-20 18:34:25
 
 > Hadoop1.2.1 + Python2.7 + Ubuntu15.10
 
+{% label default@Hadoop1 %} {% label primary@Python2 %} {% label success@Ubuntu15 %} {% label info@大数据 %}
+
 <!-- more -->
 <hr />
 

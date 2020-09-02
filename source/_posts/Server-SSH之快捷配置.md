@@ -16,7 +16,6 @@ keywords: SSH, 快捷, 配置, config, 协议类, 服务器, 22
 ### 背景
 
 {% note warning %}
-
 上篇文章介绍了有关<font color='red' size=4.5>SSH协议</font>的基础知识，正常工作中都是通过下列命令进行ssh连接：
 
 {% code %}
@@ -25,6 +24,9 @@ ssh 用户名@服务器IP
 
 工作中，需要ssh连接到服务器，然后每次需要输入服务的IP或者机器名，而且连接到一台服务器后，还可能跳转到另外一台服务器，每次还需要输入密码，个人感觉比较麻烦。通过配置ssh_config的方式简化连接命令，在ssh远程连接上更加高效。
 {% endnote %}
+
+{% label default@SSH %} {% label primary@服务器连接 %} {% label success@免密码 %} {% label info@SSH配置 %}
+
 
 <!--more-->
 <hr />

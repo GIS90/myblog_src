@@ -15,6 +15,8 @@ keywords: 天津, 游玩, 美食, 狗不理, 解放桥, 世纪钟, 意大利风�
 
 {% cq %}
 <font color='red'>**天津之眼**</font>
+**PyGo²**
+{% label default@旅行记 %} {% label primary@美食 %} {% label success@天津打卡 %}
 {% endcq %}
 
 <!--more-->

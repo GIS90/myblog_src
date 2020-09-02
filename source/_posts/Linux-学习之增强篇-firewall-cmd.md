@@ -11,15 +11,15 @@ date: 2020-03-28 09:16:18
 updated: 2020-03-28 09:16:18
 ---
 
-
 ### 简介
 
 {% note danger %}
 CentOS7开始，默认使用firewall来配置防火墙，没有安装iptables（旧版默认安装）。
 ![](/images/article_firewall.jpg)
 <font color="#dd0000" size="5">时代在更新、CentOS也在更新，我们也必须要更新。</font>
-
 {% endnote %}
+
+{% label info@Linux %} {% label warning@防火墙 %} {% label success@高级教程系列 %}
 
 <!--more-->
 <hr />

@@ -10,6 +10,8 @@ abbrlink: 14093
 date: 2018-12-02 10:52:23
 ---
 
+{% label default@Python语法糖 %} {% label primary@for...else %}
+
 ### 简介
 {% note primary %}
 python语法糖中for/while循环中else+break的使用，别让break坑你

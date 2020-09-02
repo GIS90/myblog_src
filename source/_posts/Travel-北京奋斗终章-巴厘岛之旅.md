@@ -20,6 +20,7 @@ top: true
 {% cq %}
 带上媳妇巴厘岛二人蜜月
 **PyGo²**
+{% label default@旅行记 %} {% label primary@美食 %} {% label success@巴厘岛 %} {% label danger@蜜月 %}
 {% endcq %}
 
 <!--more-->

@@ -14,6 +14,7 @@ keywords: Postgresql, pg_dump, 备份, 恢复, 数据库, 迁移, 数据
 
 ![](/images/postgresql.jpg)
 
+{% label default@Postgresql %} {% label primary@pg_dump %} {% label success@备份 %} {% label info@恢复 %} {% label danger@迁移 %}
 
 ### 背景
 

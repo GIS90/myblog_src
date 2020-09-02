@@ -18,6 +18,8 @@ keywords: 影视说, 夏洛克·福尔摩斯, 烧脑剧, 电视剧, 影视, 影�
 <div class="post_cus_note">《夏洛克·福尔摩斯》</div>
 {% endraw %}
 
+{% label default@剧情 %} {% label primary@悬疑 %} {% label success@惊悚 %}
+
 <!-- more -->
 <hr />
 

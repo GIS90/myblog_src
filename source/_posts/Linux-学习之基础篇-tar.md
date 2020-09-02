@@ -14,6 +14,8 @@ keywords: linux, tar, 解压, 压缩, 打包, 服务器, 命令, shell, bash
 
 ![](/images/article_linux_tar.png)
 
+ {% label warning@Linux %}{% label default@基础教程系列 %} {% label primary@tape archive %} {% label success@打包、压缩 %}
+
 {% cq %}
 <font size=6.5 color='red'>tape archive</font>
 {% endcq %}

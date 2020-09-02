@@ -23,6 +23,8 @@ keywords: etherpad, 在线, 协作, 编辑, 多用户, 文本, web
 
 {% endnote %}
 
+{% label default@etherpad %} {% label primary@在线协作 %} {% label success@文本编辑 %} {% label info@多用户 %}
+
 <!--more-->
 <hr />
 

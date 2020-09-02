@@ -18,6 +18,8 @@ Linux万能命令之lsof，<font size=6.5 color='red'>只有你想不到的，�
 ![](/images/article_lsof.jpg)
 {% endnote %}
 
+{% label default@Linux %} {% label info@lsof %} {% label danger@万物皆文件 %}
+
 <!--more-->
 <hr />
 

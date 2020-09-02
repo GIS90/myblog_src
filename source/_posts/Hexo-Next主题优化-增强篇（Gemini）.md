@@ -11,6 +11,8 @@ date: 2018-12-07 10:12:46
 updated: 2019-12-07 10:12:46
 ---
 
+{% label info@Hexo美化 %} {% label danger@Gemini %} {% label info@Next主题优化 %} 
+
 ### 问题简述
 {% note success %}
 Next主题优化之增强篇，前几天写了一篇通过配置相关的优化，继续介绍一下代码相关更改的优化。

@@ -16,6 +16,8 @@ date: 2019-01-25 23:06:33
 <div class="post_cus_note">《权力的游戏》</div>
 {% endraw %}
 
+{% label default@剧情 %} {% label primary@奇幻 %} {% label info@史诗 %} {% label danger@战争 %}
+
 <!-- more -->
 <hr />
 

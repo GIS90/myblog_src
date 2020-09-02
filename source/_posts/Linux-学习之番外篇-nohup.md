@@ -14,78 +14,43 @@ keywords: Linux, nohub, &
 
 ![](/images/article_linux_nohup.jpeg)
 
+{% label default@Linux %} {% label primary@nohub...& %} {% label info@后台运行命令 %} {% label success@番外教程系列 %}
+
 #### 简介
 {% note danger %}
-<font color="#red" size="5">用途</font>：不挂断地运行命令。
-<font color="#blue" size="5">语法</font>：nohup Command [ Arg … ] [　& ]
-<font color="#white" size="5">描述</font>：nohup 命令运行由 Command 参数和任何相关的 Arg 参数指定的命令，忽略所有挂断（SIGHUP）信号。在注销后使用 nohup 命令运行后台中的程序。要运行后台中的 nohup 命令，添加 & （ 表示”and”的符号）到命令的尾部。
+<font color="#red" size="5">用途</font>：用于linux后台执行命令，与&一起使用，nohup不挂断地运行命令（退出终端不会影响程序的运行）。
+<font color="#blue" size="5">语法</font>：nohup command 参数 2>&1 &
 {% endnote %}
+
 
 <!--more-->
 <hr />
 
-在Linux系统中，多账户进行ssh登录是常有的事，但是有时候会去查看一下登录的用户都有谁以及相关的登录信息。
+这个就是比较实用而且没有任何参数的命令，语法糖就一种。
 
-#### 总结
-
-|  命令  |                         说明                         |
-|:------:|:----------------------------------------------------:|
-|   w    |               显示当前登录的用户及信息               |
-|  who   | 显示当前已经登录的用户名、终端名称、登录时间及登录IP |
-| whoami |                 显示当前用户的用户名                 |
-|   id   |               用于check系统是有此用户                |
-|  last  |             显示近期用户或终端的登录情况             |
-
-#### w
-
-显示当前登录的用户及信息，除了这些还会显示当前登录了几个用户、系统当前的load。
-
+#### 基本
 ```
-[root@bash ~]# w
- 20:22:25 up 15:55,  3 users,  load average: 0.00, 0.01, 0.05
-USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
-root     tty1                      Tue21   15:27m  0.09s  0.09s -bash
-root     pts/0    192.168.1.116    19:23    1.00s  0.12s  0.01s w
-root     tty2                      07:43   19:29   0.02s  0.02s -bash
+[root@localhost ~/py_work]#nohup /root/py_work/start.sh &
+[1] 31491
+[root@localhost ~/py_work]#nohup: ignoring input and appending output to ‘nohup.out’
 ```
+- 建议命令写全路径，在命令可以写成sh脚本，也可以是直接***命令+参数***形式。
+- 执行完nohup的时候，出现日志说明，会在***当前命令执行文件夹建立日志文件***。
+- 终端退出的时候建议用exit。
 
-#### who
-
-显示当前已经登录的用户名、终端名称、登录时间及登录IP。
-
+#### 拓展
 ```
-[root@bash ~]# who
-root     tty1         2019-12-24 21:23
-root     pts/0        2019-12-24 19:23 (192.168.1.116)
-root     tty2         2019-12-24 07:43
+nohup /root/py_work/start.sh > xxxxxx.log 2>&1 &
 ```
-#### whoami
+2>&1说明：
+将标准错误（2）重定向到标准输出（&1），标准输出（&1）再被重定向输入到日志xxxxxx.log文件中。
 
-显示当前用户的用户名。
-```
-[root@bash ~]# whoami
-root
-```
+- 0 stdin (standard input）标准输入
+- 1 stdout (standard output）标准输出
+- 2 stderr (standard error）标准错误输出
+- /dev/null 表示空设备文件
 
-{% raw %}
-<div class="post_cus_note">额外赠送</div>
-{% endraw %}
+输出文件中的方式：
 
-#### id
-
-用于显示用户的ID，以及所属群组的ID，主要用于check系统是有此用户。
-```
-[root@bash ~]# id root
-uid=0(root) gid=0(wheel) groups=0(wheel)
-```
-
-#### last
-
-显示近期用户或终端的登录情况。
-```
-[root@bash ~]# last -n 5
-root     pts/0        :0.0             Wed Apr 25 10:12   still logged in
-root     pts/1        :0.0             Wed Apr 25 10:06 - 10:10  (00:03)
-root     pts/0        :0.0             Wed Apr 25 10:06 - 10:10  (00:03)
-root     pts/0        :0.0             Wed Apr 25 10:02 - 10:06  (00:04)
-root     pts/0        :0.0             Wed Apr 25 09:51 - 09:51  (00:00)
+- ```>``` xxxx.log **输出**到文件
+- ```>>``` xxxx.log **追加**到文件

@@ -19,7 +19,10 @@ keywords: SSH, 快捷, 配置, config, 协议类, 服务器, 22
 因为一些原因，把github.io重新在github搭建一下，但是**hexo deploy**去提交代码的时候，发生代码提交失败的情况。原来在GIS90.github.io Repository上没有进行***Deploy keys***的配置，导致push失败。
 
 配置好***Deploy keys***的配置，代码成功提交，但是为何配置完key就可以成功提交呢？原理是<font color='red' size=4.5>SSH协议</font>。
+
 {% endnote %}
+
+{% label default@SSH配置 %} {% label primary@SSH安装 %} {% label success@协议 %} {% label info@服务器 %}
 
 <!--more-->
 <hr />
