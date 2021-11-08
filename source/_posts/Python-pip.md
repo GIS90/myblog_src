@@ -3,7 +3,7 @@ title: Python之pip包管理
 comments: false
 categories:
   - [Python]
-tags: [Python, Python基础篇, Python包]
+tags: [Python, PIP]
 top: false
 abbrlink: 22308
 date: 2017-12-24 10:58:52
@@ -23,6 +23,8 @@ You can use pip to install packages from the Python Package Index and other inde
 官网说明：pip是Python包管理工具，主要用于包的查找、下载、安装、卸载的功能。
 当前版本：<font size=6.5 color='red'>V19.3.1</font>
 {% endnote %}
+
+{% label primary@PIP %}
 
 <!--more-->
 <hr />

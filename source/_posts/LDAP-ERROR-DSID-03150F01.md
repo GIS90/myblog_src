@@ -4,7 +4,7 @@ comments: false
 desc: 在处理LDAP的时候遇到的问题：LDAP-ERROR, DSID-03150F01
 categories:
   - [LDAP]
-tags: [LDAP]
+tags: [LDAP, ERROR集]
 keywords: LDAP, ERROR, LDAP-ERROR, DSID-03150F01
 abbrlink: 39125
 date: 2018-03-19 19:45:26

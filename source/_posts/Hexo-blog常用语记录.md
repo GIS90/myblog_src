@@ -17,6 +17,8 @@ keywords: hexo, Hexo, 常用语, markdown
 {% endcq %}
 
 
+![](/images/article_etherpad.jpg)
+
 <font size=6.5 color='red'>持续更新中。。。。。。</font>
 
 
@@ -30,6 +32,12 @@ keywords: hexo, Hexo, 常用语, markdown
 <div class="post_cus_note">123</div>
 {% endraw %}
 
+> 表格
+
+| id  | name |   Version    |
+|:---:|:----:|:------------:|
+|  1  |  Os  | MacOS10.15.6 |
+|  2  | IDE  |   PyCharm    |
 
 > 效果
 

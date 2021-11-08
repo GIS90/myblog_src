@@ -25,7 +25,7 @@ ssh 用户名@服务器IP
 工作中，需要ssh连接到服务器，然后每次需要输入服务的IP或者机器名，而且连接到一台服务器后，还可能跳转到另外一台服务器，每次还需要输入密码，个人感觉比较麻烦。通过配置ssh_config的方式简化连接命令，在ssh远程连接上更加高效。
 {% endnote %}
 
-{% label default@SSH %} {% label primary@服务器连接 %} {% label success@免密码 %} {% label info@SSH配置 %}
+{% label default@SSH %} {% label primary@服务器连接 %} {% label info@SSH配置 %}
 
 
 <!--more-->
@@ -67,8 +67,9 @@ IdentityFile ~/.ssh/id_rsa
 - Host：ssh进行连接的别名
 - HostName：服务器的IP或者机器名
 - User：用户名
-- ControlMaster：是否多个会话连接用一个session文件
-- ControlPath：session会话文件
+- Port：端口
+- ControlMaster：是否多个会话连接用一个session文件的模式，需要配合ControlPath、ControlPersist一起使用
+- ControlPath：保存的session会话文件（%r远程连接的用户，%h远程连接的ip，%s远程连接的端口）
 - ControlPersist：连接是否保持长连接
 - PasswordAuthentication：是否需要密码认证
 - IdentityFile：私钥文件

@@ -1,10 +1,10 @@
 ---
 title: 初学atom
-tags: [Atom, 编译器, Python]
+tags: [Atom, IDE, Python]
 categories:
-  - [编译器]
+  - [IDE]
 comments: false
-keywords: Atom, 编译器, python, 开发, 代码 IDE, 插件
+keywords: Atom, 编辑器, python, 开发, 代码 IDE, 插件
 abbrlink: 9420
 date: 2018-03-10 21:57:16
 update: 2018-03-12 20:03:20
@@ -15,7 +15,7 @@ desc: 简单介绍一下平常使用的编译器：atom，支持各种语言以�
 **ATOM**
 {% endcq %}
 
-日常开发中习惯了pycharm，但是平常记录点什么东西，最好要有一个自己的文本编译器，比如：subtext、vscode、notepad等等。下面介绍一下我用的atom，安装以及其他的设置我不做介绍了，网上教程一大推，主要介绍一下我用的几个插件：
+日常开发中习惯了pycharm，但是平常记录点什么东西，最好要有一个自己的文本编译器，比如：sublime、vscode、notepad等等。下面介绍一下我用的atom，安装以及其他的设置我不做介绍了，网上教程一大推，主要介绍一下我用的几个插件：
 查看安装的包【**apm list**】
 
 <!--more-->
@@ -38,10 +38,10 @@ desc: 简单介绍一下平常使用的编译器：atom，支持各种语言以�
 | command+right   | 行结束                                                                        | 🌟🌟🌟 |
 | command+up      | 文件开始                                                                      | 🌟🌟   |
 | command+down    | 文件结束                                                                      | 🌟🌟   |
-| cmd-b           | 打开文件之间的切换                                                            | 🌟🌟   |
-| cmd-t           | 目录文件之间的切换                                                            | 🌟🌟   |
-| cmd-r           | 查找与替换                                                                    | 🌟🌟🌟 |
-| shift+cmd+r     | 项目查找与替换                                                                | 🌟🌟🌟 |
+| command-b       | 打开文件之间的切换                                                            | 🌟🌟   |
+| command-t       | 目录文件之间的切换                                                            | 🌟🌟   |
+| command-r       | 查找与替换                                                                    | 🌟🌟🌟 |
+| shift+command+r | 项目查找与替换                                                                | 🌟🌟🌟 |
 | command+/       | 注释                                                                          | 🌟🌟🌟 |
 
 ### 基础插件

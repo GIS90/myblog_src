@@ -177,7 +177,8 @@ mysql -h 127.0.0.1 -P 3306 -u root -p
 
 ```
 MariaDB [(none)]> CREATE DATABASE etherpad;
-MariaDB [(none)]> GRANT ALL PRIVILEGES ON etherpad.* TO 'etherpad'@'localhost' IDENTIFIED BY '123456';
+MariaDB [(none)]> create user 'etherpad'@'%' identified by '123456';
+MariaDB [(none)]> grant all privileges on etherpad.* to 'etherpad'@'%';
 MariaDB [(none)]> FLUSH PRIVILEGES;
 MariaDB [(none)]> \q
 ```
@@ -187,12 +188,11 @@ MariaDB [(none)]> \q
 #### 创建linux用户
 
 ```
-adduser --home /opt/etherpad --shell /bin/bash etherpad
-install -d -m 755 -o etherpad -g etherpad /opt/etherpad
+adduser etherpad
 ```
 用户启动使用etherpad程序，我之前没有建立用户，直接用root去启动，会提示：
 ```
-[root@VM_0_16_centos opt]# bash /opt/etherpad-lite/bin/run.sh
+[root@VM_0_16_centos opt]# bash /opt/etherpad/etherpad-lite/bin/run.sh
 You shouldn't start Etherpad as root!
 Please type 'Etherpad rocks my socks' or supply the '--root' argument if you still want to start it as root
 ```
@@ -205,31 +205,43 @@ Please type 'Etherpad rocks my socks' or supply the '--root' argument if you sti
 #### 下载etherpad
 
 ```
-su etherpad
-cd ~
+su root
+mkdir -p /opt/www/etherpad
+cd /opt/www/etherpad
 git clone https://github.com/ether/etherpad-lite
 ```
 切换etherpad用户，如果没有git命令的用户进行安装，文章最后有相关参考。
 把etherpad放在自己想要放的目录。
+
+#### 文件授权 + 所属者
+
+root用户。
+```
+chmod 755 -R etherpad-lite
+chown -R etherpad:etherpad etherpad-lite
+
+# 查看用户名称与组
+id 用户
+```
 
 #### 配置文件
 
 > 创建配置文件
 
 ```
-cp ~/etherpad-lite/settings.json.template ~/etherpad-lite/settings.json
+cp ./etherpad-lite/settings.json.template ./etherpad-lite/settings.json
 ```
 
 > 编辑配置
 
 ```
-vim ~/etherpad-lite/settings.json
+vim ./etherpad-lite/settings.json
 ```
 
 - Ip配置
-在配置中搜索***0.0.0.0***，在文件88行，***IP***改成服务器IP，***PORT***端口改成自己设置的端口，去掉注释，配置更改如下：
+在配置中搜索***0.0.0.0***，在文件88行，***IP***0.0.0.0改成127.0.0.1只能本机访问，完了在用nginx做个反向代理即可，***PORT***端口改成自己设置的端口，去掉注释，配置更改如下：
 ```
-"ip": "192.168.151.64",
+"ip": "127.0.0.1",
 "port": 9002,
 ```
 
@@ -239,13 +251,16 @@ vim ~/etherpad-lite/settings.json
 "dbType" : "mysql",
 "dbSettings" : {
   "user":     "etherpad",
-  "host":     "192.168.151.64",
+  "host":     "localhost",
   "port":     3306,
   "password": "123456",
   "database": "etherpad",
   "charset":  "utf8mb4"
 },
 ```
+
+- 代理配置
+trustProxy设置为true。
 
 - 管理员
 在配置中搜索***password***，在文件365行，这里用的信息都是在数据库安装配置中设置的配置，去掉注释，配置更改如下：
@@ -277,15 +292,35 @@ vim ~/etherpad-lite/settings.json
 
 #### etherpad安装依赖
 
+root用户执行。
 ```
-bash ~/etherpad-lite/bin/installDeps.sh
+bash ./etherpad-lite/bin/installDeps.sh
 ```
 安装一下etherpad所需要的依赖包。
+- npm更新
+```
+curl -L https://npmjs.com/install.sh | sh
+```
+- nodejs更新：https://www.cnblogs.com/xiashan17/p/6907537.html
+安装n管理工具，进行nodejs版本安装、选择。
+安装指定版本node：
+```
+n install node/13.3.0
+```
+安装完之后：
+```
+installing : node-v13.3.0
+   mkdir : /usr/local/n/versions/node/13.3.0
+   fetch : https://nodejs.org/dist/v13.3.0/node-v13.3.0-linux-x64.tar.xz
+installed : v13.3.0 (with npm 6.13.1)
+```
+处理完以上问题，在重新安装依赖。
 
 #### 启动
 
+etherpad用户。
 ```
-~/etherpad-lite/bin/run.sh
+./etherpad-lite/bin/run.sh
 ```
 用etherpad用户直接执行上面命令。
 ```
@@ -355,7 +390,7 @@ public (active)
 
 - 开放端口
 ```
-firewall-cmd --zone=public --add-port=9001/tcp
+firewall-cmd --zone=public --add-port=9001/tcp --permanent
 ```
 
 - 重启服务
@@ -371,9 +406,9 @@ systemctl restart firewalld
 
 > etherpad依赖脚本不可执行
 
-如果遇到***/opt/etherpad/etherpad-lite/bin/run.sh***脚本不被执行，那么将脚本改变读、写、执行的权限。
+如果遇到***/opt/www/etherpad/etherpad-lite/bin/run.sh***脚本不被执行，那么将脚本改变读、写、执行的权限。
 ```
-chmod 777 /opt/etherpad/etherpad-lite/bin/run.sh
+chmod 777 /opt/www/etherpad/etherpad-lite/bin/run.sh
 ```
 
 
@@ -464,7 +499,7 @@ chmod 777 /opt/etherpad/etherpad-lite/bin/run.sh
 > start
 
 ```
-nohup /opt/etherpad/etherpad-lite/bin/run.sh>/dev/null  2>&1 &
+nohup /opt/www/etherpad/etherpad-lite/bin/run.sh>/dev/null  2>&1 &
 ```
 
 > end
@@ -498,7 +533,11 @@ server {
     access_log  /var/log/nginx/etherpad9001.access.log  main;
 
     location / {
-         proxy_pass http://172.17.0.16:9002/;
+         proxy_pass http://127.0.0.1:9002/;
+         proxy_set_header Host $host;
+         proxy_set_header X-Real-IP $remote_addr;
+         proxy_set_header X-Real-PORT $remote_port;
+         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     }
 
     error_page 404 /error.html;
@@ -520,7 +559,7 @@ server {
 
 ### 测试地址
 
-http://212.64.61.62:9001/
+http://121.4.56.169:9001/
 
 ### 学习参考
 

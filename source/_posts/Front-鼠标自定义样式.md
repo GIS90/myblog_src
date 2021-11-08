@@ -4,7 +4,7 @@ comments: false
 categories:
   - [Hexo]
   - [前端]
-tags: [Hexo, Hexo美化, 前端]
+tags: [Hexo, Hexo美化, 前端其他分类]
 top: false
 abbrlink: 3035
 date: 2019-06-10 19:03:44

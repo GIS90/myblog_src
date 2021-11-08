@@ -2,9 +2,9 @@
 title: 新MacOS导致微信截图问题
 comments: false
 categories:
-  - [生活]
   - [日常问题]
-tags: [Mac]
+  - [MacOS]
+tags: [MacOS]
 top: false
 abbrlink: 17077
 date: 2019-10-28 10:05:29
