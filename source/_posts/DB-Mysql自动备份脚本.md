@@ -154,5 +154,5 @@ exit 0
 ```
 
 {% raw %}
-<div class="post_cus_note">Enjoy the good lift everyday！！!</div>
+<div class="post_cus_note">Enjoy the good life everyday！！!</div>
 {% endraw %}

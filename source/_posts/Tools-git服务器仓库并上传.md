@@ -22,7 +22,7 @@ keywords: git, 服务器, 版本管理, 代码发布, linux
 
 ![](/images/article_git.jpg)
 
-{% label default@git实战 %} {% label primary@代码发布 %} {% label success@版本管理 %}
+{% label default@git %} {% label primary@代码发布 %} {% label success@版本管理 %}
 
 <!--more-->
 <hr />

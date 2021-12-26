@@ -12,9 +12,9 @@ desc: 总结一下后台API数据交换的格式
 keywords: API, JSON, 数据, 交换
 ---
 
-本人有5年的多的Python后端开发经验，经常与前端开发或者自己写的前端项目进行数据交换，总结一下自己常用的数据交换格式，以及状态码对应的内容。
+开发中经常与前端开发或者自己写的前端项目进行数据交换，总结一下自己常用的数据交换格式，以及状态码对应的内容。
 
-{% label danger@Linux %} {% label info@Java %}
+{% label danger@Linux %} {% label info@Python %}
 
 <!--more-->
 <hr />
