@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://pygo2.top/"/>
-  <updated>2021-12-26T11:47:04.000Z</updated>
+  <updated>2022-01-01T10:05:33.000Z</updated>
   <id>http://pygo2.top/</id>
   
   <author>
@@ -15,6 +15,60 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Pycharm新文件模板配置</title>
+    <link href="http://pygo2.top/articles/10539/"/>
+    <id>http://pygo2.top/articles/10539/</id>
+    <published>2022-01-01T10:05:33.000Z</published>
+    <updated>2022-01-01T10:05:33.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/images/article_pycharm.jpeg" alt></p><div class="note primary">            <font color="red" size="4.5">Pycharm关于文件创建File and Code Template的配置</font>          </div><span class="label default">Python</span> <span class="label primary">Pycharm</span><a id="more"></a><hr><p>今天元旦了，吃过饭后晚上还是写了会代码，用Pycharm写项目每次创建新文件的时候，都有一些文件初始化的默认内容，本人Pycharm File and Code Template配置：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"># -*- coding: utf-8 -*-</span><br><span class="line"></span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">------------------------------------------------</span><br><span class="line"></span><br><span class="line">describe:</span><br><span class="line"></span><br><span class="line">base_info:</span><br><span class="line">    __author__ = &quot;PyGo&quot;</span><br><span class="line">    __time__ = &quot;$&#123;DATE&#125;&quot;</span><br><span class="line">    __version__ = &quot;v.1.0.0&quot;</span><br><span class="line">    __mail__ = &quot;gaoming971366@163.com&quot;</span><br><span class="line">    __project__ = &quot;$&#123;PROJECT_NAME&#125;&quot;</span><br><span class="line"></span><br><span class="line">usage:</span><br><span class="line"></span><br><span class="line">design:</span><br><span class="line"></span><br><span class="line">reference urls:</span><br><span class="line"></span><br><span class="line">python version:</span><br><span class="line">    python3</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Enjoy the good time everyday！！!</span><br><span class="line">Life is short, I use python.</span><br><span class="line"></span><br><span class="line">------------------------------------------------</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line"># ------------------------------------------------------------</span><br><span class="line"># usage: /usr/bin/python $&#123;NAME&#125;.py</span><br><span class="line"># ------------------------------------------------------------</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ == &apos;__main__&apos;:</span><br><span class="line">    pass</span><br></pre></td></tr></table></figure></p><p>常用的变量如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$ &#123;PROJECT_NAME&#125; - 项目的名称。</span><br><span class="line">$ &#123;NAME&#125; - 在文件创建过程中在“新建文件”对话框中指定的新文件的名称。</span><br><span class="line">$ &#123;USER&#125; - 当前用户的登录名。</span><br><span class="line">$ &#123;DATE&#125; - 当前的系统日期。</span><br><span class="line">$ &#123;TIME&#125; - 当前系统时间。</span><br><span class="line">$ &#123;YEAR&#125; - 今年。</span><br><span class="line">$ &#123;MONTH&#125; - 当月。</span><br><span class="line">$ &#123;DAY&#125; - 当月的当天。</span><br><span class="line">$ &#123;HOUR&#125; - 目前的小时。</span><br><span class="line">$ &#123;MINUTE&#125; - 当前分钟。</span><br><span class="line">$ &#123;PRODUCT_NAME&#125; - 将在其中创建文件的IDE的名称。</span><br><span class="line">$ &#123;MONTH_NAME_SHORT&#125; - 月份名称的前3个字母。 示例：1月，2月等</span><br><span class="line">$ &#123;MONTH_NAME_FULL&#125; - 一个月的全名。 示例：1月，2月等</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/images/article_pycharm.jpeg&quot; alt&gt;&lt;/p&gt;
+&lt;div class=&quot;note primary&quot;&gt;
+            &lt;font color=&quot;red&quot; size=&quot;4.5&quot;&gt;Pycharm关于文件创建File and Code Template的配置&lt;/font&gt;
+          &lt;/div&gt;
+&lt;span class=&quot;label default&quot;&gt;Python&lt;/span&gt; &lt;span class=&quot;label primary&quot;&gt;Pycharm&lt;/span&gt;
+    
+    </summary>
+    
+      <category term="IDE" scheme="http://pygo2.top/categories/IDE/"/>
+    
+    
+      <category term="Python" scheme="http://pygo2.top/tags/Python/"/>
+    
+      <category term="IDE" scheme="http://pygo2.top/tags/IDE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>弥留之城的爱丽丝</title>
+    <link href="http://pygo2.top/articles/41087/"/>
+    <id>http://pygo2.top/articles/41087/</id>
+    <published>2021-12-31T07:06:19.000Z</published>
+    <updated>2021-12-31T07:06:19.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/images/article_miliuzhicheng.jpeg" alt></p><div class="post_cus_note">《弥留之城的爱丽丝》</div><span class="label default">死亡游戏</span> <span class="label info">悬疑</span> <span class="label danger">惊悚</span><a id="more"></a><hr><div class="note success">            <p><font size="4" color="red"><strong>简介</strong></font><br>目前只有第一季，但是蛮好看的，在第一季最后一节留了彩蛋，等待第二季</p>          </div><blockquote><p>推荐指数</p></blockquote><pre><code>⭐️⭐️⭐️⭐️</code></pre><blockquote><p>主线剧情</p></blockquote><p>男主、女主组队通关现实中的死亡游戏。</p><blockquote><p>观看地址</p></blockquote><p><strong><em>baidu</em></strong>自行下载<br>或者<br>链接: <a href="https://pan.baidu.com/s/1ju1E4FfIMlZs5Acn2Ec8Ag" target="_blank" rel="noopener">https://pan.baidu.com/s/1ju1E4FfIMlZs5Acn2Ec8Ag</a><br>提取码: v44f。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/images/article_miliuzhicheng.jpeg&quot; alt&gt;&lt;/p&gt;
+
+&lt;div class=&quot;post_cus_note&quot;&gt;《弥留之城的爱丽丝》&lt;/div&gt;
+
+&lt;span class=&quot;label default&quot;&gt;死亡游戏&lt;/span&gt; &lt;span class=&quot;label info&quot;&gt;悬疑&lt;/span&gt; &lt;span class=&quot;label danger&quot;&gt;惊悚&lt;/span&gt;
+    
+    </summary>
+    
+      <category term="影视说" scheme="http://pygo2.top/categories/%E5%BD%B1%E8%A7%86%E8%AF%B4/"/>
+    
+    
+      <category term="电视剧" scheme="http://pygo2.top/tags/%E7%94%B5%E8%A7%86%E5%89%A7/"/>
+    
+  </entry>
   
   <entry>
     <title>Github个人Overview展示</title>
@@ -199,6 +253,32 @@
   </entry>
   
   <entry>
+    <title>Jquery数组删除元素的方法</title>
+    <link href="http://pygo2.top/articles/43302/"/>
+    <id>http://pygo2.top/articles/43302/</id>
+    <published>2021-11-17T16:05:51.000Z</published>
+    <updated>2021-11-17T16:05:51.000Z</updated>
+    
+    <content type="html"><![CDATA[<span class="label info">Javascript</span><div class="note primary">            <p>写项目过程中经常写前端js，记录一下删除数组中指定某个元素的常用方法。</p>          </div><p><img src="/images/article_js.jpeg" alt></p><a id="more"></a><hr><blockquote><p>测试数据</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var arr = [&apos;a&apos;,&apos;b&apos;,&apos;c&apos;,&apos;d&apos;];</span><br></pre></td></tr></table></figure><h4 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h4><p><font color="red" size="5.5"><strong>最常用的方法</strong></font><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var index = arr.indexOf(&apos;c&apos;)</span><br><span class="line">if(index &gt; -1)&#123;</span><br><span class="line">    var el = arr.splice(index, 1)</span><br><span class="line">    console.log(el)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[ &apos;a&apos; ]</span><br><span class="line">[ &apos;b&apos;, &apos;c&apos;, &apos;d&apos; ]</span><br></pre></td></tr></table></figure></p><p>说明：<br>splice参数有多个，第一个代表删除元素的位置；第二个为删除的个数。</p><h4 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var index = arr.indexOf(&apos;c&apos;)</span><br><span class="line">if(index &gt; -1)&#123;</span><br><span class="line">    delete arr[index]</span><br><span class="line">    console.log(arr)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[ &apos;a&apos;, &apos;b&apos;, , &apos;d&apos; ]</span><br></pre></td></tr></table></figure></p><p>说明：<br>使用delete删除元素之后数组长度不变，只是被删除元素变为””了。</p><h4 id="方法三"><a href="#方法三" class="headerlink" title="方法三"></a>方法三</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var el = arr.pop()</span><br><span class="line">console.log(el)</span><br><span class="line">console.log(arr)</span><br></pre></td></tr></table></figure><p>结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">d</span><br><span class="line">[ &apos;a&apos;, &apos;b&apos;, &apos;c&apos; ]</span><br></pre></td></tr></table></figure></p><p>说明：<br>pop方法用于删除数组中的最后一项，并且数据返回到新的变量。</p><h4 id="方法四"><a href="#方法四" class="headerlink" title="方法四"></a>方法四</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var el = arr.shift()</span><br><span class="line">console.log(el)</span><br><span class="line">console.log(arr)</span><br></pre></td></tr></table></figure><p>结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a</span><br><span class="line">[ &apos;b&apos;, &apos;c&apos;, &apos;d&apos; ]</span><br></pre></td></tr></table></figure></p><p>说明：<br>shift方法用于删除数组中的第一项，并且数据返回到新的变量。</p><p>最常用的数据删除元素方法为splice，用indexOf去获取删除元素的位置，</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;span class=&quot;label info&quot;&gt;Javascript&lt;/span&gt;
+&lt;div class=&quot;note primary&quot;&gt;
+            &lt;p&gt;写项目过程中经常写前端js，记录一下删除数组中指定某个元素的常用方法。&lt;/p&gt;
+          &lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/images/article_js.jpeg&quot; alt&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="http://pygo2.top/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="Javascript" scheme="http://pygo2.top/tags/Javascript/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Server后端API返回JSON格式说明</title>
     <link href="http://pygo2.top/articles/40461/"/>
     <id>http://pygo2.top/articles/40461/</id>
@@ -272,9 +352,9 @@
       <category term="IDE" scheme="http://pygo2.top/categories/IDE/"/>
     
     
-      <category term="IDE" scheme="http://pygo2.top/tags/IDE/"/>
-    
       <category term="Atom" scheme="http://pygo2.top/tags/Atom/"/>
+    
+      <category term="IDE" scheme="http://pygo2.top/tags/IDE/"/>
     
   </entry>
   
@@ -457,84 +537,6 @@
       <category term="Java" scheme="http://pygo2.top/tags/Java/"/>
     
       <category term="ERROR集" scheme="http://pygo2.top/tags/ERROR%E9%9B%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Windows系统服务器之间的大文件互传</title>
-    <link href="http://pygo2.top/articles/555/"/>
-    <id>http://pygo2.top/articles/555/</id>
-    <published>2021-07-17T12:53:58.000Z</published>
-    <updated>2021-07-17T12:53:58.000Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h4><div class="note warning">            <p>在服务器之间经常有文件要进行传输，而且很多情况都是10G以上的大文件，服务器操作系统主流为Windows、Linux、Unix，今日用到了两台Windows服务器之间进行大文件传输，总结一下，分享出来。</p>          </div><span class="label default">服务器</span> <span class="label info">文件传输</span> <span class="label primary">Windows</span><a id="more"></a><hr><h4 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h4><table><thead><tr><th style="text-align:center">id</th><th style="text-align:center">ip</th><th style="text-align:center">name</th><th>Version</th></tr></thead><tbody><tr><td style="text-align:center">1</td><td style="text-align:center">16.19.209.67</td><td style="text-align:center">Windows</td><td>Windows Server2008 R2</td></tr><tr><td style="text-align:center">1</td><td style="text-align:center">16.19.209.100</td><td style="text-align:center">Windows</td><td>Windows Server2008 R2</td></tr></tbody></table><p>两台服务器为内网连同的两台机器。</p><h4 id="方案"><a href="#方案" class="headerlink" title="方案"></a>方案</h4><blockquote><p>文件共享</p></blockquote><ul><li>文件夹开启高级共享，右键-&gt;属性-&gt;共享-&gt;高级共享</li><li>使用MSTSC进行连接，快捷键WIN+R，输入MSTSC，输入相关远程电脑的连接信息</li><li>连接之后再另一台电脑的计算机顶部地址栏输入共享服务器的ip</li><li>选择共享的文件夹，输入对应的账号、密码</li><li>复制到本地</li></ul><p><img src="1.png" alt></p><blockquote><p>xcopy</p></blockquote><p>Win系统自带的命令，启用CMD控制台。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 格式</span><br><span class="line">net use \\IP地址 密码/user:账户</span><br><span class="line"># 示例</span><br><span class="line">net use \\16.19.209.100 Aqwe123/user:Administrator</span><br><span class="line"></span><br><span class="line">xcopy /e E:\BACKUP_MZLPAS\*.* \\16.19.209.100\E$\BACKUP_MZLPAS\ /y</span><br><span class="line">/y 表示直接覆盖原来的文件，不需要询问</span><br><span class="line">/e 表示复制文件夹下所有文件及文件夹</span><br></pre></td></tr></table></figure></p><p>前提是这个文件夹开启共享。</p><blockquote><p>python</p></blockquote><p>服务器具有python环境，利用python命令开启一个web服务，连接方进行下载。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># python2</span><br><span class="line">python -m SimpleHTTPServer XXXX</span><br></pre></td></tr></table></figure></p><p>其中，XXXX为端口。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h4 id=&quot;简述&quot;&gt;&lt;a href=&quot;#简述&quot; class=&quot;headerlink&quot; title=&quot;简述&quot;&gt;&lt;/a&gt;简述&lt;/h4&gt;&lt;div class=&quot;note warning&quot;&gt;
-            &lt;p&gt;在服务器之间经常有文件要进行传输，而且很多情况都是10G以上的大文件，服务器操作系统主流为Windows、Linux、Unix，今日用到了两台Windows服务器之间进行大文件传输，总结一下，分享出来。&lt;/p&gt;
-          &lt;/div&gt;
-&lt;span class=&quot;label default&quot;&gt;服务器&lt;/span&gt; &lt;span class=&quot;label info&quot;&gt;文件传输&lt;/span&gt; &lt;span class=&quot;label primary&quot;&gt;Windows&lt;/span&gt;
-    
-    </summary>
-    
-      <category term="服务器" scheme="http://pygo2.top/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
-    
-    
-      <category term="文件传输" scheme="http://pygo2.top/tags/%E6%96%87%E4%BB%B6%E4%BC%A0%E8%BE%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>DB2报错：SQLCODE=-668, SQLSTATE=57016</title>
-    <link href="http://pygo2.top/articles/34462/"/>
-    <id>http://pygo2.top/articles/34462/</id>
-    <published>2021-07-14T12:55:15.000Z</published>
-    <updated>2021-07-14T12:55:15.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="/images/article_db2.jpg" alt></p><div class="note primary">            <p>今日跑存储过程，很简单的一个存储过程，从来没包错过，居然报错了，提示<font color="red" size="5"><strong><em>SQLCODE：-20244</em></strong></font>，网上查资料发现没有这个<strong><em>SQLCODE</em></strong>，于是一个表一个表的<strong><em>SELECT</em></strong>，发现其中有个表报错：SQLCODE=-668, SQLSTATE=57016</p>          </div><span class="label info">DB2</span> <span class="label default">SQLCODE</span><a id="more"></a><hr><p>当存储过程出现：SQLCODE=-668, SQLSTATE=57016，说明表处于“暂挂状态”，需要load + reorg处理下就可以了。</p><blockquote><p>1.查询表的状态，DB2 CMD执行：db2 load query table pas.jxdx_dkzh_bf</p></blockquote><p><img src="668.png" alt><br>这个错误是：表处于”装入暂挂”状态。</p><blockquote><p>2.执行以下对应的命令用来解除暂挂状态。</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db2 load from /dev/null of del terminate into pas.jxdx_dkzh_bf</span><br></pre></td></tr></table></figure><p>win、linux都适用。</p><blockquote><p>3.然后</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db2 reorg table pas.jxdx_dkzh_bf</span><br></pre></td></tr></table></figure><blockquote><p>4.测试select语句，如果可以了就可以执行存储过程了。</p></blockquote><div class="post_cus_note">注意要点</div><ul><li>table后面跟的表名格式：策略.表名</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;/images/article_db2.jpg&quot; alt&gt;&lt;/p&gt;
-&lt;div class=&quot;note primary&quot;&gt;
-            &lt;p&gt;今日跑存储过程，很简单的一个存储过程，从来没包错过，居然报错了，提示&lt;font color=&quot;red&quot; size=&quot;5&quot;&gt;&lt;strong&gt;&lt;em&gt;SQLCODE：-20244&lt;/em&gt;&lt;/strong&gt;&lt;/font&gt;，网上查资料发现没有这个&lt;strong&gt;&lt;em&gt;SQLCODE&lt;/em&gt;&lt;/strong&gt;，于是一个表一个表的&lt;strong&gt;&lt;em&gt;SELECT&lt;/em&gt;&lt;/strong&gt;，发现其中有个表报错：SQLCODE=-668, SQLSTATE=57016&lt;/p&gt;
-          &lt;/div&gt;
-&lt;span class=&quot;label info&quot;&gt;DB2&lt;/span&gt; &lt;span class=&quot;label default&quot;&gt;SQLCODE&lt;/span&gt;
-    
-    </summary>
-    
-      <category term="数据库" scheme="http://pygo2.top/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-    
-      <category term="DB2" scheme="http://pygo2.top/tags/DB2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PDF转WORD</title>
-    <link href="http://pygo2.top/articles/28829/"/>
-    <id>http://pygo2.top/articles/28829/</id>
-    <published>2021-07-04T16:44:39.000Z</published>
-    <updated>2021-07-04T16:44:39.000Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><div class="note default">            <p>利用业余时间参加了公司的创新项目活动，里面有一个PDF转WORD的功能，分享出来。主要使用了python3版本的pdf2docx包，包的使用也很简单，基于基础功能写写逻辑、封装下页面就可以做出web功能了。</p>          </div><span class="label info">Python实战</span> <span class="label default">PDF转WORD</span><a id="more"></a><hr><h4 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h4><table><thead><tr><th style="text-align:center">id</th><th style="text-align:center">name</th><th style="text-align:center">Version</th></tr></thead><tbody><tr><td style="text-align:center">1</td><td style="text-align:center">Python</td><td style="text-align:center">3.7</td></tr></tbody></table><p>pdf2docx只支持python3。</p><h4 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">docx==0.2.4</span><br><span class="line">fitz==0.0.1.dev2</span><br><span class="line">fonttools==4.24.4</span><br><span class="line">idna==2.10</span><br><span class="line">lxml==4.6.3</span><br><span class="line">numpy==1.21.0</span><br><span class="line">opencv-python==4.5.2.54</span><br><span class="line">pdf2docx==0.5.2</span><br><span class="line">PyMuPDF==1.16.14</span><br><span class="line">python-docx==0.8.11</span><br></pre></td></tr></table></figure><h4 id="官方代码"><a href="#官方代码" class="headerlink" title="官方代码"></a>官方代码</h4><blockquote><p>示例一</p></blockquote><p>转换整个文档。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">from pdf2docx import Converter</span><br><span class="line"></span><br><span class="line">pdf_file = &apos;/path/to/sample.pdf&apos;</span><br><span class="line">docx_file = &apos;path/to/sample.docx&apos;</span><br><span class="line"></span><br><span class="line"># convert pdf to docx</span><br><span class="line">cv = Converter(pdf_file)</span><br><span class="line">cv.convert(docx_file)      # all pages by default</span><br><span class="line">cv.close()</span><br></pre></td></tr></table></figure></p><blockquote><p>示例二</p></blockquote><p>转换文档指定页。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># convert from the second page to the end (by default)</span><br><span class="line">cv.convert(docx_file, start=1)</span><br><span class="line"></span><br><span class="line"># convert from the first page (by default) to the third (end=3, excluded)</span><br><span class="line">cv.convert(docx_file, end=3)</span><br><span class="line"></span><br><span class="line"># convert from the second page and the third</span><br><span class="line">cv.convert(docx_file, start=1, end=3)</span><br></pre></td></tr></table></figure></p><blockquote><p>示例三</p></blockquote><p>多进程转换。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cv.convert(docx_file, multi_processing=True, cpu_count=4)</span><br></pre></td></tr></table></figure></p><blockquote><p>示例四</p></blockquote><p>加密文档转换。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cv = Converter(pdf_file, password)</span><br><span class="line">cv.convert(docx_file)</span><br><span class="line">cv.close()</span><br></pre></td></tr></table></figure></p><h4 id="参考学习"><a href="#参考学习" class="headerlink" title="参考学习"></a>参考学习</h4><p>官网：<a href="https://dothinking.github.io/pdf2docx/index.html" target="_blank" rel="noopener">https://dothinking.github.io/pdf2docx/index.html</a></p><h4 id="项目转换代码"><a href="#项目转换代码" class="headerlink" title="项目转换代码"></a>项目转换代码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/python</span><br><span class="line"># -*- coding: utf-8 -*-</span><br><span class="line"></span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">--------------------------------------------------------------</span><br><span class="line">describe:</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">base_info:</span><br><span class="line">    __version__ = &quot;v.10&quot;</span><br><span class="line">    __author__ = &quot;mingliang.gao&quot;</span><br><span class="line">    __time__ = &quot;2020/10/1 9:31 AM&quot;</span><br><span class="line">    __mail__ = &quot;gaoming971366@163.com&quot;</span><br><span class="line">--------------------------------------------------------------</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line"># ------------------------------------------------------------</span><br><span class="line"># usage: /usr/bin/python file_lib.py</span><br><span class="line"># ------------------------------------------------------------</span><br><span class="line">import os</span><br><span class="line">from multiprocessing import cpu_count</span><br><span class="line">from pdf2docx import Converter</span><br><span class="line"></span><br><span class="line">from deploy.utils.utils import get_storefilename_by_md5, \</span><br><span class="line">    get_base_dir, get_now, mk_dirs</span><br><span class="line">from deploy.config import TRANSFER_BASE_DIR</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">class FileLib(object):</span><br><span class="line">    ALLOWED_EXTENSIONS = [</span><br><span class="line">        &apos;.doc&apos;,</span><br><span class="line">        &apos;.docx&apos;,</span><br><span class="line">        &apos;.xls&apos;,</span><br><span class="line">        &apos;.xlsx&apos;,</span><br><span class="line">        &apos;.ppt&apos;,</span><br><span class="line">        &apos;.pptx&apos;,</span><br><span class="line">        &apos;.pdf&apos;,</span><br><span class="line">        &apos;.txt&apos;,</span><br><span class="line">    ]</span><br><span class="line"></span><br><span class="line">    def __init__(self):</span><br><span class="line">        self.cpu_count = cpu_count()</span><br><span class="line"></span><br><span class="line">    def allow_format_fmt(self, fname):</span><br><span class="line">        return True if (os.path.splitext(fname)[1]).lower() in self.ALLOWED_EXTENSIONS else False</span><br><span class="line"></span><br><span class="line">    def store_file(self, file, compress=False, is_md5_store_name=True):</span><br><span class="line">        if not file:</span><br><span class="line">            return False, &#123;&apos;message&apos;: &apos;没有发现文件&apos;&#125;</span><br><span class="line">        try:</span><br><span class="line">            # 文件存储初始化</span><br><span class="line">            now_date = get_now(format=&quot;%Y-%m-%d&quot;)</span><br><span class="line">            real_store_dir = get_base_dir() + TRANSFER_BASE_DIR + now_date</span><br><span class="line">            store_dir = os.path.join(TRANSFER_BASE_DIR + now_date)</span><br><span class="line">            if not os.path.exists(real_store_dir):</span><br><span class="line">                mk_dirs(real_store_dir)</span><br><span class="line"></span><br><span class="line">            file_name = file.filename</span><br><span class="line">            md5_v, store_file_name = get_storefilename_by_md5(file_name, ftype=&apos;file&apos;)</span><br><span class="line">            _real_file = os.path.join(real_store_dir, store_file_name) \</span><br><span class="line">                if is_md5_store_name else os.path.join(real_store_dir, file_name)</span><br><span class="line">            file.save(_real_file)</span><br><span class="line">            # 压缩</span><br><span class="line">            # if compress:</span><br><span class="line">            #     pass</span><br><span class="line">            return True, &#123;&apos;store_name&apos;: store_file_name if is_md5_store_name else file_name,</span><br><span class="line">                          &apos;md5&apos;: md5_v,</span><br><span class="line">                          &apos;path&apos;: os.path.join(store_dir, store_file_name) if is_md5_store_name else os.path.join(store_dir, file_name),</span><br><span class="line">                          &apos;message&apos;: &apos;success&apos;&#125;</span><br><span class="line">        except:</span><br><span class="line">            return False, &#123;&apos;message&apos;: &apos;文件存储发生错误&apos;&#125;</span><br><span class="line"></span><br><span class="line">    def pdf_2_word(self, file_pdf: str, docx_name: str = None,</span><br><span class="line">                   start: int = 0, end: int = None, pages: list = None,</span><br><span class="line">                   is_multi_processing: bool = False, cpu_count: int = 1):</span><br><span class="line">        if not file_pdf:</span><br><span class="line">            return False, &#123;&apos;message&apos;: &apos;Pdf file is null&apos;, &apos;tar_file&apos;: &apos;&apos;&#125;</span><br><span class="line">        src_file = get_base_dir() + file_pdf</span><br><span class="line">        if not os.path.exists(src_file):</span><br><span class="line">            return False, &#123;&apos;message&apos;: &apos;Pdf file is not exist&apos;, &apos;tar_file&apos;: &apos;&apos;&#125;</span><br><span class="line">        if not os.path.isfile(src_file):</span><br><span class="line">            return False, &#123;&apos;message&apos;: &apos;Pdf file is not file&apos;, &apos;tar_file&apos;: &apos;&apos;&#125;</span><br><span class="line">        if docx_name:</span><br><span class="line">            docx_names = os.path.splitext(docx_name)</span><br><span class="line">            if len(docx_names) &lt; 2:</span><br><span class="line">                return False, &#123;&apos;message&apos;: &apos;Pdf file name not have suffix&apos;, &apos;tar_file&apos;: &apos;&apos;&#125;</span><br><span class="line">        src_path, src_name = os.path.split(src_file)</span><br><span class="line">        transfer_name_pdf = docx_name if docx_name else src_name</span><br><span class="line">        transfer_name_word = os.path.splitext(transfer_name_pdf)[0] + &apos;.docx&apos;</span><br><span class="line">        docx_file = os.path.join(src_path, transfer_name_word)</span><br><span class="line">        rel_path = os.path.split(file_pdf)[0]</span><br><span class="line">        tar_file = os.path.join(rel_path, transfer_name_word)</span><br><span class="line">        # convert pdf to docx</span><br><span class="line">        cv = Converter(src_file)</span><br><span class="line">        # all pages by default</span><br><span class="line">        if is_multi_processing and cpu_count &gt;= self.cpu_count:</span><br><span class="line">            cpu_count = self.cpu_count</span><br><span class="line">        cv.convert(docx_file, multi_processing=True, cpu_count=cpu_count) \</span><br><span class="line">            if is_multi_processing else cv.convert(docx_file)</span><br><span class="line">        cv.close()</span><br><span class="line">        return True, &#123;&apos;message&apos;: &apos;success&apos;, &apos;tar_file&apos;: tar_file&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h4 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h4&gt;&lt;div class=&quot;note default&quot;&gt;
-            &lt;p&gt;利用业余时间参加了公司的创新项目活动，里面有一个PDF转WORD的功能，分享出来。主要使用了python3版本的pdf2docx包，包的使用也很简单，基于基础功能写写逻辑、封装下页面就可以做出web功能了。&lt;/p&gt;
-          &lt;/div&gt;
-&lt;span class=&quot;label info&quot;&gt;Python实战&lt;/span&gt; &lt;span class=&quot;label default&quot;&gt;PDF转WORD&lt;/span&gt;
-    
-    </summary>
-    
-      <category term="Python" scheme="http://pygo2.top/categories/Python/"/>
-    
-    
-      <category term="Python" scheme="http://pygo2.top/tags/Python/"/>
-    
-      <category term="Python程序篇" scheme="http://pygo2.top/tags/Python%E7%A8%8B%E5%BA%8F%E7%AF%87/"/>
     
   </entry>
   
