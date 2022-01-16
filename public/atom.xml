@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://pygo2.top/"/>
-  <updated>2022-01-01T10:05:33.000Z</updated>
+  <updated>2022-01-09T07:20:30.000Z</updated>
   <id>http://pygo2.top/</id>
   
   <author>
@@ -15,6 +15,58 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Javascript对象属性的遍历</title>
+    <link href="http://pygo2.top/articles/27964/"/>
+    <id>http://pygo2.top/articles/27964/</id>
+    <published>2022-01-09T07:20:30.000Z</published>
+    <updated>2022-01-09T07:20:30.000Z</updated>
+    
+    <content type="html"><![CDATA[<div class="note primary">            <p>7种Javascript对象属性遍历的方法。</p>          </div><p><img src="/images/article_js.jpeg" alt></p><span class="label info">Javascript</span><a id="more"></a><hr><blockquote><p>测试数据</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var name = &apos;mingliang.gao&apos;;</span><br><span class="line">var demo = &#123;</span><br><span class="line">    name,</span><br><span class="line">    language: &apos;js&apos;,</span><br><span class="line">    say() &#123;</span><br><span class="line">        return (&apos;name: &apos;, name, &apos;language: &apos;, language)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="方法一：for…in"><a href="#方法一：for…in" class="headerlink" title="方法一：for…in"></a>方法一：for…in</h4><p>for…in循环遍历对象自身的和继承的可枚举属性（不含 Symbol 属性）。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for (let k in demo)&#123;</span><br><span class="line">    console.log(k)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">name</span><br><span class="line">language</span><br><span class="line">say</span><br></pre></td></tr></table></figure></p><h4 id="方法二：Object-keys-obj"><a href="#方法二：Object-keys-obj" class="headerlink" title="方法二：Object.keys(obj)"></a>方法二：Object.keys(obj)</h4><p>Object.keys返回一个数组，包括对象自身的（不含继承的）所有可枚举属性（不含 Symbol 属性）的键名。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.log(Object.keys(demo))</span><br></pre></td></tr></table></figure></p><p>结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[ &apos;name&apos;, &apos;language&apos;, &apos;say&apos; ]</span><br></pre></td></tr></table></figure></p><h4 id="方法三：Object-getOwnPropertyNames-obj"><a href="#方法三：Object-getOwnPropertyNames-obj" class="headerlink" title="方法三：Object.getOwnPropertyNames(obj)"></a>方法三：Object.getOwnPropertyNames(obj)</h4><p>Object.getOwnPropertyNames返回一个数组，包含对象自身的所有属性（不含 Symbol 属性，但是包括不可枚举属性）的键名。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.log(Object.getOwnPropertyNames(demo))</span><br></pre></td></tr></table></figure></p><p>结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[ &apos;name&apos;, &apos;language&apos;, &apos;say&apos; ]</span><br></pre></td></tr></table></figure></p><h4 id="方法四：Object-getOwnPropertySymbols-obj"><a href="#方法四：Object-getOwnPropertySymbols-obj" class="headerlink" title="方法四：Object.getOwnPropertySymbols(obj)"></a>方法四：Object.getOwnPropertySymbols(obj)</h4><p>Object.getOwnPropertySymbols返回一个数组，包含对象自身的所有 Symbol 属性的键名。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.log(Object.getOwnPropertySymbols(demo))</span><br></pre></td></tr></table></figure></p><p>结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[ &apos;name&apos;, &apos;language&apos;, &apos;say&apos; ]</span><br></pre></td></tr></table></figure></p><h4 id="方法五：Reflect-ownKeys-obj"><a href="#方法五：Reflect-ownKeys-obj" class="headerlink" title="方法五：Reflect.ownKeys(obj)"></a>方法五：Reflect.ownKeys(obj)</h4><p>Reflect.ownKeys返回一个数组，包含对象自身的（不含继承的）所有键名，不管键名是 Symbol 或字符串，也不管是否可枚举。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.log(Reflect.ownKeys(demo))</span><br></pre></td></tr></table></figure></p><p>结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[ &apos;name&apos;, &apos;language&apos;, &apos;say&apos; ]</span><br></pre></td></tr></table></figure></p><h4 id="方法六：getOwnPropertyDescriptor-obj-‘属性名’"><a href="#方法六：getOwnPropertyDescriptor-obj-‘属性名’" class="headerlink" title="方法六：getOwnPropertyDescriptor(obj, ‘属性名’)"></a>方法六：getOwnPropertyDescriptor(obj, ‘属性名’)</h4><p>对象的每个属性都有一个描述对象（Descriptor），Object.getOwnPropertyDescriptor方法可以获取该属性的描述对象。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.log(getOwnPropertyDescriptor(demo, &apos;name&apos;))</span><br></pre></td></tr></table></figure></p><p>结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123; value: &apos;mingliang.gao&apos;,</span><br><span class="line">  writable: true,</span><br><span class="line">  enumerable: true,</span><br><span class="line">  configurable: true &#125;</span><br></pre></td></tr></table></figure></p><h4 id="方法七：解构赋值"><a href="#方法七：解构赋值" class="headerlink" title="方法七：解构赋值"></a>方法七：解构赋值</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let &#123; name, language, say, ...args &#125; = demo;</span><br><span class="line">console.log(language)</span><br><span class="line">console.log(say)</span><br><span class="line">console.log(args)</span><br></pre></td></tr></table></figure><p>结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mingliang.gao</span><br><span class="line">python</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;div class=&quot;note primary&quot;&gt;
+            &lt;p&gt;7种Javascript对象属性遍历的方法。&lt;/p&gt;
+          &lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/images/article_js.jpeg&quot; alt&gt;&lt;/p&gt;
+&lt;span class=&quot;label info&quot;&gt;Javascript&lt;/span&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="http://pygo2.top/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="Javascript" scheme="http://pygo2.top/tags/Javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>DB-Oracle密码过期的处理</title>
+    <link href="http://pygo2.top/articles/32323/"/>
+    <id>http://pygo2.top/articles/32323/</id>
+    <published>2022-01-04T14:08:48.000Z</published>
+    <updated>2022-01-04T14:08:48.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/images/article_oracle.jpeg" alt></p><div class="note info">            <p>今天下午处理了一下Oracle账户过期的问题，记录一下处理的过程，密码过期+杀死死锁。</p>          </div><span class="label info">Oracle</span> <span class="label primary">密码过期</span><a id="more"></a><hr><h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>4号刚休完元旦的假期下午来到项目上，发现系统的调度停止了，修改系统状态又重新了一次，发现还是报错，第一个调度都跑不过去，这记录一下，后面杀死死锁进程要考。<br>因为在节前psql已经提示账户密码马上过期了，需要重制密码，没有理会，所以第一时间想到了是这个原因造成的，于是打开plsq输入登录密码，已经登录不上去了，问题已经确定了，那么就针对问题处理问题。</p><h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>具体Oracle数据库运维没什么经验，增删改查用的还是多，但是涉及到操作了，还是要谨慎一些，问了自己的好朋友、同事，以及结合baidu，处理了这次密码过期造成的问题。不多说，看下处理过程。</p><h4 id="切换oracle用户"><a href="#切换oracle用户" class="headerlink" title="切换oracle用户"></a>切换oracle用户</h4><p>登录服务器，切换到oracle用户，执行<strong><em>sqlplus / as sysdba</em></strong>操纵，如果能顺利登录Oracle数据库，直接下下个阶段。<br>我这的Oracle数据库部署的有问题，执行sqlplus发现提示一些错误，具体的错误就不写了，反正就是当时这个Oracle环境遍历没有配置好。打开/home/oracle/.bash_profile环境变量文件，发现以及配置如下内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">umask 022</span><br><span class="line">ORACLE_HOSTNAME=aespas</span><br><span class="line">ORACLE_BASE=/u01/app/oracle</span><br><span class="line">ORACLE_HOME=$ORACLE_BASE/product/11.2.0/dbhome_1</span><br><span class="line">export ORACLE_SID=aespas</span><br><span class="line">PATH=$PATH:$HOME/bin:$ORACLE_HOME/bin:$ORACLE_HOME/jdk/bin</span><br><span class="line"></span><br><span class="line">export PATH</span><br><span class="line">export ORACLE_HOME</span><br><span class="line">LC_ALL=&quot;en_US&quot;</span><br><span class="line">LANG=&quot;en_US&quot;</span><br><span class="line">export NLS_LANG=&quot;AMERICAN_AMERICA.ZHS16GBK&quot;</span><br><span class="line">export NLS_DATE_FORMAT=&apos;YYYY-MM-DD HH24:MI:SS&apos;</span><br></pre></td></tr></table></figure></p><p>需要执行一下命令使环境变量生效：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source /home/oracle/.bash_profile</span><br></pre></td></tr></table></figure></p><h4 id="修改密码"><a href="#修改密码" class="headerlink" title="修改密码"></a>修改密码</h4><ul><li><p>登录Oracle</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sqlplus / as sysdba</span><br></pre></td></tr></table></figure></li><li><p>查看指定的用户</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select username, profile from dba_users where username = &apos;PAS&apos;;</span><br></pre></td></tr></table></figure></li><li><p>查看用户指定profile密码有效期设置</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from dba_profiles s where s.profile=&apos;DEFAULT&apos; AND resource_name=&apos;PASSWORD_LIFE_TIME&apos;;</span><br></pre></td></tr></table></figure></li><li><p>密码有效期由默认的180天修改成“无限制”</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER PROFILE DEFAULT LIMIT PASSWORD_LIFE_TIME UNLIMITED;</span><br></pre></td></tr></table></figure></li><li><p>重新设置密码</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER USER PAS identified by pas</span><br></pre></td></tr></table></figure></li></ul><h4 id="杀死死锁"><a href="#杀死死锁" class="headerlink" title="杀死死锁"></a>杀死死锁</h4><ul><li><p>查看哪些表锁住了</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select b.owner,b.object_name,a.session_id,a.locked_mode</span><br><span class="line">from v$locked_object a,dba_objects b</span><br><span class="line">where b.object_id = a.object_id;̨̨̨̨̨</span><br></pre></td></tr></table></figure></li><li><p>查看锁死的会话</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select b.username,b.sid,b.serial#,logon_time</span><br><span class="line">from v$locked_object a,v$session b</span><br><span class="line">where a.session_id = b.sid order by b.logon_time;</span><br></pre></td></tr></table></figure></li><li><p>杀死锁死的会话</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter system kill session &apos;sid,serial&apos;;</span><br></pre></td></tr></table></figure></li></ul><p>其中sid、serial为上一步查询的锁死会话。</p><h4 id="运行调度"><a href="#运行调度" class="headerlink" title="运行调度"></a>运行调度</h4><p>重新运行系统的调度</p><h3 id="注意要点"><a href="#注意要点" class="headerlink" title="注意要点"></a>注意要点</h3><ul><li>sqlplus登录数据库的所有sql建议手动输入，不要粘贴复制。</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/images/article_oracle.jpeg&quot; alt&gt;&lt;/p&gt;
+&lt;div class=&quot;note info&quot;&gt;
+            &lt;p&gt;今天下午处理了一下Oracle账户过期的问题，记录一下处理的过程，密码过期+杀死死锁。&lt;/p&gt;
+          &lt;/div&gt;
+&lt;span class=&quot;label info&quot;&gt;Oracle&lt;/span&gt; &lt;span class=&quot;label primary&quot;&gt;密码过期&lt;/span&gt;
+    
+    </summary>
+    
+      <category term="数据库" scheme="http://pygo2.top/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+      <category term="Oracle" scheme="http://pygo2.top/tags/Oracle/"/>
+    
+  </entry>
   
   <entry>
     <title>Pycharm新文件模板配置</title>
@@ -259,15 +311,15 @@
     <published>2021-11-17T16:05:51.000Z</published>
     <updated>2021-11-17T16:05:51.000Z</updated>
     
-    <content type="html"><![CDATA[<span class="label info">Javascript</span><div class="note primary">            <p>写项目过程中经常写前端js，记录一下删除数组中指定某个元素的常用方法。</p>          </div><p><img src="/images/article_js.jpeg" alt></p><a id="more"></a><hr><blockquote><p>测试数据</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var arr = [&apos;a&apos;,&apos;b&apos;,&apos;c&apos;,&apos;d&apos;];</span><br></pre></td></tr></table></figure><h4 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h4><p><font color="red" size="5.5"><strong>最常用的方法</strong></font><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var index = arr.indexOf(&apos;c&apos;)</span><br><span class="line">if(index &gt; -1)&#123;</span><br><span class="line">    var el = arr.splice(index, 1)</span><br><span class="line">    console.log(el)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[ &apos;a&apos; ]</span><br><span class="line">[ &apos;b&apos;, &apos;c&apos;, &apos;d&apos; ]</span><br></pre></td></tr></table></figure></p><p>说明：<br>splice参数有多个，第一个代表删除元素的位置；第二个为删除的个数。</p><h4 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var index = arr.indexOf(&apos;c&apos;)</span><br><span class="line">if(index &gt; -1)&#123;</span><br><span class="line">    delete arr[index]</span><br><span class="line">    console.log(arr)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[ &apos;a&apos;, &apos;b&apos;, , &apos;d&apos; ]</span><br></pre></td></tr></table></figure></p><p>说明：<br>使用delete删除元素之后数组长度不变，只是被删除元素变为””了。</p><h4 id="方法三"><a href="#方法三" class="headerlink" title="方法三"></a>方法三</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var el = arr.pop()</span><br><span class="line">console.log(el)</span><br><span class="line">console.log(arr)</span><br></pre></td></tr></table></figure><p>结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">d</span><br><span class="line">[ &apos;a&apos;, &apos;b&apos;, &apos;c&apos; ]</span><br></pre></td></tr></table></figure></p><p>说明：<br>pop方法用于删除数组中的最后一项，并且数据返回到新的变量。</p><h4 id="方法四"><a href="#方法四" class="headerlink" title="方法四"></a>方法四</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var el = arr.shift()</span><br><span class="line">console.log(el)</span><br><span class="line">console.log(arr)</span><br></pre></td></tr></table></figure><p>结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a</span><br><span class="line">[ &apos;b&apos;, &apos;c&apos;, &apos;d&apos; ]</span><br></pre></td></tr></table></figure></p><p>说明：<br>shift方法用于删除数组中的第一项，并且数据返回到新的变量。</p><p>最常用的数据删除元素方法为splice，用indexOf去获取删除元素的位置，</p>]]></content>
+    <content type="html"><![CDATA[<div class="note primary">            <p>写项目过程中经常写前端js，记录一下删除数组中指定某个元素的常用方法。</p>          </div><p><img src="/images/article_js.jpeg" alt></p><span class="label info">Javascript</span><a id="more"></a><hr><blockquote><p>测试数据</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var arr = [&apos;a&apos;,&apos;b&apos;,&apos;c&apos;,&apos;d&apos;];</span><br></pre></td></tr></table></figure><h4 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h4><p><font color="red" size="5.5"><strong>最常用的方法</strong></font><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var index = arr.indexOf(&apos;c&apos;)</span><br><span class="line">if(index &gt; -1)&#123;</span><br><span class="line">    var el = arr.splice(index, 1)</span><br><span class="line">    console.log(el)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[ &apos;a&apos; ]</span><br><span class="line">[ &apos;b&apos;, &apos;c&apos;, &apos;d&apos; ]</span><br></pre></td></tr></table></figure></p><p>说明：<br>splice参数有多个，第一个代表删除元素的位置；第二个为删除的个数。</p><h4 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var index = arr.indexOf(&apos;c&apos;)</span><br><span class="line">if(index &gt; -1)&#123;</span><br><span class="line">    delete arr[index]</span><br><span class="line">    console.log(arr)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[ &apos;a&apos;, &apos;b&apos;, , &apos;d&apos; ]</span><br></pre></td></tr></table></figure></p><p>说明：<br>使用delete删除元素之后数组长度不变，只是被删除元素变为””了。</p><h4 id="方法三"><a href="#方法三" class="headerlink" title="方法三"></a>方法三</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var el = arr.pop()</span><br><span class="line">console.log(el)</span><br><span class="line">console.log(arr)</span><br></pre></td></tr></table></figure><p>结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">d</span><br><span class="line">[ &apos;a&apos;, &apos;b&apos;, &apos;c&apos; ]</span><br></pre></td></tr></table></figure></p><p>说明：<br>pop方法用于删除数组中的最后一项，并且数据返回到新的变量。</p><h4 id="方法四"><a href="#方法四" class="headerlink" title="方法四"></a>方法四</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var el = arr.shift()</span><br><span class="line">console.log(el)</span><br><span class="line">console.log(arr)</span><br></pre></td></tr></table></figure><p>结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a</span><br><span class="line">[ &apos;b&apos;, &apos;c&apos;, &apos;d&apos; ]</span><br></pre></td></tr></table></figure></p><p>说明：<br>shift方法用于删除数组中的第一项，并且数据返回到新的变量。</p><p>最常用的数据删除元素方法为splice，用indexOf去获取删除元素的位置。</p>]]></content>
     
     <summary type="html">
     
-      &lt;span class=&quot;label info&quot;&gt;Javascript&lt;/span&gt;
-&lt;div class=&quot;note primary&quot;&gt;
+      &lt;div class=&quot;note primary&quot;&gt;
             &lt;p&gt;写项目过程中经常写前端js，记录一下删除数组中指定某个元素的常用方法。&lt;/p&gt;
           &lt;/div&gt;
 &lt;p&gt;&lt;img src=&quot;/images/article_js.jpeg&quot; alt&gt;&lt;/p&gt;
+&lt;span class=&quot;label info&quot;&gt;Javascript&lt;/span&gt;
     
     </summary>
     
@@ -483,60 +535,6 @@
       <category term="Python" scheme="http://pygo2.top/tags/Python/"/>
     
       <category term="Excel" scheme="http://pygo2.top/tags/Excel/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Bootstrap的动态icon</title>
-    <link href="http://pygo2.top/articles/63837/"/>
-    <id>http://pygo2.top/articles/63837/</id>
-    <published>2021-08-01T02:07:44.000Z</published>
-    <updated>2021-08-01T02:07:44.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="/images/article_bootstrap.jpeg" alt></p><div class="note primary">            <p>Bootstrap图标使用的是Font Awesome，加上基本的class可以产生动画效果，让页面看起来更加酷炫。</p>          </div><span class="label primary">Bootstrap</span> <span class="label info">icon</span><a id="more"></a><hr><p>实现代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;fa-5x&quot;&gt;</span><br><span class="line">    &lt;i class=&quot;fa fa-spinner fa-spin&quot;&gt;&lt;/i&gt;</span><br><span class="line">    &lt;i class=&quot;fa fa-refresh fa-spin&quot;&gt;&lt;/i&gt;</span><br><span class="line">    &lt;i class=&quot;fa fa-cog fa-spin&quot;&gt;&lt;/i&gt;</span><br><span class="line">    &lt;i class=&quot;fa fa-spinner fa-pulse&quot;&gt;&lt;/i&gt;</span><br><span class="line">    &lt;i class=&quot;fa fa-refresh fa-pulse&quot;&gt;&lt;/i&gt;</span><br><span class="line">    &lt;i class=&quot;fa fa-cog fa-pulse&quot;&gt;&lt;/i&gt;</span><br><span class="line">    &lt;i class=&quot;fa fa-spinner fa-rotate-90&quot;&gt;&lt;/i&gt;</span><br><span class="line">    &lt;i class=&quot;fa fa-refresh fa-rotate-90&quot;&gt;&lt;/i&gt;</span><br><span class="line">    &lt;i class=&quot;fa fa-cog fa-rotate-90&quot;&gt;&lt;/i&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p><ul><li>fa-spin：让icon图标不停的动态旋转</li><li>fa-pulse：图标以八步为周期进行旋转，比较适合表示刷新、加载等功能的图标，如.fa-spinner、.fa-refresh、.fa-cog等</li><li>fa-rotate-xx：图标以某个角度进行选择</li><li>fa-flip-horizontal：水平翻转</li><li>fa-flip-vertical：垂直翻转</li><li>fa-3x：图标大小的设置，有fa-x、fa-2x、fa-3x，想要多大有多大，使用默认大小fa-x居多</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;/images/article_bootstrap.jpeg&quot; alt&gt;&lt;/p&gt;
-&lt;div class=&quot;note primary&quot;&gt;
-            &lt;p&gt;Bootstrap图标使用的是Font Awesome，加上基本的class可以产生动画效果，让页面看起来更加酷炫。&lt;/p&gt;
-          &lt;/div&gt;
-&lt;span class=&quot;label primary&quot;&gt;Bootstrap&lt;/span&gt; &lt;span class=&quot;label info&quot;&gt;icon&lt;/span&gt;
-    
-    </summary>
-    
-      <category term="Bootstrap" scheme="http://pygo2.top/categories/Bootstrap/"/>
-    
-    
-      <category term="Bootstrap" scheme="http://pygo2.top/tags/Bootstrap/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JAVA的Error:loading:xxxx\jvm.dll问题解决</title>
-    <link href="http://pygo2.top/articles/35460/"/>
-    <id>http://pygo2.top/articles/35460/</id>
-    <published>2021-07-18T03:22:52.000Z</published>
-    <updated>2021-07-18T03:22:52.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>问题描述：</p></blockquote><p><img src="/images/article_javaerrror.jpg" alt></p><p>在服务器执行java环境的时候，发现报以上的错误：<font color="red" size="5"><strong><em>Error: loading: xxxx\jvm.dll</em></strong></font>，记得在服务器坏之前还是好的，修复了之后就变成这样了，不管咋样，修复好才是王道。</p><a id="more"></a><hr><blockquote><p>解决方案</p></blockquote><p>直接修改path环境变量，把<font color="red" size="5"><strong><em>%JAVA_HOME%/bin;%JAVA_HOME%/jre/bin;</em></strong></font>放到path变量的最前面。</p><blockquote><p>解决过程</p></blockquote><ul><li>首先，报<strong><em>Error: loading: xxxx\jvm.dll</em></strong>这个文件的问题，正常java的环境应该回去找安装好的jvm.dll文件。</li><li>于是，我把这个对应指定的文件重命名，发现报另一个的错误：<strong><em>Error: missing <code>server‘ JVM at</code>XXXXXbin\server\jvm.dll‘.</em></strong></li><li>初步设想应该是JAVA环境配置出了问题，于是把JAVA环境重新配置了一边，好了。</li></ul><blockquote><p>原因</p></blockquote><p>应该是JAVA去找jvm.dll的时候，从PATH的顺序去找，把JAVA配置的路径放在最前面，先从JAVA环境找起。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;问题描述：&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;/images/article_javaerrror.jpg&quot; alt&gt;&lt;/p&gt;
-&lt;p&gt;在服务器执行java环境的时候，发现报以上的错误：&lt;font color=&quot;red&quot; size=&quot;5&quot;&gt;&lt;strong&gt;&lt;em&gt;Error: loading: xxxx\jvm.dll&lt;/em&gt;&lt;/strong&gt;&lt;/font&gt;，记得在服务器坏之前还是好的，修复了之后就变成这样了，不管咋样，修复好才是王道。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Java" scheme="http://pygo2.top/categories/Java/"/>
-    
-    
-      <category term="Java" scheme="http://pygo2.top/tags/Java/"/>
-    
-      <category term="ERROR集" scheme="http://pygo2.top/tags/ERROR%E9%9B%86/"/>
     
   </entry>
   
