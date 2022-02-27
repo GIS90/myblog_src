@@ -1,12 +1,19 @@
 ---
-title: Tools-Linux搭建gitea
+title: gitea代码库的环境搭建
 comments: false
 categories:
-  - []
-tags: []
+  - - 服务器
+tags:
+  - Linux
+  - git
+  - gitea
 top: false
-date: 2022-02-16 11:43:18
-updated: 2022-02-16 11:43:18
-desc:
-keywords:
+desc: 服务器搭建gitea代码库管理项目文件
+keywords: 'Linux, git, gitea'
+abbrlink: 3042
+date: 2022-02-22 21:43:18
+updated: 2022-02-22 21:43:18
 ---
+
+
+<font size=6.5 color='red'>学习中。。。。。。</font>

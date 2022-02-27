@@ -35,9 +35,13 @@ keywords: DB2, SQLCODE, 668
 > 2.执行以下对应的命令用来解除暂挂状态。
 
 ```
+# Linux
 db2 load from /dev/null of del terminate into pas.jxdx_dkzh_bf
+
+# Windows
+db2 load from E:/test.txt of del terminate into pas.jxdx_dkzh_bf
 ```
-win、linux都适用。
+根据系统自行选择要执行的命令，Windows需要在命令指定的目录下建立一个空文件。
 
 > 3.然后
 

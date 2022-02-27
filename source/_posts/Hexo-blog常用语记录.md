@@ -2,7 +2,7 @@
 title: blog常用markdown语法模板记录
 comments: false
 categories:
-  - [杂七杂八]
+  - [Hexo]
 top: false
 desc: blog常用语记录，主要用于markdown语法
 abbrlink: 57737

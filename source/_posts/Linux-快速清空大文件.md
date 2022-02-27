@@ -1,12 +1,42 @@
 ---
-title: Linux-快速清空大文件
+title: 快速清空大文件
 comments: false
 categories:
-  - []
-tags: []
+  - - Linux
+tags:
+  - Linux
+  - Linux其他篇
 top: false
-date: 2022-02-16 11:44:55
-updated: 2022-02-16 11:44:55
-desc:
-keywords:
+desc: 快速清空Linux中的大文件
+keywords: 'Linux, cat, shell, echo,'
+abbrlink: 27322
+date: 2022-01-16 22:14:34
+updated: 2022-01-16 22:14:34
 ---
+
+![](/images/article_linux_yun.jpg)
+
+{% label info@Linux快速清空大文件 %}
+
+<!--more-->
+<hr />
+
+> 1.echo
+
+```
+echo "" > filename.log
+```
+
+> 2.cat
+
+```
+cat /dev/null > access.log
+```
+
+> 3.dd
+
+```
+dd if=/dev/null of=access.log
+```
+
+清空的原理就是重定向，方法很多，不局限。
