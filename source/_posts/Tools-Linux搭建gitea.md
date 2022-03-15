@@ -168,6 +168,9 @@ COMMANDS:
 ![](pz5.png)
 
 #### 目录说明
+
+Gitea系统初始化成功会让自动建立一个管理员，对于上述配置后对应的目录也会自动生成。
+
 > custom
 
 配置文件目录，包含项目全局、数据库、仓库存储位置、访问服务、服务等各项配置。
@@ -183,6 +186,7 @@ COMMANDS:
 
 #### Gitea应用
 
+具体Gitea的使用也没什么难度，主要就是创建仓库、维护等操作，对于管理员有个管理权限，部署成功后接下来就是对Gitea的探索。
 创建仓库：
 - 拥有者
 - 仓库名称
@@ -197,6 +201,8 @@ COMMANDS:
 ![](create.png)
 
 #### Git使用
+
+本来不打算介绍Git的使用了，但是把基础的操作功能记录下，对于初学者也可能比较友好，在Github上搞几个项目Git命令自然而然就会了，基础的功能还是比较好记的，有兴趣的人可以查查官网，命令超级多，而且参数也不少。
 
 > GIT初始化仓库
 
@@ -236,6 +242,7 @@ git push -u origin master
 ```
 git pull origin master
 ```
+这里主要介绍Gitea安装与使用，对于git命令的学习请参考下列学习地址。
 
 #### 学习参考
 
@@ -245,3 +252,6 @@ GIT菜鸟：https://www.runoob.com/git/git-basic-operations.html
 
 
 ![](/images/article_gitflow.png)
+
+
+<font color='red' size=4.5>每天坚持学习！</font>
