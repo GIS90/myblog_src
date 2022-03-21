@@ -22,3 +22,7 @@ keywords: DB2死锁的处理过程
 
 <!--more-->
 <hr />
+
+- http://www.mirocn.com/info/details_156.html
+- https://www.cnblogs.com/ruingy/p/3605487.html
+- https://zhuanlan.zhihu.com/p/201010573
