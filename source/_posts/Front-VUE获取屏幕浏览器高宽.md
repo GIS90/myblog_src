@@ -1,13 +1,41 @@
 ---
-title: Front-VUE获取屏幕浏览器高宽
+title: JavaScript获取屏幕浏览器高宽
 comments: false
 categories:
-  - []
-tags: []
+  - [VUE]
+tags: [VUE, JavaScript]
 top: false
 abbrlink: 56199
 date: 2022-05-09 20:08:26
 updated: 2022-05-09 20:08:26
-desc:
-keywords:
+desc: JavaScript获取屏幕浏览器高宽
+keywords: VUE, JavaScript
 ---
+
+
+![](/images/article_js1.jpg)
+
+{% note info %}
+对于写前端代码的，经常会计算一些css样式，获取屏幕浏览器高宽也是家庭便饭，记录一下。
+{% endnote %}
+
+{% label info@Hashcat %}
+
+<!--more-->
+<hr />
+
+全局变量，直接上代码：
+```
+// 浏览器可用高度、宽度
+document.body.scrollHeight
+document.body.scrollWidth
+
+// HTML页面的可用高度、宽度
+document.body.clientHeight
+document.body.clientWidth
+```
+
+学习参考：
+- https://www.jianshu.com/p/e324cbd5ed3d
+- https://blog.csdn.net/grkcsdn/article/details/118556380
+- https://www.jb51.net/article/106472.htm
