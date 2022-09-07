@@ -1,5 +1,5 @@
 ---
-title: Element-UI的tree组件子选父不选提交数据问题
+title: ElementUI的tree组件子选父不选提交数据问题
 comments: false
 categories:
   - [VUE]

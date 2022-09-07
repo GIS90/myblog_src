@@ -149,17 +149,30 @@ db2look -d <数据库名> -u <用户> -e -o <脚本名称>.sql
 首先，在指定存放文件备份的目前建立对应数据的文件夹。
 第二，在执行下列命令，断开所有连接：
 ```
+# 断开所有连接
 db2 force application all
+
+# 查看是否还有连着连接
+db2 list applications
 ```
+如果还有连接，请继续等待，直至到没有连接。
+
 > 备份
 
 ```
 db2 backup db <database name> [ to <dir name> ]
 # demo
-db2 backup db PASBASE to D:\backup
+db2 backup db $生产库名 to $备份路径 PARALLELISM 2 COMPRESS
 ```
 database name：表示数据库。
 to dir name：表示为备份到的目录路径,为可选项,默认在当前目录下。
+
+> 检查
+
+```
+db2ckbkp -h <database name>
+```
+备份的数据库全名。
 
 > 恢复
 
