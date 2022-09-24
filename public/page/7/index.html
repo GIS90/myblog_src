@@ -26,8 +26,8 @@
 
 <!-- title、keywords、desc关键字 -->
 
-  <title>博文分类</title>
-  <meta name="title" content="博文分类">
+  <title>Hi</title>
+  <meta name="title" content="Hi">
 
 
   <meta name="keywords" content="Python, Linux, Hexo, 技术, 影视说, 娱乐, 旅行记, 博客, 代码, 生活, 人生, 分享">
@@ -501,7 +501,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://pygo2.top/articles/54459/">
+    <link itemprop="mainEntityOfPage" href="http://pygo2.top/articles/54029/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="mingliang.gao">
@@ -521,7 +521,7 @@
           <h2 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/articles/54459/" class="post-title-link" itemprop="url">Win Server服务器EventLog中的6005、6006、6008、6009、6013</a>
+                <a href="/articles/54029/" class="post-title-link" itemprop="url">Vue入门系列-VUE全家桶架构图</a>
               
             
           </h2>
@@ -549,7 +549,7 @@
                 
               
 
-              <time title="创建时间：2021-05-21 09:05:20" itemprop="dateCreated datePublished" datetime="2021-05-21T09:05:20+08:00">2021-05-21</time>
+              <time title="创建时间：2021-09-12 13:54:57" itemprop="dateCreated datePublished" datetime="2021-09-12T13:54:57+08:00">2021-09-12</time>
             
 
             
@@ -567,7 +567,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Windows/" itemprop="url" rel="index"><span itemprop="name">Windows</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/前端/" itemprop="url" rel="index"><span itemprop="name">前端</span></a></span>
 
                 
                 
@@ -593,7 +593,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">869</span>
+                <span title="本文字数">213</span>
               
 
               
@@ -628,14 +628,13 @@
 
       
         
-          <h4 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h4><div class="note primary">
-            <p>早上访问web项目，发现挂掉了，以为是内网网线的问题（本人电脑内外网跳板机），主要有线转换头经常出现问题，但是整了半天依然不行，于是打开服务器一看，什么东西都没了，一看就是重启了，于是需要查找到什么时候重启的，学会了查看系统的EventLog，记录一下用到的6005, 6006, 6008, 6009, 6013。</p>
-          </div>
-<span class="label info">Windows</span> <span class="label primary">EventLog</span>
+          <p><img src="/images/article_vue.jpeg" alt></p>
+<p>前段时间在慕课网学习了基础的VUE视频，受益匪浅啊，决定把自己从VUE入门的学习过程写一个系列的文章做一个分享，如果学习过程有错误的理解或者有什么记录不对的地方，可以留言进行交流。</p>
+<span class="label primary">VUE</span>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/articles/54459/#more" rel="contents">
+              <a class="btn" href="/articles/54029/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -700,7 +699,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://pygo2.top/articles/15964/">
+    <link itemprop="mainEntityOfPage" href="http://pygo2.top/articles/60121/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="mingliang.gao">
@@ -720,7 +719,7 @@
           <h2 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/articles/15964/" class="post-title-link" itemprop="url">FreeFileSync探索</a>
+                <a href="/articles/60121/" class="post-title-link" itemprop="url">413 Request Entity Too Large</a>
               
             
           </h2>
@@ -748,7 +747,7 @@
                 
               
 
-              <time title="创建时间：2021-05-10 22:07:54" itemprop="dateCreated datePublished" datetime="2021-05-10T22:07:54+08:00">2021-05-10</time>
+              <time title="创建时间：2021-08-23 22:51:13" itemprop="dateCreated datePublished" datetime="2021-08-23T22:51:13+08:00">2021-08-23</time>
             
 
             
@@ -792,7 +791,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">544</span>
+                <span title="本文字数">294</span>
               
 
               
@@ -827,13 +826,15 @@
 
       
         
-          <p>一款备份软件可以运行在win、macos、linux上的文件备份软件。</p>
-<p>官网：<a href="https://freefilesync.org/" target="_blank" rel="noopener">https://freefilesync.org/</a></p>
-<font size="6.5" color="red">有兴趣或者需要的同学可以详细研究一下。。。。。。</font>
+          <div class="note primary">
+            <p>在发布的pyhton web项目上传2M的文件，提示<font color="red" size="4.5">413 Request Entity Too Large</font>，请求实体过大也就是requests的Content-Length过大，记得当时本机开发的时候没有报过这个问题，为何上线就有了，大概率是域名、nginx那的问题。</p>
+          </div>
+<p><img src="/images/article_nginx413.jpeg" alt></p>
+<span class="label primary">Nginx</span>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/articles/15964/#more" rel="contents">
+              <a class="btn" href="/articles/60121/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -898,7 +899,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://pygo2.top/articles/40004/">
+    <link itemprop="mainEntityOfPage" href="http://pygo2.top/articles/24240/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="mingliang.gao">
@@ -918,7 +919,7 @@
           <h2 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/articles/40004/" class="post-title-link" itemprop="url">DB2存储过程异常处理</a>
+                <a href="/articles/24240/" class="post-title-link" itemprop="url">openpyxl写入性能的比较</a>
               
             
           </h2>
@@ -946,7 +947,7 @@
                 
               
 
-              <time title="创建时间：2021-05-07 23:43:48" itemprop="dateCreated datePublished" datetime="2021-05-07T23:43:48+08:00">2021-05-07</time>
+              <time title="创建时间：2021-08-08 11:47:56" itemprop="dateCreated datePublished" datetime="2021-08-08T11:47:56+08:00">2021-08-08</time>
             
 
             
@@ -964,7 +965,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/数据库/" itemprop="url" rel="index"><span itemprop="name">数据库</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a></span>
 
                 
                 
@@ -990,7 +991,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">969</span>
+                <span title="本文字数">1.5k</span>
               
 
               
@@ -1025,15 +1026,212 @@
 
       
         
-          <p><img src="/images/article_db2.jpg" alt></p>
+          <p><font size="6.5" color="red">简单比较一下openpyxl在行写入与单元格写入性能上的对比。</font></p>
+<p><hr><br><span class="label info">Python</span> <span class="label primary">Excel</span></p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/articles/24240/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <!-- 版权声明 -->
+    <div>
+     
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://pygo2.top/articles/26307/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="mingliang.gao">
+      <meta itemprop="description" content="<font size=" 5" color="#FF4500">直男<br><font size="4.5" color="#FF8C00">双鱼座</font><br><font size="3" color="#000000">Python开发工程师</font>"/>
+      <meta itemprop="image" content="/images/timg.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="PyGo²">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/articles/26307/" class="post-title-link" itemprop="url">解决Python处理Excel65535的问题</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+
+          
+
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">创建时间：</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2021-08-05 22:31:28" itemprop="dateCreated datePublished" datetime="2021-08-05T22:31:28+08:00">2021-08-05</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">578</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><img src="/images/article_python_excel.jpeg" alt></p>
 <div class="note primary">
-            <p>记录下DB2数据库存储过程对异常的处理，DECLARE声明异常的方式。</p>
+            <blockquote><p>问题描述</p></blockquote><p>使用Python去处理表格的时候，居然报错，提示为：<br>undefined</p>
           </div>
-<span class="label info">DB2</span> <span class="label default">存储过程</span> <span class="label danger">SQLEXCEPTIOIN</span> <span class="label primary">DECLARE</span>
+<span class="label info">Python</span>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/articles/40004/#more" rel="contents">
+              <a class="btn" href="/articles/26307/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1098,7 +1296,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://pygo2.top/articles/28873/">
+    <link itemprop="mainEntityOfPage" href="http://pygo2.top/articles/63837/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="mingliang.gao">
@@ -1118,7 +1316,7 @@
           <h2 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/articles/28873/" class="post-title-link" itemprop="url">Cygwin工具简介</a>
+                <a href="/articles/63837/" class="post-title-link" itemprop="url">Bootstrap的动态icon</a>
               
             
           </h2>
@@ -1146,7 +1344,7 @@
                 
               
 
-              <time title="创建时间：2021-04-27 21:47:02" itemprop="dateCreated datePublished" datetime="2021-04-27T21:47:02+08:00">2021-04-27</time>
+              <time title="创建时间：2021-08-01 10:07:44" itemprop="dateCreated datePublished" datetime="2021-08-01T10:07:44+08:00">2021-08-01</time>
             
 
             
@@ -1164,7 +1362,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/工具集/" itemprop="url" rel="index"><span itemprop="name">工具集</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Bootstrap/" itemprop="url" rel="index"><span itemprop="name">Bootstrap</span></a></span>
 
                 
                 
@@ -1190,7 +1388,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">898</span>
+                <span title="本文字数">964</span>
               
 
               
@@ -1225,215 +1423,15 @@
 
       
         
-          <div class="note primary">
-            <p><font size="6.5" color="DeepPink">Get that Linux feeling - on Windows</font><br>运行于Windows系统上可以运行Linux命令的shell。</p>
-          </div>
-<p><img src="/images/article_cygwin.png" alt></p>
-<span class="label warning">Linux</span> <span class="label info">SHELL</span> <span class="label primary">Windows</span>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/articles/28873/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <!-- 版权声明 -->
-    <div>
-     
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://pygo2.top/articles/55299/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="mingliang.gao">
-      <meta itemprop="description" content="<font size=" 5" color="#FF4500">直男<br><font size="4.5" color="#FF8C00">双鱼座</font><br><font size="3" color="#000000">Python开发工程师</font>"/>
-      <meta itemprop="image" content="/images/timg.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="PyGo²">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/articles/55299/" class="post-title-link" itemprop="url">DB2存储过程备份</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-
-          
-
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">创建时间：</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2021-04-20 23:34:08" itemprop="dateCreated datePublished" datetime="2021-04-20T23:34:08+08:00">2021-04-20</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/数据库/" itemprop="url" rel="index"><span itemprop="name">数据库</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">本文字数：</span>
-                
-                <span title="本文字数">1k</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">1 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><img src="/images/article_db2.jpg" alt></p>
+          <p><img src="/images/article_bootstrap.jpeg" alt></p>
 <div class="note primary">
-            <p>基于Windows系统的db2自动化存储过程备份，每天一次，这样再也不用担心存储过程修改之后不能复原的问题了。<br>主要使用到了routine这个命令。</p>
+            <p>Bootstrap图标使用的是Font Awesome，加上基本的class可以产生动画效果，让页面看起来更加酷炫。</p>
           </div>
-<span class="label primary">DB2</span> <span class="label default">存储过程</span> <span class="label danger">自动备份</span>
+<span class="label primary">Bootstrap</span> <span class="label info">icon</span>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/articles/55299/#more" rel="contents">
+              <a class="btn" href="/articles/63837/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1498,7 +1496,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://pygo2.top/articles/22710/">
+    <link itemprop="mainEntityOfPage" href="http://pygo2.top/articles/35460/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="mingliang.gao">
@@ -1518,7 +1516,7 @@
           <h2 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/articles/22710/" class="post-title-link" itemprop="url">Rsync命令参数详解</a>
+                <a href="/articles/35460/" class="post-title-link" itemprop="url">JAVA的Error:loading:xxxx\jvm.dll问题解决</a>
               
             
           </h2>
@@ -1546,25 +1544,9 @@
                 
               
 
-              <time title="创建时间：2021-04-12 20:42:53" itemprop="dateCreated datePublished" datetime="2021-04-12T20:42:53+08:00">2021-04-12</time>
+              <time title="创建时间：2021-07-18 11:22:52" itemprop="dateCreated datePublished" datetime="2021-07-18T11:22:52+08:00">2021-07-18</time>
             
 
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新时间：</span>
-                
-                <time title="修改时间：2021-04-20 20:42:53" itemprop="dateModified" datetime="2021-04-20T20:42:53+08:00">2021-04-20</time>
-              
             
           </span>
 
@@ -1580,7 +1562,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/工具集/" itemprop="url" rel="index"><span itemprop="name">工具集</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span>
 
                 
                 
@@ -1606,7 +1588,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">11k</span>
+                <span title="本文字数">443</span>
               
 
               
@@ -1620,7 +1602,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">10 分钟</span>
+                <span title="阅读时长">1 分钟</span>
               
             </div>
           
@@ -1641,14 +1623,15 @@
 
       
         
-          <div class="note primary">
-            <p>记录一下rsync命令的参数。</p>
-          </div>
-<span class="label info">RSYNC</span>
+          <blockquote>
+<p>问题描述：</p>
+</blockquote>
+<p><img src="/images/article_javaerrror.jpg" alt></p>
+<p>在服务器执行java环境的时候，发现报以上的错误：<font color="red" size="5"><strong><em>Error: loading: xxxx\jvm.dll</em></strong></font>，记得在服务器坏之前还是好的，修复了之后就变成这样了，不管咋样，修复好才是王道。</p>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/articles/22710/#more" rel="contents">
+              <a class="btn" href="/articles/35460/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1713,7 +1696,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://pygo2.top/articles/11384/">
+    <link itemprop="mainEntityOfPage" href="http://pygo2.top/articles/555/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="mingliang.gao">
@@ -1733,7 +1716,7 @@
           <h2 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/articles/11384/" class="post-title-link" itemprop="url">Rsync安装与配置</a>
+                <a href="/articles/555/" class="post-title-link" itemprop="url">Windows系统服务器之间的大文件互传</a>
               
             
           </h2>
@@ -1761,207 +1744,7 @@
                 
               
 
-              <time title="创建时间：2021-04-08 21:24:12" itemprop="dateCreated datePublished" datetime="2021-04-08T21:24:12+08:00">2021-04-08</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/工具集/" itemprop="url" rel="index"><span itemprop="name">工具集</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">本文字数：</span>
-                
-                <span title="本文字数">4.6k</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">4 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <div class="note primary">
-            <p>项目上有需要对服务器之间的数据进行同步备份需求，想到了之前在Qunar使用过的开源同步软件RSYNC，这里做个简单的基础使用说明，主要是安装与配置。</p>
-          </div>
-<p><img src="/images/article_rsync.jpeg" alt></p>
-<span class="label primary">RSYNC</span> <span class="label default">数据同步</span> <span class="label danger">服务器</span>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/articles/11384/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <!-- 版权声明 -->
-    <div>
-     
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://pygo2.top/articles/36343/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="mingliang.gao">
-      <meta itemprop="description" content="<font size=" 5" color="#FF4500">直男<br><font size="4.5" color="#FF8C00">双鱼座</font><br><font size="3" color="#000000">Python开发工程师</font>"/>
-      <meta itemprop="image" content="/images/timg.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="PyGo²">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/articles/36343/" class="post-title-link" itemprop="url">博客域名切换</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-
-          
-
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">创建时间：</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2021-02-02 22:02:29" itemprop="dateCreated datePublished" datetime="2021-02-02T22:02:29+08:00">2021-02-02</time>
+              <time title="创建时间：2021-07-17 20:53:58" itemprop="dateCreated datePublished" datetime="2021-07-17T20:53:58+08:00">2021-07-17</time>
             
 
             
@@ -1988,22 +1771,6 @@
           
 
           
-            
-            
-              
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-            
-                <span class="post-meta-item-text">评论数：</span>
-                <a href="/articles/36343/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/articles/36343/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
 
           
           
@@ -2021,7 +1788,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">48</span>
+                <span title="本文字数">781</span>
               
 
               
@@ -2056,11 +1823,14 @@
 
       
         
-          <div class="post_cus_note">pygo2.top上线</div>
+          <h4 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h4><div class="note warning">
+            <p>在服务器之间经常有文件要进行传输，而且很多情况都是10G以上的大文件，服务器操作系统主流为Windows、Linux、Unix，今日用到了两台Windows服务器之间进行大文件传输，总结一下，分享出来。</p>
+          </div>
+<span class="label default">服务器</span> <span class="label info">文件传输</span> <span class="label primary">Windows</span>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/articles/36343/#more" rel="contents">
+              <a class="btn" href="/articles/555/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -2125,7 +1895,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://pygo2.top/articles/49218/">
+    <link itemprop="mainEntityOfPage" href="http://pygo2.top/articles/34462/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="mingliang.gao">
@@ -2145,7 +1915,7 @@
           <h2 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/articles/49218/" class="post-title-link" itemprop="url">MacOS配置svn免账号密码</a>
+                <a href="/articles/34462/" class="post-title-link" itemprop="url">DB2报错：SQLCODE=-668, SQLSTATE=57016</a>
               
             
           </h2>
@@ -2173,7 +1943,7 @@
                 
               
 
-              <time title="创建时间：2021-02-01 14:08:55" itemprop="dateCreated datePublished" datetime="2021-02-01T14:08:55+08:00">2021-02-01</time>
+              <time title="创建时间：2021-07-14 20:55:15" itemprop="dateCreated datePublished" datetime="2021-07-14T20:55:15+08:00">2021-07-14</time>
             
 
             
@@ -2191,7 +1961,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/工具集/" itemprop="url" rel="index"><span itemprop="name">工具集</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/数据库/" itemprop="url" rel="index"><span itemprop="name">数据库</span></a></span>
 
                 
                 
@@ -2217,7 +1987,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">186</span>
+                <span title="本文字数">629</span>
               
 
               
@@ -2252,12 +2022,15 @@
 
       
         
-          <p><img src="/images/article_svn.jpg" alt></p>
-<span class="label primary">SVN</span>
+          <p><img src="/images/article_db2.jpg" alt></p>
+<div class="note primary">
+            <p>今日跑存储过程，很简单的一个存储过程，从来没包错过，居然报错了，提示<font color="red" size="5"><strong><em>SQLCODE：-20244</em></strong></font>，网上查资料发现没有这个<strong><em>SQLCODE</em></strong>，于是一个表一个表的<strong><em>SELECT</em></strong>，发现其中有个表报错：SQLCODE=-668, SQLSTATE=57016</p>
+          </div>
+<span class="label info">DB2</span> <span class="label default">SQLCODE</span>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/articles/49218/#more" rel="contents">
+              <a class="btn" href="/articles/34462/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -2322,7 +2095,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://pygo2.top/articles/32287/">
+    <link itemprop="mainEntityOfPage" href="http://pygo2.top/articles/28829/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="mingliang.gao">
@@ -2342,7 +2115,7 @@
           <h2 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/articles/32287/" class="post-title-link" itemprop="url">CkEditor图片上传到服务端</a>
+                <a href="/articles/28829/" class="post-title-link" itemprop="url">PDF转WORD</a>
               
             
           </h2>
@@ -2370,7 +2143,7 @@
                 
               
 
-              <time title="创建时间：2021-01-30 11:35:27" itemprop="dateCreated datePublished" datetime="2021-01-30T11:35:27+08:00">2021-01-30</time>
+              <time title="创建时间：2021-07-05 00:44:39" itemprop="dateCreated datePublished" datetime="2021-07-05T00:44:39+08:00">2021-07-05</time>
             
 
             
@@ -2388,14 +2161,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/前端应用/" itemprop="url" rel="index"><span itemprop="name">前端应用</span></a></span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/IDE/" itemprop="url" rel="index"><span itemprop="name">IDE</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a></span>
 
                 
                 
@@ -2421,7 +2187,206 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1.4k</span>
+                <span title="本文字数">5.7k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">5 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><div class="note default">
+            <p>利用业余时间参加了公司的创新项目活动，里面有一个PDF转WORD的功能，分享出来。主要使用了python3版本的pdf2docx包，包的使用也很简单，基于基础功能写写逻辑、封装下页面就可以做出web功能了。</p>
+          </div>
+<span class="label info">Python实战</span> <span class="label default">PDF转WORD</span>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/articles/28829/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <!-- 版权声明 -->
+    <div>
+     
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://pygo2.top/articles/64746/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="mingliang.gao">
+      <meta itemprop="description" content="<font size=" 5" color="#FF4500">直男<br><font size="4.5" color="#FF8C00">双鱼座</font><br><font size="3" color="#000000">Python开发工程师</font>"/>
+      <meta itemprop="image" content="/images/timg.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="PyGo²">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/articles/64746/" class="post-title-link" itemprop="url">Centos7安装python3</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+
+          
+
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">创建时间：</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2021-06-26 22:00:33" itemprop="dateCreated datePublished" datetime="2021-06-26T22:00:33+08:00">2021-06-26</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">747</span>
               
 
               
@@ -2456,12 +2421,14 @@
 
       
         
-          <blockquote class="blockquote-center"><font size="5.5" color="red">CKEditor系列教程（三）</font></blockquote>
-<span class="label primary">CKEditor</span> <span class="label warning">前端应用</span>
+          <p><img src="/images/article_python3.jpeg" alt></p>
+<h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><div class="note primary">
+            <p>python2已经不维护更新了，不管是DEV开发、还是服务器运行环境，python3推广是迟早的事，学习一下在Centos7系统上安装python3。</p>
+          </div>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/articles/32287/#more" rel="contents">
+              <a class="btn" href="/articles/64746/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -2515,7 +2482,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/6/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/20/">20</a><a class="extend next" rel="next" href="/page/8/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/6/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/22/">22</a><a class="extend next" rel="next" href="/page/8/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -2559,7 +2526,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">198</span>
+                    <span class="site-state-item-count">212</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -2640,7 +2607,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">31</span>
+                      
+                    
+                    <span class="site-state-item-count">32</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -2847,7 +2816,17 @@
                     
                       
                     
-                    <span class="site-state-item-count">94</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">99</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -2940,7 +2919,7 @@
     <h4 class="widget-title" style="font-size:21px;text-align:center;color:#0080FF;margin:20px 0px 0px;">Tag Cloud</h4>
     <div id="myCanvasContainer" class="widget tagcloud" style="font-size:18px;">
         <canvas width="220" height="200" id="resCanvas" style="width=100%">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ADB/">ADB</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/API/">API</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ArcGIS/">ArcGIS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Atom/">Atom</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bootstrap/">Bootstrap</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CkEditor/">CkEditor</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Conda/">Conda</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Crontab/">Crontab</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DB2/">DB2</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DNS/">DNS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DingTalk/">DingTalk</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ERROR集/">ERROR集</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Element-UI/">Element-UI</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Excel/">Excel</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Flask/">Flask</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/FreeFileSync/">FreeFileSync</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Github/">Github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/">HTML</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hadoop/">Hadoop</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hashcat/">Hashcat</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">31</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo插件/">Hexo插件</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo美化/">Hexo美化</a><span class="tag-list-count">14</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IDE/">IDE</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JSON/">JSON</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/">Javascript</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LDAP/">LDAP</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Libreoffice/">Libreoffice</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a><span class="tag-list-count">24</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux其他篇/">Linux其他篇</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux基础篇/">Linux基础篇</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux增强篇/">Linux增强篇</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux番外篇/">Linux番外篇</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MacOS/">MacOS</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mysql/">Mysql</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nginx/">Nginx</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Oracle/">Oracle</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PIP/">PIP</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Postgresql/">Postgresql</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">33</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python包/">Python包</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python基础篇/">Python基础篇</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python实战/">Python实战</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python程序篇/">Python程序篇</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Rsync/">Rsync</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SSH/">SSH</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Shell/">Shell</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/">Ubuntu</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VIM/">VIM</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VUE/">VUE</a><span class="tag-list-count">15</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WIKI/">WIKI</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Windows/">Windows</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/brew/">brew</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/etherpad/">etherpad</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ffmpeg/">ffmpeg</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gitea/">gitea</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/seo优化/">seo优化</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/svn/">svn</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vant/">vant</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/中国节/">中国节</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端其他分类/">前端其他分类</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端组件/">前端组件</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/办公工具/">办公工具</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/动漫/">动漫</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/协议类/">协议类</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/历史/">历史</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/回忆录/">回忆录</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/国际节/">国际节</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/域名/">域名</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/存储过程/">存储过程</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/富文本编辑器/">富文本编辑器</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/抓娃娃/">抓娃娃</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/文件传输/">文件传输</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/旅行记/">旅行记</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/烧脑剧/">烧脑剧</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/爬虫/">爬虫</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/爬虫系列/">爬虫系列</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/生活/">生活</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/电视剧/">电视剧</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/看图笑话/">看图笑话</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/纯文笑话/">纯文笑话</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/美国大片/">美国大片</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/美食/">美食</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/节日/">节日</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/英语学习/">英语学习</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/西方节/">西方节</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/证书/">证书</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/运维工具/">运维工具</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/音乐/">音乐</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/项目/">项目</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ADB/">ADB</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/API/">API</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ArcGIS/">ArcGIS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Atom/">Atom</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bash/">Bash</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bash脚本系列/">Bash脚本系列</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bootstrap/">Bootstrap</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CkEditor/">CkEditor</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Conda/">Conda</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Crontab/">Crontab</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DB2/">DB2</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DNS/">DNS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DingTalk/">DingTalk</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ERROR集/">ERROR集</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Element-UI/">Element-UI</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Excel/">Excel</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Flask/">Flask</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/FreeFileSync/">FreeFileSync</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Github/">Github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/">HTML</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hadoop/">Hadoop</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hashcat/">Hashcat</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">31</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo插件/">Hexo插件</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo美化/">Hexo美化</a><span class="tag-list-count">14</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IDE/">IDE</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JSON/">JSON</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/">Javascript</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LDAP/">LDAP</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Libreoffice/">Libreoffice</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a><span class="tag-list-count">26</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux其他篇/">Linux其他篇</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux基础篇/">Linux基础篇</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux增强篇/">Linux增强篇</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux番外篇/">Linux番外篇</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MacOS/">MacOS</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mysql/">Mysql</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nginx/">Nginx</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Oracle/">Oracle</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PIP/">PIP</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Postgresql/">Postgresql</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">41</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python包/">Python包</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python基础篇/">Python基础篇</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python实战/">Python实战</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python模块系列/">Python模块系列</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python程序篇/">Python程序篇</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Rsync/">Rsync</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SSH/">SSH</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Shell/">Shell</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tomcat/">Tomcat</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/">Ubuntu</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VIM/">VIM</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VUE/">VUE</a><span class="tag-list-count">15</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WIKI/">WIKI</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Windows/">Windows</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/brew/">brew</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/etherpad/">etherpad</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ffmpeg/">ffmpeg</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gitea/">gitea</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/seo优化/">seo优化</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/svn/">svn</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vant/">vant</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/中国节/">中国节</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端其他分类/">前端其他分类</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端组件/">前端组件</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/办公工具/">办公工具</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/动漫/">动漫</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/协议类/">协议类</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/历史/">历史</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/回忆录/">回忆录</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/国际节/">国际节</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/域名/">域名</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/存储过程/">存储过程</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/富文本编辑器/">富文本编辑器</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/抓娃娃/">抓娃娃</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/文件传输/">文件传输</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/旅行记/">旅行记</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/烧脑剧/">烧脑剧</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/爬虫/">爬虫</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/爬虫系列/">爬虫系列</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/生活/">生活</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/电视剧/">电视剧</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/看图笑话/">看图笑话</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/纯文笑话/">纯文笑话</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/美国大片/">美国大片</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/美食/">美食</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/节日/">节日</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/英语学习/">英语学习</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/西方节/">西方节</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/证书/">证书</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/运维工具/">运维工具</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/部署教程系列/">部署教程系列</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/音乐/">音乐</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/项目/">项目</a><span class="tag-list-count">1</span></li></ul>
         </canvas>
     </div>
 </div>
@@ -2976,7 +2955,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">549k</span>
+    <span title="站点总字数">649k</span>
   
 
   
@@ -2985,7 +2964,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">8:19</span>
+    <span title="站点阅读时长">9:50</span>
   
 </div>
 
