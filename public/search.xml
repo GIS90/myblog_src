@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[前端栅格布局xs sm md lg xl详解]]></title>
+    <url>%2Farticles%2F6149%2F</url>
+    <content type="text"><![CDATA[在写VUE的时候用到了Layout布局组件，el-col里面有多个属性是控制大小的，一直都是搞后台的，css基本是小白，查阅资料记录一下学习的内容。 前端 看下官网实例，响应式设计：123456&lt;el-row :gutter=&quot;10&quot;&gt; &lt;el-col :xs=&quot;8&quot; :sm=&quot;6&quot; :md=&quot;4&quot; :lg=&quot;3&quot; :xl=&quot;1&quot;&gt;&lt;div class=&quot;grid-content bg-purple&quot;&gt;&lt;/div&gt;&lt;/el-col&gt; &lt;el-col :xs=&quot;4&quot; :sm=&quot;6&quot; :md=&quot;8&quot; :lg=&quot;9&quot; :xl=&quot;11&quot;&gt;&lt;div class=&quot;grid-content bg-purple-light&quot;&gt;&lt;/div&gt;&lt;/el-col&gt; &lt;el-col :xs=&quot;4&quot; :sm=&quot;6&quot; :md=&quot;8&quot; :lg=&quot;9&quot; :xl=&quot;11&quot;&gt;&lt;div class=&quot;grid-content bg-purple&quot;&gt;&lt;/div&gt;&lt;/el-col&gt; &lt;el-col :xs=&quot;8&quot; :sm=&quot;6&quot; :md=&quot;4&quot; :lg=&quot;3&quot; :xl=&quot;1&quot;&gt;&lt;div class=&quot;grid-content bg-purple-light&quot;&gt;&lt;/div&gt;&lt;/el-col&gt;&lt;/el-row&gt; 里面包含了xs sm md lg xl属性来控制宽度，对这几个值进行详解： xl【extra large】：屏幕 &gt;= 1920px，超大显示器 lg【large】：1200px &lt;= 屏幕 &lt;= 1920px，台式1920*1080显示器 md【middle】：992px&lt;= 屏幕 &lt;= 1200px，适合笔记本 sm【small】：768px &lt;= 屏幕 &lt;= 992px，适合平板 xs【extra small】：屏幕&lt;=768，手机端屏幕 优点 如果屏幕的大小发生改变，系统会根据设置的大小进行分别显示，感觉挺好用的。 测试 正常分辨率 更改分辨率]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>HTML</tag>
+        <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Bash脚本之自动解压zip]]></title>
     <url>%2Farticles%2F42651%2F</url>
     <content type="text"><![CDATA[Bash Bash脚本系列 Bash脚本系列 记录日常服务器运维用到的Bash脚本。 简介每天新接收新的zip文件，并且zip文件压缩的时候是直接集成了文件，没有把文件放在一个目录里面在进行压缩。 源码12345678910111213141516#!/usr/bin/bashLDIR=/home/mingliang.gao/newdircd $LDIRfiles=$(ls | grep &quot;.zip&quot;)for file in $filesdo echo $file NAME=`echo &quot;$file&quot; | cut -d&apos;.&apos; -f1` #EXTENSION=`echo &quot;$file&quot; | cut -d&apos;.&apos; -f2` if [ ! -e &quot;$&#123;NAME&#125;&quot; ]; then unzip $&#123;LDIR&#125;/$&#123;file&#125; -d $&#123;LDIR&#125;/$&#123;NAME&#125; fidone 配置LDIR：*.zip文件所在的目录 系列其他Bash系列请点击tag标签进行查看。 Bash脚本系列，持续更新中。。。。。。]]></content>
@@ -12,6 +24,17 @@
         <tag>Linux</tag>
         <tag>Bash</tag>
         <tag>Bash脚本系列</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Oracle手工导入dat数据]]></title>
+    <url>%2Farticles%2F30542%2F</url>
+    <content type="text"><![CDATA[最近开始搞Oracle数据库，看存储过程学习了一下Oracle怎么导入dat数据的，这里记录一下，方便日后查询使用。 Oracle sqlplus sqlldr SQL语句 第一步：生成ctl文件 1/u01/app/oracle/product/11.2.0/dbhome_1/bin/sqlplus pas/pas @/home/oracle/pas_control/control.sql T01_CPCT_BSC_INF_FILE_H T01_CPCT_BSC_INF_FILE_H.dat /data/gtp/20220830/ /u01/app/oracle/product/11.2.0/dbhome_1/bin/sqlplus：为sqlplus命令的绝对路径，根据环境不同进行更改 pas/pas：账户/密码 @/home/oracle/pas_control/control.sql：下面会有control.sql文件详解，这里也是绝对路径 T01_CPCT_BSC_INF_FILE_H：表名，control.sql文件会用到列举表字段信息 T01_CPCT_BSC_INF_FILE_H.dat：dat文件名称 /data/gtp/20220830/：dat数据存放的绝对路径 第二步：根据生成的ctl导入数据 1/u01/app/oracle/product/11.2.0/dbhome_1/bin/sqlldr userid=pas/pas control=/data/gtp/20220830/T01_CPCT_BSC_INF_FILE_H.ctl log=/data/gtp/20220830/T01_CPCT_BSC_INF_FILE_H.log direct=true /u01/app/oracle/product/11.2.0/dbhome_1/bin/sqlldr：sqlldr命令的绝对路径 userid=pas/pas：账户/密码 control=/data/gtp/20220830/T01_CPCT_BSC_INF_FILE_H.ctl：执行第一步sqlplus会生成新的ctl文件，存放的导入命令 log=/data/gtp/20220830/T01_CPCT_BSC_INF_FILE_H.log：导入日志 direct=true：是否为直接路径 sqlldr是Oracle数据加载工具，还有bad、data、discard、skip等很多参数，详细查看man命令或者官网。 control.sql目的产生新的ctl文件，导入数据时候使用。 12345678910111213141516171819202122232425262728293031323334353637383940414243set echo offset heading offset verify offset feedback offset show offset trim offset pages 0set concat onset lines 300set trimspool onset trimout onspool &amp;3&amp;1..ctlselect &apos;LOAD DATA&apos;||chr (10)|| &apos;CHARACTERSET ZHS16GBK&apos;||chr (10)|| &apos;INFILE &apos;&apos;&amp;3&amp;2&apos;&apos;&apos;||chr (10)|| &apos;APPEND INTO TABLE &apos;||table_name||chr (10)|| &apos;FIELDS TERMINATED BY &quot;&quot; optionally enclosed by &apos;&apos;&quot;&apos;&apos;&apos;||chr (10)|| &apos;TRAILING NULLCOLS&apos;||chr (10)||&apos;(&apos;from USER_TABLESwhere table_name = upper (&apos;&amp;1&apos;);select decode (column_id, 1, &apos; &apos;, &apos; , &apos;)|| rpad (column_name, 33, &apos; &apos;)|| decode (data_type, &apos;VARCHAR2&apos;, &apos;CHAR(2000) NULLIF (&apos;||column_name||&apos;=BLANKS)&apos;, &apos;FLOAT&apos;, &apos;DECIMAL EXTERNAL NULLIF(&apos;||column_name||&apos;=BLANKS)&apos;, &apos;NUMBER&apos;, decode (data_precision, 0, &apos;INTEGER EXTERNAL NULLIF (&apos;||column_name|| &apos;=BLANKS)&apos;, decode (data_scale, 0, &apos;INTEGER EXTERNAL NULLIF (&apos;|| column_name||&apos;=BLANKS)&apos;, &apos;DECIMAL EXTERNAL NULLIF (&apos;|| column_name||&apos;=BLANKS)&apos;)), &apos;DATE&apos;, &apos;DATE &quot;MM/DD/YY&quot; NULLIF (&apos;||column_name||&apos;=BLANKS)&apos;, null)from user_tab_columnswhere table_name = upper (&apos;&amp;1&apos;)order by column_id;select &apos;)&apos;from sys.dual;spool offexit]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>Oracle</tag>
       </tags>
   </entry>
   <entry>
