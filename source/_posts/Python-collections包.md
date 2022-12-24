@@ -25,7 +25,7 @@ keywords: Python, Collections
 
 - OrderedDict：有序dict
 - deque：队列
-- ChainMap：
+- ChainMap：链式MAP
 - defaultdict：自带默认值的dict
 - Counter：计数器
 

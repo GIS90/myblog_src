@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://pygo2.top/"/>
-  <updated>2022-10-08T15:12:19.000Z</updated>
+  <updated>2022-12-24T04:58:49.000Z</updated>
   <id>http://pygo2.top/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>VUE富文本编辑器学习</title>
+    <link href="http://pygo2.top/articles/8950/"/>
+    <id>http://pygo2.top/articles/8950/</id>
+    <published>2022-12-24T04:58:49.000Z</published>
+    <updated>2022-12-24T04:58:49.000Z</updated>
+    
+    <content type="html"><![CDATA[<span class="label primary">VUE</span> <span class="label info">富文本编辑器</span><h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><div class="note primary">            <p>最近的OpenTool平台集成了SQLBase功能，大致就是采集日常用的SQL语句，供使用的人参考，所以在富文本这搜索一下，自己使用的是wangeditor（国产）。</p>          </div><p><img src="/images/article_vue.jpeg" alt></p><a id="more"></a><hr><h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p>下面2个文章是</p><ul><li>11款vue富文本编辑器推荐：<a href="https://www.geekku.com/spec/vue/1574.html" target="_blank" rel="noopener">https://www.geekku.com/spec/vue/1574.html</a></li><li>最好用的8款Vue富文本编辑器测评与推荐：<a href="https://kalacloud.com/blog/vue-richtext-editor/" target="_blank" rel="noopener">https://kalacloud.com/blog/vue-richtext-editor/</a></li></ul><h3 id="学习"><a href="#学习" class="headerlink" title="学习"></a>学习</h3><p>国内外有很多VUE富文本组件，有TinyMCE、CKEditor5等等，太多了，在本次开发中我使用的wangeditor，是一位国内友人开源的一款富文本，总体来说文档、使用还是很方便的。</p><p>官网：<a href="https://www.wangeditor.com/" target="_blank" rel="noopener">https://www.wangeditor.com/</a></p><p>具体的代码、ISSUE、API都有很详细的说明，而且还支持二次开发。</p><font size="5.5" color="red"><strong><em>坚持每天学习。。。。。。</em></strong></font>]]></content>
+    
+    <summary type="html">
+    
+      &lt;span class=&quot;label primary&quot;&gt;VUE&lt;/span&gt; &lt;span class=&quot;label info&quot;&gt;富文本编辑器&lt;/span&gt;
+&lt;h3 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h3&gt;&lt;div class=&quot;note primary&quot;&gt;
+            &lt;p&gt;最近的OpenTool平台集成了SQLBase功能，大致就是采集日常用的SQL语句，供使用的人参考，所以在富文本这搜索一下，自己使用的是wangeditor（国产）。&lt;/p&gt;
+          &lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/images/article_vue.jpeg&quot; alt&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="http://pygo2.top/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="VUE" scheme="http://pygo2.top/tags/VUE/"/>
+    
+  </entry>
   
   <entry>
     <title>前端栅格布局xs sm md lg xl详解</title>
@@ -447,9 +473,9 @@
     
       <category term="部署教程系列" scheme="http://pygo2.top/tags/%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B%E7%B3%BB%E5%88%97/"/>
     
-      <category term="Java" scheme="http://pygo2.top/tags/Java/"/>
-    
       <category term="Linux" scheme="http://pygo2.top/tags/Linux/"/>
+    
+      <category term="Java" scheme="http://pygo2.top/tags/Java/"/>
     
   </entry>
   
@@ -515,32 +541,6 @@
     
     </summary>
     
-    
-  </entry>
-  
-  <entry>
-    <title>DB2数据库备份记录查询</title>
-    <link href="http://pygo2.top/articles/64563/"/>
-    <id>http://pygo2.top/articles/64563/</id>
-    <published>2022-06-17T13:05:52.000Z</published>
-    <updated>2022-06-17T13:05:52.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="/images/article_db2.jpg" alt></p><div class="note primary">            <p>有一天手动备份数据库，想看下数据库备份时间，于是找到了<strong><em>db2 list history backup all for 数据库</em></strong>命令。</p>          </div><span class="label primary">DB2</span> <span class="label danger">backup</span><a id="more"></a><hr><p>直接DB2CMD执行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">db2 connect to 数据库 user pas using pas</span><br><span class="line">db2 list history backup all for 数据库</span><br></pre></td></tr></table></figure></p><p>结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">Op Obj Timestamp+Sequence Type Dev Earliest Log Current Log  Backup ID</span><br><span class="line"> -- --- ------------------ ---- --- ------------ ------------ --------------</span><br><span class="line">  B  D  20220802175839001   F    D  S0000000.LOG S0000000.LOG</span><br><span class="line"> ----------------------------------------------------------------------------</span><br><span class="line">  Contains 9 tablespace(s):</span><br><span class="line"></span><br><span class="line"> 00001 SYSCATSPACE</span><br><span class="line"> 00002 TBS_MXZ</span><br><span class="line"> 00003 SYSTOOLSPACE</span><br><span class="line"> 00004 TBS_PAS</span><br><span class="line"> 00005 TBS_JKSJ</span><br><span class="line"> 00006 TBS_JXDX</span><br><span class="line"> 00007 TBS_NBZZ</span><br><span class="line"> 00008 TBS_IDX</span><br><span class="line"> 00009 TBS_LSB</span><br><span class="line"> ----------------------------------------------------------------------------</span><br><span class="line">    Comment: DB2 BACKUP YKSPAS3 OFFLINE</span><br><span class="line"> Start Time: 20220802175839</span><br><span class="line">   End Time: 20220802231447</span><br><span class="line">     Status: A</span><br><span class="line"> ----------------------------------------------------------------------------</span><br><span class="line">  EID: 48531 Location: /home/db2inst1/SNPAS/PAS_BACKUP/PAS_BACKUP20220731</span><br></pre></td></tr></table></figure></p><ul><li>Start Time: 开始时间</li><li>End Time: 结束时间</li></ul><div class="post_cus_note">拓展</div><p>查看数据库备份是否可用：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db2ckbkp -h /home/db2inst1/SNPAS/PAS_BACKUP/PAS_BACKUP20220731</span><br></pre></td></tr></table></figure></p><p>-h 后面是数据库备份文件，如果是可用的备份文件最后会有successful。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;/images/article_db2.jpg&quot; alt&gt;&lt;/p&gt;
-&lt;div class=&quot;note primary&quot;&gt;
-            &lt;p&gt;有一天手动备份数据库，想看下数据库备份时间，于是找到了&lt;strong&gt;&lt;em&gt;db2 list history backup all for 数据库&lt;/em&gt;&lt;/strong&gt;命令。&lt;/p&gt;
-          &lt;/div&gt;
-&lt;span class=&quot;label primary&quot;&gt;DB2&lt;/span&gt; &lt;span class=&quot;label danger&quot;&gt;backup&lt;/span&gt;
-    
-    </summary>
-    
-      <category term="数据库" scheme="http://pygo2.top/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-    
-      <category term="DB2" scheme="http://pygo2.top/tags/DB2/"/>
     
   </entry>
   

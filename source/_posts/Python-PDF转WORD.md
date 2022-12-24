@@ -66,6 +66,8 @@ c.close()
 
 > 官网
 
+https://www.libreoffice.org/
+
 > 代码
 
 ```
@@ -97,6 +99,8 @@ https://pypdf2.readthedocs.io/en/latest/
 
 > 官网
 
+https://www.unixuser.org/~euske/python/pdfminer/programming.html
+
 > 代码
 
 ```
@@ -108,3 +112,5 @@ https://pypdf2.readthedocs.io/en/latest/
 
 
 ### 结束语
+
+<font size=5.5 color='red'>***坚持每天学习。。。。。。***</font>
