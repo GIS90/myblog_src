@@ -7,7 +7,7 @@ type: about
 ---
 > #### 个人简述
 
-1991，网名<font color=#D35400 size=7 face="黑体">***PyGo²***</font>(人一定要2一点)，曾任职去哪儿网python开发工程师。
+<font color=#D35400 size=7 face="黑体">***PyGo²***</font>(人一定要2一点)，曾任职去哪儿网python开发工程师。
 
 > #### MyLove
 
@@ -129,6 +129,7 @@ type: about
 * ***Email:*** gaoming971366@163.com
 
 * ***Weibo:*** https://weibo.com/u/1989571513
+* ***OpenTool:*** https://2l.pygo2.top
 
 > #### 简历下载
 
