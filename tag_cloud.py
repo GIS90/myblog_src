@@ -87,7 +87,7 @@ class TagCloudGenerator(object):
                 continue
 
             tags = self.get_index_tags(index_file)
-            print index_file
+            print(index_file)
             all_tags.extend(tags) if tags else None
         else:
             return all_tags

@@ -1,5 +1,5 @@
 ---
-title: DB-Oracle密码过期的处理
+title: Oracle密码过期的处理
 comments: false
 categories:
   - [数据库]

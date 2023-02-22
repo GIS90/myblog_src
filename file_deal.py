@@ -53,7 +53,7 @@ def main():
     cur_dir = get_cur_dir()
     l = len(file_mapping)
     start = 1
-    for k, v in file_mapping.iteritems():
+    for k, v in file_mapping.items():
         if not k or not v:
             continue
         src_dir = os.path.join(cur_dir, BASE_DIR_NAME, v)
@@ -64,9 +64,9 @@ def main():
                         tar_dir,
                         ignore=ignore_patterns('*.pyc', 'tmp*'))
         partion = start * 100 / l
-        print "\r"
+        # print("\r")
         LOG.info('======> % s' % k)
-        a = "#" * partion + " " * (100-partion) + "["+str(partion) + "%"+"]"
+        a = "#" * int(partion) + " " * (100-int(partion)) + "["+str(partion) + "%"+"]"
         sys.stdout.write("\r%s" % a)
         sys.stdout.flush()
         time.sleep(0.8)
@@ -74,10 +74,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
-
-
-
-
-

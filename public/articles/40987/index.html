@@ -1,0 +1,2205 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta name="google-site-verification" content="nOQH_Lr6zdiXCxCLRslnRmrnULAd7XsMJc-3MQo0iMI">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="baidu-site-verification" content="3T5rDqaWUL">
+<meta name="baidu-site-verification" content="1hLVI7jmus">
+
+<!-- title、keywords、desc关键字 -->
+
+  <title>Hi</title>
+  <meta name="title" content="Hi">
+
+
+  <meta name="keywords" content="Python, Linux, Hexo, 技术, 影视说, 娱乐, 旅行记, 博客, 代码, 生活, 人生, 分享">
+
+
+
+
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link rel="stylesheet" href="/lib/pace/pace-theme-center-atom.min.css?v=1.0.2">
+
+
+
+
+
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="google-site-verification" content="nOQH_Lr6zdiXCxCLRslnRmrnULAd7XsMJc-3MQo0iMI">
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link rel="stylesheet" href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.0.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon32.ico?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon16.ico?v=7.0.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.0.1" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.0.1',
+    sidebar: {"position":"left","display":"post","offset":30,"onmobile":true,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: true,
+    fastclick: false,
+    lazyload: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"flipXIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"fadeIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+<div id="blog_header" class="blog_header">
+    <marquee>Enjoy the good life everyday！</marquee>
+</div>
+
+<div id="float_box" class="float_box" align="middle" onmouseover="window.clearInterval(interval)" onmouseout="interval = window.setInterval('changePos()', delay)">
+    <div class="float_box_close" onclick="closeBox()">
+        关闭
+
+    </div>
+    <div id="float_box_content" class="float_box_content">
+        <marquee class="float_box_content_text" direction="right">欢迎来PyGo个人空间 ^_^</marquee>
+        <!--
+        <br><img src="/images/card.jpg" class="float_box_content_img">
+        -->
+    </div>
+</div>
+
+
+  <meta name="description" content="Redhat7.4服务器安装Oracle11g数据库，详细实践版本。  Oracle 数据库">
+<meta name="keywords" content="Oracle, 安装">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Oracle数据库Redhat7.4部署安装">
+<meta property="og:url" content="http://pygo2.top/articles/40987/index.html">
+<meta property="og:site_name" content="PyGo²">
+<meta property="og:description" content="Redhat7.4服务器安装Oracle11g数据库，详细实践版本。  Oracle 数据库">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://pygo2.top/images/article_oracle_1.jpeg">
+<meta property="og:image" content="http://pygo2.top/articles/40987/331662561426_.pic.jpg">
+<meta property="og:image" content="http://pygo2.top/articles/40987/341662561512_.pic.jpg">
+<meta property="og:image" content="http://pygo2.top/articles/40987/351662561646_.pic.jpg">
+<meta property="og:image" content="http://pygo2.top/articles/40987/361662561936_.pic.jpg">
+<meta property="og:image" content="http://pygo2.top/articles/40987/371662561966_.pic.jpg">
+<meta property="og:image" content="http://pygo2.top/articles/40987/381662562021_.pic.jpg">
+<meta property="og:image" content="http://pygo2.top/articles/40987/391662562045_.pic.jpg">
+<meta property="og:image" content="http://pygo2.top/articles/40987/401662562189_.pic.jpg">
+<meta property="og:image" content="http://pygo2.top/articles/40987/411662562292_.pic.jpg">
+<meta property="og:image" content="http://pygo2.top/articles/40987/dbca.png">
+<meta property="og:image" content="http://pygo2.top/articles/40987/SNPAS.png">
+<meta property="og:image" content="http://pygo2.top/articles/40987/421662562514_.pic.jpg">
+<meta property="og:image" content="http://pygo2.top/articles/40987/431662562733_.pic.jpg">
+<meta property="og:image" content="http://pygo2.top/articles/40987/441662562761_.pic.jpg">
+<meta property="og:image" content="http://pygo2.top/articles/40987/451662562766_.pic.jpg">
+<meta property="og:updated_time" content="2022-08-03T14:21:53.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Oracle数据库Redhat7.4部署安装">
+<meta name="twitter:description" content="Redhat7.4服务器安装Oracle11g数据库，详细实践版本。  Oracle 数据库">
+<meta name="twitter:image" content="http://pygo2.top/images/article_oracle_1.jpeg">
+
+
+
+
+
+
+  <link rel="canonical" href="http://pygo2.top/articles/40987/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Oracle数据库Redhat7.4部署安装 | PyGo²</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <!-- 头部github设置-->
+    <a target="_blank" href="https://github.com/GIS90" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta" style="background: #3385ff;">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title" style="font-family: Monospace; font-size:35px;">
+            PyGo²
+        </span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <h1 class="site-subtitle" itemprop="description" style="color:black;font-size:18px;font-family: Monospace;">
+            一个爱<font size="5" color="#BF0060">老婆</font>的<font size="5" color="#FF4500">Python</font>程序猿。。。。。。
+        </h1>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/index.html" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-history"></i> <br>时间轴</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-list"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-movie">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/影视说/" rel="section"><i class="menu-item-icon fa fa-fw fa-film"></i> <br>影视说</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-photo">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/photo/" rel="section"><i class="menu-item-icon fa fa-fw fa-camera"></i> <br>相册</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-enjoy">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/娱乐/" rel="section"><i class="menu-item-icon fa fa-fw fa-battery-full"></i> <br>娱乐</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-messagepad">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/messagepad/" rel="section"><i class="menu-item-icon fa fa-fw fa-sticky-note"></i> <br>留言板</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于我</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="没有你搜不到的，只有你想不到的。。。。。。" spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+<button id="theme_change" class="theme_change" type="button" onclick="theme_change()">
+    暗黑系
+</button>
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://pygo2.top/articles/40987/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="mingliang.gao">
+      <meta itemprop="description" content="<font size=" 5" color="#FF4500">直男<br><font size="4.5" color="#FF8C00">双鱼座</font><br><font size="3" color="#000000">Python开发工程师</font>"/>
+      <meta itemprop="image" content="/images/timg.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="PyGo²">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Oracle数据库Redhat7.4部署安装
+
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+
+          
+
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">创建时间：</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2022-08-03 22:21:53" itemprop="dateCreated datePublished" datetime="2022-08-03T22:21:53+08:00">2022-08-03</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/数据库/" itemprop="url" rel="index"><span itemprop="name">数据库</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读量： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">13k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">12 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="/images/article_oracle_1.jpeg" alt></p>
+<blockquote class="blockquote-center"><p>Redhat7.4服务器安装Oracle11g数据库，详细实践版本。</p>
+</blockquote>
+<span class="label primary">Oracle</span> <span class="label info">数据库</span>
+<a id="more"></a>
+<hr>
+
+<h3 id="版本说明"><a href="#版本说明" class="headerlink" title="版本说明"></a>版本说明</h3><table>
+<thead>
+<tr>
+<th style="text-align:center">名称</th>
+<th style="text-align:center">版本</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">服务器系统</td>
+<td style="text-align:center">Redhat7.4</td>
+</tr>
+<tr>
+<td style="text-align:center">Oracle</td>
+<td style="text-align:center">11g Enterprise Edition</td>
+</tr>
+</tbody>
+</table>
+<p>接下来是部署安装的过程，都是重要步骤。<br>
+<div class="post_cus_note">====== 部署开始 ======</div>
+</p>
+<h3 id="Oracle安装"><a href="#Oracle安装" class="headerlink" title="Oracle安装"></a>Oracle安装</h3><h4 id="Oracle用户【root用户】"><a href="#Oracle用户【root用户】" class="headerlink" title="Oracle用户【root用户】"></a>Oracle用户【root用户】</h4><p>对于到手的Linux服务器，Oracle存在自主创建或者已经被创建的情况，分别进行操作说明。</p>
+<blockquote>
+<p>情况一：创建用户</p>
+</blockquote>
+<p>1.创建oracle用户组<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">groupadd oinstall</span><br><span class="line">groupadd dba</span><br></pre></td></tr></table></figure></p>
+<p>2.创建oracle用户<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">seradd oracle -g oinstall -G dba -m  -s /bin/bash</span><br></pre></td></tr></table></figure></p>
+<p>3.设置oracle用户密码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">passwd oracle</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>情况二： Oracle用户已存在</p>
+</blockquote>
+<p>1.创建用户租<br>groupadd oinstall<br>groupadd dba<br>2.修改oracle用户所属组<br>usermod -g oinstall -G dba -s /bin/bash oracle<br>id oracle<br>出现的结果是oracle用户是属于oinstall、dba2个组<br>3.把oracle用户目录重新赋予权限：<br>chown -R oracle:oinstall /home/oracle</p>
+<h4 id="Package安装【root用户】"><a href="#Package安装【root用户】" class="headerlink" title="Package安装【root用户】"></a>Package安装【root用户】</h4><p>安装所必须的包，执行以下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yum install  binutils  elfutils-libelf   elfutils-libelf-devel  gcc-c++   glibc  glibc-common</span><br><span class="line"> glibc-devel  glibc-headers   libaio  libaio-devel   libgcc  libstdc++   libstdc++-devel    make</span><br><span class="line"> sysstat  unixODBC  unixODBC-devel</span><br></pre></td></tr></table></figure></p>
+<p>如果服务器没连内网，需要从安装盘安装以上的包。挂截光盘，将系统对应的系统盘插入光驱后，运行以下命令：<br>1.挂载系统盘<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir /mnt/cdrom</span><br><span class="line">mount –t auto –o ro /dev/cdrom /mnt/cdrom</span><br></pre></td></tr></table></figure></p>
+<p>2.配置源文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/yum.repos.d/Server.repo</span><br></pre></td></tr></table></figure></p>
+<p>3.更改配置，在以上文件中输入以下内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[dvd]</span><br><span class="line">Name=localyum</span><br><span class="line">Baseurl=file:///mnt/cdrom</span><br><span class="line">Enabled=1</span><br><span class="line">Gpgcheck=0</span><br></pre></td></tr></table></figure></p>
+<p>保存退出，在进行yum包安装。</p>
+<h4 id="调整OS内核参数【root用户】"><a href="#调整OS内核参数【root用户】" class="headerlink" title="调整OS内核参数【root用户】"></a>调整OS内核参数【root用户】</h4><p>设置原则：<br>kernel.shmmax设为物理内存大小(如果系统已设置了足够大就无需再设置了，参考值为最小需求)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"># vi /etc/sysctl.conf</span><br><span class="line">#------------------------------------------</span><br><span class="line">kernel.shmall = 16777216</span><br><span class="line">kernel.shmmax = 68719476735</span><br><span class="line">kernel.shmmni = 4096</span><br><span class="line">kernel.sem = 500 2048000 500 4096</span><br><span class="line">kernel.randomize_va_space=0</span><br><span class="line">fs.aio-max-nr = 1048576</span><br><span class="line">fs.file-max = 6815744</span><br><span class="line">fs.aio-max-nr = 1048576</span><br><span class="line">net.ipv4.ip_local_port_range = 9000 65500</span><br><span class="line">net.core.rmem_default = 262144</span><br><span class="line">net.core.rmem_max = 4194304</span><br><span class="line">net.core.wmem_default = 262144</span><br><span class="line">net.core.wmem_max = 1048586</span><br><span class="line">#------------------------------------------</span><br></pre></td></tr></table></figure></p>
+<p><img src="331662561426_.pic.jpg" alt></p>
+<p>运行命令使参数立即生效<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sysctl  -p</span><br></pre></td></tr></table></figure></p>
+<h4 id="配置PAM模块文件【root用户】"><a href="#配置PAM模块文件【root用户】" class="headerlink" title="配置PAM模块文件【root用户】"></a>配置PAM模块文件【root用户】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/security/limits.conf</span><br><span class="line">#------------------------------------------</span><br><span class="line">oracle soft nproc 2047</span><br><span class="line">oracle hard nproc 16384</span><br><span class="line">oracle soft nofile 1024</span><br><span class="line">oracle hard nofile 65536</span><br><span class="line">#------------------------------------------</span><br></pre></td></tr></table></figure>
+<p><img src="341662561512_.pic.jpg" alt></p>
+<h4 id="建立必须目录和文件【root用户】"><a href="#建立必须目录和文件【root用户】" class="headerlink" title="建立必须目录和文件【root用户】"></a>建立必须目录和文件【root用户】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir  –p  /u01/app/oracle</span><br><span class="line">chown  -R  oracle:oinstall  /u01/</span><br></pre></td></tr></table></figure>
+<p>建立完之后可以tree以下，如果没有<strong><em>yum tree</em></strong>安装tree命令，用来查看目录树结构，推荐。</p>
+<h4 id="设置oracle用户环境变量【oracle用户】"><a href="#设置oracle用户环境变量【oracle用户】" class="headerlink" title="设置oracle用户环境变量【oracle用户】"></a>设置oracle用户环境变量【oracle用户】</h4><p>如果服务器有多网卡, 注意设置ORACLE_HOSTNAME为某网卡IP对应的主机名, 参照/etc/hosts文件.<br>切换到oracle 用户 编辑.bash_profile文件为以下内容。<br>切换到oracle用户<br>命令：su  -  oracle</p>
+<p>编辑配置文件<br>命令如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">$vim /home/oracle/.bash_profile</span><br><span class="line"># --------------------------------------------------</span><br><span class="line"># oracle config</span><br><span class="line">umask 022</span><br><span class="line">ORACLE_HOSTNAME=VM_176_9_linux</span><br><span class="line">ORACLE_BASE=/u01/app/oracle</span><br><span class="line">ORACLE_HOME=/u01/app/oracle/product/11.2.0/dbhome_1</span><br><span class="line">ORACLE_SID=orcl</span><br><span class="line">LD_LIBRARY_PATH=$ORACLE_HOME/lib</span><br><span class="line">PATH=$PATH:$HOME/bin:$ORACLE_HOME/bin:$ORACLE_HOME/jdk/bin:$LD_LIBRARY_PATH</span><br><span class="line"></span><br><span class="line">export ORACLE_HOME</span><br><span class="line">export ORACLE_SID</span><br><span class="line">export LD_LIBRARY_PATH</span><br><span class="line">export PATH</span><br><span class="line"></span><br><span class="line">LC_ALL=&quot;en_US&quot;</span><br><span class="line">export NLS_LANG=&quot;AMERICAN_AMERICA.ZHS16GBK&quot;</span><br><span class="line">export NLS_DATE_FORMAT=&quot;YYYY-MM-DD HH24:MI:SS&quot;</span><br><span class="line"># --------------------------------------------------</span><br></pre></td></tr></table></figure></p>
+<p>参数说明：</p>
+<ul>
+<li>ORACLE_HOSTNAM：本机名称</li>
+<li>ORACLE_BASE：Oracle安装根目录</li>
+<li>ORACLE_HOME：Oracle软件安装目录</li>
+<li>ORACLE_SID：Oracle SID</li>
+<li>LD_LIBRARY_PATH：Oracle lib包</li>
+<li>NLS_LANG：NLS编码设置，先这么设置，后面有一个拓展 专门说明。</li>
+</ul>
+<p><img src="351662561646_.pic.jpg" alt></p>
+<p>再运行以下命令使配置立即生效。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source /home/oracle/.bash_profile</span><br></pre></td></tr></table></figure></p>
+<h4 id="配置cvu-config文件【oracle用户】"><a href="#配置cvu-config文件【oracle用户】" class="headerlink" title="配置cvu_config文件【oracle用户】"></a>配置cvu_config文件【oracle用户】</h4><p>1.解压Oracle包，进入Oracle解压后目录database/stage/cvu/cv/admin，备份 cvu_config 文件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp cvu_config backup_cvu_config</span><br></pre></td></tr></table></figure></p>
+<p>2.编辑 cvu_config 并且改动以下行内容（添加cvu_config配置信息的时候建议手动输入，复制的时候出现|【不知什么原因】）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CV_ASSUME_DISTID=OEL4 to CV_ASSUME_DISTID=OEL6</span><br></pre></td></tr></table></figure></p>
+<p>3.保存文件。</p>
+<h4 id="配置响应文件【oracle用户】"><a href="#配置响应文件【oracle用户】" class="headerlink" title="配置响应文件【oracle用户】"></a>配置响应文件【oracle用户】</h4><p>在ORACLE安装软件的response目录里有各种响应文件模板，我们需要将配置响应文件的参数以匹配当前环境<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">$ vi /home/oracle/database/response/db_install.rsp</span><br><span class="line"></span><br><span class="line">#--------------------------------------------------------------------</span><br><span class="line"># 注意!不要更改以下参数,否则安装会报错!</span><br><span class="line">oracle.install.responseFileVersion=/oracle/install/rspfmt_dbinstall_response_schema_v11_2_0</span><br><span class="line"></span><br><span class="line">#以下参数根据实际情况更改,ORACLE_HOSTNAME的值由hostname命令获得</span><br><span class="line">oracle.install.option=INSTALL_DB_SWONLY</span><br><span class="line">ORACLE_HOSTNAME=服务器名称</span><br><span class="line">INVENTORY_LOCATION=/u01/app/oracle/oraInventory</span><br><span class="line">UNIX_GROUP_NAME=oinstall</span><br><span class="line">SELECTED_LANGUAGES=en,zh_CN</span><br><span class="line">oracle.install.db.InstallEdition=EE</span><br><span class="line">oracle.install.db.DBA_GROUP=dba</span><br><span class="line">oracle.install.db.OPER_GROUP=dba</span><br><span class="line">DECLINE_SECURITY_UPDATES=true</span><br><span class="line">ORACLE_HOME=/u01/app/oracle/product/11.2.0/dbhome_1</span><br><span class="line">ORACLE_BASE=/u01/app/oracle</span><br><span class="line">#--------------------------------------------------------------------</span><br></pre></td></tr></table></figure></p>
+<p>各参数含义如下:<br>-silent 表示以静默方式安装,不会有任何提示<br>-force 允许安装到一个非空目录<br>-noconfig 表示不运行配置助手netca<br>-responseFile 表示使用哪个响应文件,必需使用绝对路径<br>oracle.install.responseFileVersion 响应文件模板的版本,该参数不要更改<br>oracle.install.option 安装选项,本例只安装oracle软件,<br>DECLINE_SECURITY_UPDATES 是否需要在线安全更新,该参数不要更改<br>ORACLE_HOSTNAME 安装主机名<br>UNIX_GROUP_NAME oracle用户用于安装软件的组名<br>INVENTORY_LOCATION oracle产品清单目录<br>SELECTED_LANGUAGES oracle运行语言环境,一般选en，zh_CN<br>ORACLE_HOME Oracle安装目录<br>ORACLE_BASE oracle基础目录<br>oracle.install.db.InstallEdition 安装版本类型,一般是企业版<br>oracle.install.db.isCustomInstall 是否定制安装,默认Partitioning,OLAP,RAT都选上了<br>oracle.install.db.customComponents 定制安装组件列表:除了以上默认的,可加上Label Security和Database Vault<br>oracle.install.db.DBA_GROUP oracle用户用于授予OSDBA权限的组名<br>oracle.install.db.OPER_GROUP oracle用户用于授予OSOPER权限的组名</p>
+<h4 id="执行安装脚本"><a href="#执行安装脚本" class="headerlink" title="执行安装脚本"></a>执行安装脚本</h4><p>【一定要oracle用户执行】【一定要oracle用户执行】【一定要oracle用户执行】<br>命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./runInstaller  -silent  -force  -noconfig  -responseFile  /home/oracle/db_install.rsp</span><br></pre></td></tr></table></figure></p>
+<p>其中后面的db_install.rsp为上一步配置的响应文件的路径。</p>
+<p><img src="361662561936_.pic.jpg" alt></p>
+<p>执行成功后会出现以上界面，会提示需要要ROOT用户下执行脚本，然后再回来上图界面按回车完成安装。</p>
+<h4 id="运行orainstRoot-sh和root-sh完成安装"><a href="#运行orainstRoot-sh和root-sh完成安装" class="headerlink" title="运行orainstRoot.sh和root.sh完成安装"></a>运行orainstRoot.sh和root.sh完成安装</h4><p>【一定要root用户执行】【一定要root用户执行】【一定要root用户执行】<br>切换到root用户执行脚本。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/u01/app/oraInventory/orainstRoot.sh</span><br><span class="line">/u01/app/oracle/product/11.2.0/dbhome_1/root.sh</span><br></pre></td></tr></table></figure></p>
+<p><img src="371662561966_.pic.jpg" alt></p>
+<p>然后再回到安装界面按回车，提示安装成功，至此数据库已经安装完成。</p>
+<h4 id="检查安装文件【root用户】"><a href="#检查安装文件【root用户】" class="headerlink" title="检查安装文件【root用户】"></a>检查安装文件【root用户】</h4><blockquote>
+<p>1.文件一：$ORACLE_HOME/bin/oracle</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd $ORACLE_HOME/bin</span><br><span class="line">ll | grep oracle</span><br></pre></td></tr></table></figure>
+<p><img src="381662562021_.pic.jpg" alt></p>
+<blockquote>
+<p>2.文件二：$ORACLE_HOME/rdbms/lib/config.o</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd $ORACLE_HOME/rdbms/lib/</span><br><span class="line">ll | grep config</span><br></pre></td></tr></table></figure>
+<p><img src="391662562045_.pic.jpg" alt></p>
+<p>确认上面的2个文件大小一定要大于0，不然后面后出现ORA-12547:TNS:list contact。<br>如果出现上述情况，可以把/u01/app/oracle/oraInventory目录删除，重新进行安装。</p>
+
+<div class="post_cus_note">数据库安装完成</div>
+
+<h3 id="PAS数据库安装"><a href="#PAS数据库安装" class="headerlink" title="PAS数据库安装"></a>PAS数据库安装</h3><h4 id="静默配置监听程序【oracle用户】"><a href="#静默配置监听程序【oracle用户】" class="headerlink" title="静默配置监听程序【oracle用户】"></a>静默配置监听程序【oracle用户】</h4><p>通过response文件运行netca, 生成sqlnet.ora和listener.ora文件, 位于$ORACLE_HOME/network/admin目录下<br>命令：$ $ORACLE_HOME/bin/netca /silent /responsefile /home/oracle/netca.rsp<br><img src="401662562189_.pic.jpg" alt><br>如果发生以下错误：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">=========================================================</span><br><span class="line">$ORACLE_HOME/bin/netca /silent /responsefile /home/oracle/database/response/netca.rspUnsatisfiedLinkError exception loading native library: njni11</span><br><span class="line">java.lang.UnsatisfiedLinkError: /u01/app/oracle/product/11.2.0/dbhome_1/lib/libnjni11.so: libaio.so.1: cannot open shared object file: No such file or directory</span><br><span class="line">java.lang.UnsatisfiedLinkError: jniGetOracleHome</span><br><span class="line">	at oracle.net.common.NetGetEnv.jniGetOracleHome(Native Method)</span><br><span class="line">	at oracle.net.common.NetGetEnv.getOracleHome(Unknown Source)</span><br><span class="line">	at oracle.net.ca.NetCALogger.getOracleHome(NetCALogger.java:230)</span><br><span class="line">	at oracle.net.ca.NetCALogger.initOracleParameters(NetCALogger.java:215)</span><br><span class="line">	at oracle.net.ca.NetCALogger.initLogger(NetCALogger.java:130)</span><br><span class="line">	at oracle.net.ca.NetCA.main(NetCA.java:427)</span><br><span class="line"></span><br><span class="line">Error: jniGetOracleHome</span><br><span class="line">=========================================================</span><br></pre></td></tr></table></figure></p>
+<p>解决方案：<br>缺少lib包<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">find /u01 -name libaio.so.1</span><br><span class="line">cp /u01/app/oracle/product/11.2.0/dbhome_1/lib/stubs/libaio.so.1 /u01/app/oracle/product/11.2.0/dbhome_1/lib</span><br></pre></td></tr></table></figure></p>
+<p>在执行上述命令，成功<br>创建PAS数据库实例</p>
+<h4 id="配置建库响应文件-dbca-rsp【oracle用户】"><a href="#配置建库响应文件-dbca-rsp【oracle用户】" class="headerlink" title="配置建库响应文件 dbca.rsp【oracle用户】"></a>配置建库响应文件 dbca.rsp【oracle用户】</h4><p>打开安装目录下的response文件夹下的dbca.rsp ，修改以下参数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$vim  /home/oracle/database/response/dbca.rsp</span><br><span class="line">GDBNAME = &quot;pas&quot;</span><br><span class="line">SID = &quot;orcl&quot;</span><br><span class="line">SYSPASSWORD = &quot;pas&quot;</span><br><span class="line">SYSTEMPASSWORD = &quot;pas&quot;</span><br><span class="line">SYSMANPASSWORD = &quot;pas&quot;</span><br><span class="line">DBSNMPPASSWORD = &quot;pas&quot;</span><br><span class="line">CHARACTERSET = &quot;ZHS16GBK&quot;</span><br><span class="line">MEMORYPERCENTAGE = &quot;40&quot;</span><br></pre></td></tr></table></figure></p>
+<h4 id="创建数据库实例【oracle用户】"><a href="#创建数据库实例【oracle用户】" class="headerlink" title="创建数据库实例【oracle用户】"></a>创建数据库实例【oracle用户】</h4><p>Oracle用户下执行以下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ORACLE_HOME/bin/dbca -silent -responseFile /home/oracle/database/response/dbca.rsp</span><br></pre></td></tr></table></figure></p>
+<p>注意,dbca.rsp为上一步配置的响应文件的路径。<br><img src="411662562292_.pic.jpg" alt><br>待提示成功后，数据库实例创建完毕。<br><img src="dbca.png" alt></p>
+<h4 id="创建数据文件路径"><a href="#创建数据文件路径" class="headerlink" title="创建数据文件路径"></a>创建数据文件路径</h4><p>1.创建目录，切换至实例用户窗口中输入如下命令，将下列脚本中的SNPAS批量替换成你的数据库名称，同时需要检查实例目录上否有足够空间的磁盘(真实环境至少剩余空间需要500G以上 df 检查磁盘空间)<br><strong><em>【文件位置根据服务器实际空间以及位置进行修改，oracle对目录具有读写权限】</em></strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">su - oracle</span><br><span class="line">mkdir -p  /data/SNPAS/PAS_DATA/PAS_SPACE_DATA</span><br><span class="line">mkdir -p  /data/SNPAS/PAS_DATA/PAS_SPACE_IDX</span><br><span class="line">mkdir -p  /data/SNPAS/PAS_DATA/PAS_SPACE_TMP</span><br><span class="line">mkdir -p  /data/SNPAS/PAS_BACKUP</span><br><span class="line">mkdir -p  /data/SNPAS/PAS_DATA_SRC</span><br><span class="line">mkdir -p  /data/SNPAS/PAS_ARCH_LOG</span><br></pre></td></tr></table></figure></p>
+<p>2.创建成功之后的目录结构如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /data/SNPAS</span><br><span class="line">tree</span><br></pre></td></tr></table></figure></p>
+<p><img src="SNPAS.png" alt></p>
+<h4 id="创建表空间【oracle用户】"><a href="#创建表空间【oracle用户】" class="headerlink" title="创建表空间【oracle用户】"></a>创建表空间【oracle用户】</h4><p>查看当前实例：select instance_name from v$instance;<br>切换为需要的实例：export ORACLE_SID=SID名称<br>以管理员身份通过SQLPLUS登录ORACLE<br>$ ORACLE_HOME/bin/sqlplus / as sysdba<br><img src="421662562514_.pic.jpg" alt></p>
+<h4 id="表空间创建"><a href="#表空间创建" class="headerlink" title="表空间创建"></a>表空间创建</h4><p>表空间特殊说明：</p>
+<ul>
+<li>【1.表空间存储目录以上一步建立的路径为准】</li>
+<li>【2.初始化表空间文件的大小可以为10G，后期自动增长】</li>
+<li>【3.11g普通表空间文件大小最大32G】</li>
+</ul>
+<blockquote>
+<p>创建TBS_MXZ表空间文件【sqlplus】</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">SQL&gt;CREATE TABLESPACE &quot;TBS_MXZ&quot;</span><br><span class="line">  LOGGING DATAFILE</span><br><span class="line">  &apos;/data/SNPAS/PAS_DATA/PAS_SPACE_DATA/TBS_MXZ1.dbf&apos; SIZE 10G,</span><br><span class="line">  &apos;/data/SNPAS/PAS_DATA/PAS_SPACE_DATA/TBS_MXZ2.dbf&apos; SIZE 10G,</span><br><span class="line">  &apos;/data/SNPAS/PAS_DATA/PAS_SPACE_DATA/TBS_MXZ3.dbf&apos; SIZE 10G,</span><br><span class="line">  &apos;/data/SNPAS/PAS_DATA/PAS_SPACE_DATA/TBS_MXZ4.dbf&apos; SIZE 10G,</span><br><span class="line">  &apos;/data/SNPAS/PAS_DATA/PAS_SPACE_DATA/TBS_MXZ5.dbf&apos; SIZE 10G</span><br><span class="line">   autoextend on</span><br><span class="line">   next 1G</span><br><span class="line">   maxsize unlimited;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>创建TBS_NBZZ表空间文件【sqlplus】</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">SQL&gt; CREATE TABLESPACE &quot;TBS_NBZZ&quot;</span><br><span class="line">  LOGGING DATAFILE</span><br><span class="line">  &apos;/data/SNPAS/PAS_DATA/PAS_SPACE_DATA/TBS_NBZZ1.dbf&apos; SIZE 10G,</span><br><span class="line">&apos;/data/SNPAS/PAS_DATA/PAS_SPACE_DATA/TBS_NBZZ2.dbf&apos; SIZE 10G,</span><br><span class="line">&apos;/data/SNPAS/PAS_DATA/PAS_SPACE_DATA/TBS_NBZZ3.dbf&apos; SIZE 10G,</span><br><span class="line">  &apos;/data/SNPAS/PAS_DATA/PAS_SPACE_DATA/TBS_NBZZ4.dbf&apos; SIZE 10G</span><br><span class="line">   autoextend on</span><br><span class="line">   next 1G</span><br><span class="line">   maxsize unlimited;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>创建TBS_JXDX表空间文件【sqlplus】</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">SQL&gt;CREATE TABLESPACE &quot;TBS_JXDX&quot;</span><br><span class="line">  LOGGING DATAFILE</span><br><span class="line">  &apos;/data/SNPAS/PAS_DATA/PAS_SPACE_DATA/TBS_JXDX1.dbf&apos; SIZE 10G,</span><br><span class="line">  &apos;/data/SNPAS/PAS_DATA/PAS_SPACE_DATA/TBS_JXDX2.dbf&apos; SIZE 10G</span><br><span class="line">   autoextend on</span><br><span class="line">   next 1G</span><br><span class="line">   maxsize unlimited;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>创建TBS_JKSJ表空间文件【sqlplus】</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">SQL&gt;CREATE TABLESPACE &quot;TBS_JKSJ&quot;</span><br><span class="line">  LOGGING DATAFILE</span><br><span class="line">  &apos;/data/SNPAS/PAS_DATA/PAS_SPACE_DATA/TBS_JKSJ1.dbf&apos; SIZE 10G</span><br><span class="line">   autoextend on</span><br><span class="line">   next 1G</span><br><span class="line">   maxsize unlimited;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>创建TBS_LSB表空间文件【sqlplus】</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">SQL&gt;CREATE TABLESPACE &quot;TBS_LSB&quot;</span><br><span class="line">  LOGGING DATAFILE</span><br><span class="line">  &apos;/data/SNPAS/PAS_DATA/PAS_SPACE_DATA/TBS_LSB1.dbf&apos; SIZE 10G</span><br><span class="line">   autoextend on</span><br><span class="line">   next 1G</span><br><span class="line">   maxsize unlimited;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>创建TBS_PAS表空间文件【sqlplus】</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">SQL&gt; CREATE TABLESPACE &quot;TBS_PAS&quot;</span><br><span class="line"> LOGGING DATAFILE</span><br><span class="line"> &apos;/data/SNPAS/PAS_DATA/PAS_SPACE_DATA/TBS_PAS1.dbf&apos; SIZE 10G,</span><br><span class="line"> &apos;/data/SNPAS/PAS_DATA/PAS_SPACE_DATA/TBS_PAS2.dbf&apos; SIZE 10G</span><br><span class="line">  autoextend on</span><br><span class="line">  next 1G</span><br><span class="line">  maxsize unlimited;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>创建TBS_IDX表空间文件【sqlplus】</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">SQL&gt;CREATE TABLESPACE &quot;TBS_IDX&quot;</span><br><span class="line">LOGGING DATAFILE</span><br><span class="line">&apos;/data/SNPAS/PAS_DATA/PAS_SPACE_IDX/TBS_IDX1.dbf&apos; SIZE 10G,</span><br><span class="line">&apos;/data/SNPAS/PAS_DATA/PAS_SPACE_IDX/TBS_IDX2.dbf&apos; SIZE 10G</span><br><span class="line"> autoextend on</span><br><span class="line"> next 1G</span><br><span class="line"> maxsize unlimited;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>创建TBS_TMP表空间文件【sqlplus】</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">SQL&gt;CREATE TEMPORARY TABLESPACE TBS_TMP</span><br><span class="line">  TEMPFILE</span><br><span class="line">   &apos;/data/SNPAS/PAS_DATA/PAS_SPACE_TMP/TBS_TMP1.dbf&apos; SIZE 10G,</span><br><span class="line">   &apos;/data/SNPAS/PAS_DATA/PAS_SPACE_TMP/TBS_TMP2.dbf&apos; SIZE 10G</span><br><span class="line">   autoextend on</span><br><span class="line">   next 1G</span><br><span class="line">   maxsize unlimited;</span><br></pre></td></tr></table></figure>
+<p>表空间说明与配置建议:</p>
+<table>
+<thead>
+<tr>
+<th>表空间名称</th>
+<th>表空间作用</th>
+<th>表空间大小配置建议</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TBS_MXZ</td>
+<td>存放明细账数据</td>
+<td>100G-200G</td>
+<td></td>
+</tr>
+<tr>
+<td>TBS_NBZZ</td>
+<td>存放内部总账数据</td>
+<td>100G以上</td>
+<td></td>
+</tr>
+<tr>
+<td>TBS_JXDX</td>
+<td>存放绩效对象数据</td>
+<td>30G</td>
+<td></td>
+</tr>
+<tr>
+<td>TBS_JKSJ</td>
+<td>存放接口数据</td>
+<td>10G</td>
+<td></td>
+</tr>
+<tr>
+<td>TBS_LSB</td>
+<td>存放临时表数据</td>
+<td>10G</td>
+<td></td>
+</tr>
+<tr>
+<td>TBS_PAS</td>
+<td>存放一些基础表的表空间，例如权限、参数、业绩关系、业绩指标、考核方案等</td>
+<td>30G</td>
+<td></td>
+</tr>
+<tr>
+<td>TBS_IDX</td>
+<td>存放索引数据</td>
+<td>30G</td>
+<td></td>
+</tr>
+<tr>
+<td>TBS_TMP</td>
+<td>临时表空间</td>
+</tr>
+</tbody>
+</table>
+<h4 id="创建PAS用户【sqlplus】"><a href="#创建PAS用户【sqlplus】" class="headerlink" title="创建PAS用户【sqlplus】"></a>创建PAS用户【sqlplus】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">su - oracle</span><br><span class="line">sqlplus / as sysdba</span><br></pre></td></tr></table></figure>
+<p>以管理员身份通过SQLPLUS登录ORACLE，执行以下命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SQL&gt; CREATE USER PAS IDENTIFIED BY pas</span><br><span class="line">DEFAULT TABLESPACE &quot;TBS_PAS&quot;</span><br><span class="line">TEMPORARY TABLESPACE &quot;TBS_TMP&quot;;</span><br></pre></td></tr></table></figure></p>
+<h4 id="PAS用户授权【sqlplus】"><a href="#PAS用户授权【sqlplus】" class="headerlink" title="PAS用户授权【sqlplus】"></a>PAS用户授权【sqlplus】</h4><p>以管理员身份通过SQLPLUS登录ORACLE，执行以下命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">SQL&gt;GRANT &quot;JAVAUSERPRIV&quot; TO PAS WITH ADMIN OPTION;</span><br><span class="line">SQL&gt;GRANT &quot;RESOURCE&quot; TO PAS WITH ADMIN OPTION;</span><br><span class="line">SQL&gt;GRANT &quot;DBA&quot; TO PAS WITH ADMIN OPTION;</span><br><span class="line">SQL&gt;GRANT &quot;JAVASYSPRIV&quot; TO PAS WITH ADMIN OPTION;</span><br><span class="line">SQL&gt;GRANT &quot;CONNECT&quot; TO PAS WITH ADMIN OPTION;</span><br><span class="line">SQL&gt;ALTER USER PAS DEFAULT ROLE &quot;JAVAUSERPRIV&quot;,&quot;RESOURCE&quot;,&quot;DBA&quot;,&quot;JAVASYSPRIV&quot;,&quot;CONNECT&quot;;</span><br><span class="line"></span><br><span class="line">-- SYSTEM PRIVILEGES</span><br><span class="line">SQL&gt;GRANT CREATE ANY INDEX TO PAS WITH ADMIN OPTION;</span><br><span class="line">SQL&gt;GRANT CREATE ANY TABLE TO PAS WITH ADMIN OPTION;</span><br><span class="line">SQL&gt;GRANT UNLIMITED TABLESPACE TO PAS WITH ADMIN OPTION;</span><br><span class="line">SQL&gt;grant select on SYS.DBA_DATA_FILES to PAS;</span><br><span class="line">SQL&gt;grant select on SYS.DBA_FREE_SPACE to PAS;</span><br><span class="line">SQL&gt;grant select on SYS.DBA_TABLESPACES to PAS;</span><br><span class="line">SQL&gt;grant create session to PAS;</span><br><span class="line">SQL&gt;grant create sequence to PAS;</span><br><span class="line">SQL&gt;grant drop any sequence to PAS;</span><br><span class="line">SQL&gt;grant select any dictionary to pas;</span><br></pre></td></tr></table></figure></p>
+<h4 id="配置数据库参数【sqlplus】"><a href="#配置数据库参数【sqlplus】" class="headerlink" title="配置数据库参数【sqlplus】"></a>配置数据库参数【sqlplus】</h4><p>下面是数据库的基本参数建议配置，可根据实际情况按需修改，需以sys用户登录数据库,<br>$sqlplus / as sysdba;</p>
+<ul>
+<li><p>1.设置SGA大小，建议为物理内存的40%<br>SQL&gt;alter system set sga_max_size=20G  scope=both<br>   alter system set sga_target=20G scope=spfile;</p>
+</li>
+<li><p>2.设置PGA大小，建议为物理内存10%<br>SQL&gt;alter system set pga_aggregate_target=5G scope=both;<br><img src="431662562733_.pic.jpg" alt></p>
+</li>
+<li><p>3.设置最大进程数，PROCESSE=1500<br>SQL&gt; alter system set processes=1500  scope=spfile;<br><img src="441662562761_.pic.jpg" alt></p>
+</li>
+<li><p>4.设置最大游标数OPEN_CURSORS=300<br>SQL&gt; alter system set open_cursors=1000 scope=both;<br><img src="451662562766_.pic.jpg" alt></p>
+</li>
+</ul>
+
+<div class="post_cus_note">====== 部署完成 ======</div>
+
+<h3 id="部署教程系列"><a href="#部署教程系列" class="headerlink" title="部署教程系列"></a>部署教程系列</h3><ul>
+<li>LINUX+ORACLE部署安装：<a href="http://pygo2.top/articles/40987/">http://pygo2.top/articles/40987/</a></li>
+<li>Linux安装JAVA1.7与配置：<a href="http://pygo2.top/articles/13502/">http://pygo2.top/articles/13502/</a></li>
+<li>Windows安装JAVA1.7与配置：<a href="http://pygo2.top/articles/1151/">http://pygo2.top/articles/1151/</a></li>
+<li>Windows安装Tomcat7与配置：<a href="http://pygo2.top/articles/2013/">http://pygo2.top/articles/2013/</a></li>
+<li>Windows安装PLSQL与配置：<a href="http://pygo2.top/articles/47618/">http://pygo2.top/articles/47618/</a></li>
+</ul>
+<font size="6.5" color="red">部署系列持续更新中。。。。。。</font>
+
+      
+    </div>
+
+    <!-- 版权声明 -->
+    <div>
+     
+        <ul class="post-copyright">
+          <li class="post-copyright-author">
+              <strong>本文作者：</strong>mingliang.gao【一个爱<font size="5" color="#BF0060">老婆</font>的<font size="5" color="#FF4500">Python</font>程序猿。。。。。。】
+          </li>
+          <li class="post-copyright-link">
+            <strong>本文链接：</strong>
+            <a href="http://pygo2.top/articles/40987/" title="Oracle数据库Redhat7.4部署安装">http://pygo2.top/articles/40987/</a>
+          </li>
+          <li class="post-copyright-license">
+            <strong>版权声明：</strong>
+            本博客所有文章欢迎转载，转载请注明出处！
+          </li>
+        </ul>
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+      <div>
+        <div id="reward-container">
+  <div>觉得有帮助 <i class="fa fa-paw" style="color:red"></i> 请偶坐个公交车</div>
+  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/wechatpay.png" alt="mingliang.gao 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/alipay.png" alt="mingliang.gao 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Oracle/" rel="tag"><i class="fa fa-bomb"></i> Oracle</a>
+          
+            <a href="/tags/部署教程系列/" rel="tag"><i class="fa fa-bomb"></i> 部署教程系列</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/articles/47618/" rel="next" title="Windows Server2012R2安装PLSQL">
+                <i class="fa fa-chevron-left"></i> Windows Server2012R2安装PLSQL
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/articles/26110/" rel="prev" title="Python模块之command系统命令">
+                Python模块之command系统命令 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/timg.gif" alt="mingliang.gao">
+            
+              <p class="site-author-name" itemprop="name">mingliang.gao</p>
+              <div class="site-description motion-element" itemprop="description"><font size="5" color="#FF4500">直男</font><br><font size="4.5" color="#FF8C00">双鱼座</font><br><font size="3" color="#000000">Python开发工程师</font></div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">221</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">32</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">102</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+
+            </nav>
+          
+
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/GIS90" title="GitHub &rarr; https://github.com/GIS90" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i></a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="https://weibo.com/u/1989571513" title="WeiBo &rarr; https://weibo.com/u/1989571513" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i></a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="/gaoming971366@163.com" title="E-Mail &rarr; gaoming971366@163.com"><i class="fa fa-fw fa-at"></i></a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="https://my.oschina.net/u/2259452" title="OsChina &rarr; https://my.oschina.net/u/2259452" rel="noopener" target="_blank"><i class="fa fa-fw fa-fire"></i></a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                <font size="5.5" color="#0080FF">友情链接</font>
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.json.cn/" title="https://www.json.cn/" rel="noopener" target="_blank">json格式化</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.yasuotu.com/" title="https://www.yasuotu.com/" rel="noopener" target="_blank">picture压缩</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.baidu.com/" title="https://www.baidu.com/" rel="noopener" target="_blank">baidu一下</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+<script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
+<script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
+<script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
+<div class="widget-wrap">
+    <h4 class="widget-title" style="font-size:21px;text-align:center;color:#0080FF;margin:20px 0px 0px;">Tag Cloud</h4>
+    <div id="myCanvasContainer" class="widget tagcloud" style="font-size:18px;">
+        <canvas width="220" height="200" id="resCanvas" style="width=100%">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ADB/">ADB</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/API/">API</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ArcGIS/">ArcGIS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Atom/">Atom</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bash/">Bash</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bash脚本系列/">Bash脚本系列</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bootstrap/">Bootstrap</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CkEditor/">CkEditor</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Conda/">Conda</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Crontab/">Crontab</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DB2/">DB2</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DNS/">DNS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DingTalk/">DingTalk</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ERROR集/">ERROR集</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Element-UI/">Element-UI</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Excel/">Excel</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Flask/">Flask</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/FreeFileSync/">FreeFileSync</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Github/">Github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/">HTML</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hadoop/">Hadoop</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hashcat/">Hashcat</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">31</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo插件/">Hexo插件</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo美化/">Hexo美化</a><span class="tag-list-count">14</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IDE/">IDE</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JSON/">JSON</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/">Javascript</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LDAP/">LDAP</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Libreoffice/">Libreoffice</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a><span class="tag-list-count">26</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux其他篇/">Linux其他篇</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux基础篇/">Linux基础篇</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux增强篇/">Linux增强篇</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux番外篇/">Linux番外篇</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MacOS/">MacOS</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mysql/">Mysql</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NODE/">NODE</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NPM/">NPM</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nginx/">Nginx</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Oracle/">Oracle</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PIP/">PIP</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Postgresql/">Postgresql</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">42</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python包/">Python包</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python基础篇/">Python基础篇</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python实战/">Python实战</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python模块系列/">Python模块系列</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python程序篇/">Python程序篇</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Rsync/">Rsync</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SSH/">SSH</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Shell/">Shell</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tomcat/">Tomcat</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/">Ubuntu</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VIM/">VIM</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VUE/">VUE</a><span class="tag-list-count">18</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WIKI/">WIKI</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Window-Server/">Window Server</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Windows/">Windows</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/brew/">brew</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/etherpad/">etherpad</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ffmpeg/">ffmpeg</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gitea/">gitea</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/seo优化/">seo优化</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/svn/">svn</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vant/">vant</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/中国节/">中国节</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端其他分类/">前端其他分类</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端组件/">前端组件</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/办公工具/">办公工具</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/动漫/">动漫</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/协议类/">协议类</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/历史/">历史</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/回忆录/">回忆录</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/国际节/">国际节</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/域名/">域名</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/存储过程/">存储过程</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/富文本编辑器/">富文本编辑器</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/抓娃娃/">抓娃娃</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/文件传输/">文件传输</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/旅行记/">旅行记</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/烧脑剧/">烧脑剧</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/爬虫/">爬虫</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/爬虫系列/">爬虫系列</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/生活/">生活</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/电视剧/">电视剧</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/看图笑话/">看图笑话</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/纯文笑话/">纯文笑话</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/美国大片/">美国大片</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/美食/">美食</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/节日/">节日</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/英语学习/">英语学习</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/西方节/">西方节</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/证书/">证书</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/运维工具/">运维工具</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/部署教程系列/">部署教程系列</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/音乐/">音乐</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/项目/">项目</a><span class="tag-list-count">1</span></li></ul>
+        </canvas>
+    </div>
+</div>
+
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#版本说明"><span class="nav-number">1.</span> <span class="nav-text">版本说明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Oracle安装"><span class="nav-number">2.</span> <span class="nav-text">Oracle安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Oracle用户【root用户】"><span class="nav-number">2.1.</span> <span class="nav-text">Oracle用户【root用户】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Package安装【root用户】"><span class="nav-number">2.2.</span> <span class="nav-text">Package安装【root用户】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#调整OS内核参数【root用户】"><span class="nav-number">2.3.</span> <span class="nav-text">调整OS内核参数【root用户】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置PAM模块文件【root用户】"><span class="nav-number">2.4.</span> <span class="nav-text">配置PAM模块文件【root用户】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#建立必须目录和文件【root用户】"><span class="nav-number">2.5.</span> <span class="nav-text">建立必须目录和文件【root用户】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设置oracle用户环境变量【oracle用户】"><span class="nav-number">2.6.</span> <span class="nav-text">设置oracle用户环境变量【oracle用户】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置cvu-config文件【oracle用户】"><span class="nav-number">2.7.</span> <span class="nav-text">配置cvu_config文件【oracle用户】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置响应文件【oracle用户】"><span class="nav-number">2.8.</span> <span class="nav-text">配置响应文件【oracle用户】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#执行安装脚本"><span class="nav-number">2.9.</span> <span class="nav-text">执行安装脚本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#运行orainstRoot-sh和root-sh完成安装"><span class="nav-number">2.10.</span> <span class="nav-text">运行orainstRoot.sh和root.sh完成安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#检查安装文件【root用户】"><span class="nav-number">2.11.</span> <span class="nav-text">检查安装文件【root用户】</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PAS数据库安装"><span class="nav-number">3.</span> <span class="nav-text">PAS数据库安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#静默配置监听程序【oracle用户】"><span class="nav-number">3.1.</span> <span class="nav-text">静默配置监听程序【oracle用户】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置建库响应文件-dbca-rsp【oracle用户】"><span class="nav-number">3.2.</span> <span class="nav-text">配置建库响应文件 dbca.rsp【oracle用户】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建数据库实例【oracle用户】"><span class="nav-number">3.3.</span> <span class="nav-text">创建数据库实例【oracle用户】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建数据文件路径"><span class="nav-number">3.4.</span> <span class="nav-text">创建数据文件路径</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建表空间【oracle用户】"><span class="nav-number">3.5.</span> <span class="nav-text">创建表空间【oracle用户】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#表空间创建"><span class="nav-number">3.6.</span> <span class="nav-text">表空间创建</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建PAS用户【sqlplus】"><span class="nav-number">3.7.</span> <span class="nav-text">创建PAS用户【sqlplus】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PAS用户授权【sqlplus】"><span class="nav-number">3.8.</span> <span class="nav-text">PAS用户授权【sqlplus】</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置数据库参数【sqlplus】"><span class="nav-number">3.9.</span> <span class="nav-text">配置数据库参数【sqlplus】</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#部署教程系列"><span class="nav-number">4.</span> <span class="nav-text">部署教程系列</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 – <span itemprop="copyrightYear">2023</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user-circle"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">mingliang.gao</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="站点总字数">660k</span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+    <span title="站点阅读时长">10:01</span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+<span id="sitetime" class="footer-sitetime"></span>
+<script language="javascript">
+	function siteTime(){
+		window.setTimeout("siteTime()", 1000);
+		var seconds = 1000;
+		var minutes = seconds * 60;
+		var hours = minutes * 60;
+		var days = hours * 24;
+		var years = days * 365;
+		var today = new Date();
+		var todayYear = today.getFullYear();
+		var todayMonth = today.getMonth()+1;
+		var todayDate = today.getDate();
+		var todayHour = today.getHours();
+		var todayMinute = today.getMinutes();
+		var todaySecond = today.getSeconds();
+		/* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+		year - 作为date对象的年份，为4位年份值
+		month - 0-11之间的整数，做为date对象的月份
+		day - 1-31之间的整数，做为date对象的天数
+		hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+		minutes - 0-59之间的整数，做为date对象的分钟数
+		seconds - 0-59之间的整数，做为date对象的秒数
+		microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+		var t1 = Date.UTC(2018,10,22,23,00,00);
+		var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+		var diff = t2-t1;
+		var diffYears = Math.floor(diff/years);
+		var diffDays = Math.floor((diff/days)-diffYears*365);
+		var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+		var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+		var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+		document.getElementById("sitetime").innerHTML=" 已运行"+diffYears+" 年 "+diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒 | 备案编号：<a href='http://beian.miit.gov.cn/' target='_blank'><font size=4.5 color='red'>蒙ICP备2021000415号</font></a>";
+	}
+	siteTime();
+</script>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+      本站访客总量：
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+  
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+      本站总访问量：
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+      <div id="needsharebutton-float">
+        <span class="btn">
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </span>
+      </div>
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=7.0.1"></script>
+
+  <script src="/js/src/motion.js?v=7.0.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=7.0.1"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=7.0.1"></script>
+
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
+<script src="/js/src/post-details.js?v=7.0.1"></script>
+
+
+
+  
+
+
+  <script src="/js/src/next-boot.js?v=7.0.1"></script>
+
+
+  
+  <script src="/js/src/js.cookie.js?v=7.0.1"></script>
+  <script src="/js/src/scroll-cookie.js?v=7.0.1"></script>
+
+
+  
+
+  
+
+  
+  
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'nKAaXD2tmTHEFQRsCIhlVh5c-gzGzoHsz',
+    appKey: 'rsNeXIqkLjqwrVmtKkf4nYl5',
+    placeholder: '欢迎吐槽 ！！！',
+    avatar: 'monsterid',
+    meta: guest,
+    pageSize: '12' || 10,
+    visitor: false,
+    lang: '' || 'zh-cn'
+  });
+</script>
+
+
+
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+<script>
+if ($('body').find('div.pdf').length) {
+  $.ajax({
+    type: 'GET',
+    url: '//cdn.jsdelivr.net/npm/pdfobject@2/pdfobject.min.js',
+    dataType: 'script',
+    cache: true,
+    success: function() {
+      $('body').find('div.pdf').each(function(i, o) {
+        PDFObject.embed($(o).attr('target'), $(o), {
+          pdfOpenParams: {
+            navpanes: 0,
+            toolbar: 0,
+            statusbar: 0,
+            pagemode: 'thumbs',
+            view: 'FitH'
+          },
+          PDFJS_URL: '/lib/pdf/web/viewer.html',
+          height: $(o).attr('height') || '500px'
+        });
+      });
+    },
+  });
+}
+</script>
+
+
+  
+<script>
+if ($('body').find('pre.mermaid').length) {
+  $.ajax({
+    type: 'GET',
+    url: '//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js',
+    dataType: 'script',
+    cache: true,
+    success: function() {
+      mermaid.initialize({
+        theme: 'forest',
+        logLevel: 3,
+        flowchart: { curve: 'linear' },
+        gantt: { axisFormat: '%m/%d/%Y' },
+        sequence: { actorMargin: 50 }
+      });
+    }
+  });
+}
+</script>
+
+
+  
+
+  
+
+  
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+  <script>
+    
+    
+      flOptions = {};
+      
+        flOptions.iconStyle = "box";
+      
+        flOptions.boxForm = "vertical";
+      
+        flOptions.position = "topCenter";
+      
+        flOptions.networks = "Weibo,Wechat,Douban,QQZone";
+      
+      new needShareButton('#needsharebutton-float', flOptions);
+    
+  </script>
+
+
+  
+
+  
+
+  
+
+  
+<script>
+  $('.highlight').each(function(i, e) {
+    var $wrap = $('<div>').addClass('highlight-wrap');
+    $(e).after($wrap);
+    $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+      var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+        return $(e).text();
+      }).toArray().join('\n');
+      var ta = document.createElement('textarea');
+      var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+      ta.style.top = yPosition + 'px'; // Prevent page scroll
+      ta.style.position = 'absolute';
+      ta.style.opacity = '0';
+      ta.readOnly = true;
+      ta.value = code;
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, code.length);
+      ta.readOnly = false;
+      var result = document.execCommand('copy');
+      
+        if (result) $(this).text('复制成功');
+        else $(this).text('复制失败');
+      
+      ta.blur(); // For iOS
+      $(this).blur();
+    })).on('mouseleave', function(e) {
+      var $b = $(this).find('.copy-btn');
+      setTimeout(function() {
+        $b.text('复制');
+      }, 300);
+    }).append(e);
+  })
+</script>
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/click_magic.js"></script>
+  <script type="text/javascript" src="/js/src/theme_change.js"></script>
+  <script type="text/javascript" src="/js/src/float_box.js" language="javascript"></script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pNluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/haru02.model.json"},"display":{"position":"right","width":230,"height":480,"hOffset":10,"vOffset":-20},"mobile":{"show":false,"scale":0.2},"react":{"opacity":0.8},"log":false,"pluginModelPath":"assets/"});</script></body>
+</html>

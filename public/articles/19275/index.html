@@ -1,0 +1,2009 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta name="google-site-verification" content="nOQH_Lr6zdiXCxCLRslnRmrnULAd7XsMJc-3MQo0iMI">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="baidu-site-verification" content="3T5rDqaWUL">
+<meta name="baidu-site-verification" content="1hLVI7jmus">
+
+<!-- title、keywords、desc关键字 -->
+
+  <title>Hi</title>
+  <meta name="title" content="Hi">
+
+
+  <meta name="keywords" content="Python, Linux, Hexo, 技术, 影视说, 娱乐, 旅行记, 博客, 代码, 生活, 人生, 分享">
+
+
+
+
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link rel="stylesheet" href="/lib/pace/pace-theme-center-atom.min.css?v=1.0.2">
+
+
+
+
+
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="google-site-verification" content="nOQH_Lr6zdiXCxCLRslnRmrnULAd7XsMJc-3MQo0iMI">
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link rel="stylesheet" href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.0.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon32.ico?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon16.ico?v=7.0.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.0.1" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.0.1',
+    sidebar: {"position":"left","display":"post","offset":30,"onmobile":true,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: true,
+    fastclick: false,
+    lazyload: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"flipXIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"fadeIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+<div id="blog_header" class="blog_header">
+    <marquee>Enjoy the good life everyday！</marquee>
+</div>
+
+<div id="float_box" class="float_box" align="middle" onmouseover="window.clearInterval(interval)" onmouseout="interval = window.setInterval('changePos()', delay)">
+    <div class="float_box_close" onclick="closeBox()">
+        关闭
+
+    </div>
+    <div id="float_box_content" class="float_box_content">
+        <marquee class="float_box_content_text" direction="right">欢迎来PyGo个人空间 ^_^</marquee>
+        <!--
+        <br><img src="/images/card.jpg" class="float_box_content_img">
+        -->
+    </div>
+</div>
+
+
+  <meta name="description" content="Python Python模块系列  Python模块系列">
+<meta name="keywords" content="Python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python模块之excel模块">
+<meta property="og:url" content="http://pygo2.top/articles/19275/index.html">
+<meta property="og:site_name" content="PyGo²">
+<meta property="og:description" content="Python Python模块系列  Python模块系列">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://pygo2.top/images/article_python_module.jpeg">
+<meta property="og:updated_time" content="2022-08-13T14:20:32.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python模块之excel模块">
+<meta name="twitter:description" content="Python Python模块系列  Python模块系列">
+<meta name="twitter:image" content="http://pygo2.top/images/article_python_module.jpeg">
+
+
+
+
+
+
+  <link rel="canonical" href="http://pygo2.top/articles/19275/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Python模块之excel模块 | PyGo²</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <!-- 头部github设置-->
+    <a target="_blank" href="https://github.com/GIS90" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta" style="background: #3385ff;">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title" style="font-family: Monospace; font-size:35px;">
+            PyGo²
+        </span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <h1 class="site-subtitle" itemprop="description" style="color:black;font-size:18px;font-family: Monospace;">
+            一个爱<font size="5" color="#BF0060">老婆</font>的<font size="5" color="#FF4500">Python</font>程序猿。。。。。。
+        </h1>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/index.html" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-history"></i> <br>时间轴</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-list"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-movie">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/影视说/" rel="section"><i class="menu-item-icon fa fa-fw fa-film"></i> <br>影视说</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-photo">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/photo/" rel="section"><i class="menu-item-icon fa fa-fw fa-camera"></i> <br>相册</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-enjoy">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/娱乐/" rel="section"><i class="menu-item-icon fa fa-fw fa-battery-full"></i> <br>娱乐</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-messagepad">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/messagepad/" rel="section"><i class="menu-item-icon fa fa-fw fa-sticky-note"></i> <br>留言板</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于我</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="没有你搜不到的，只有你想不到的。。。。。。" spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+<button id="theme_change" class="theme_change" type="button" onclick="theme_change()">
+    暗黑系
+</button>
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://pygo2.top/articles/19275/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="mingliang.gao">
+      <meta itemprop="description" content="<font size=" 5" color="#FF4500">直男<br><font size="4.5" color="#FF8C00">双鱼座</font><br><font size="3" color="#000000">Python开发工程师</font>"/>
+      <meta itemprop="image" content="/images/timg.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="PyGo²">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Python模块之excel模块
+
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+
+          
+
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">创建时间：</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2022-08-13 22:20:32" itemprop="dateCreated datePublished" datetime="2022-08-13T22:20:32+08:00">2022-08-13</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读量： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">33k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">30 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="/images/article_python_module.jpeg" alt></p>
+<span class="label primary">Python</span> <span class="label info">Python模块系列</span>
+
+<div class="post_cus_note">Python模块系列</div>
+
+<a id="more"></a>
+<hr>
+
+
+<p>Python项目常用的模块代码。</p>
+<h4 id="版本"><a href="#版本" class="headerlink" title="版本"></a>版本</h4><table>
+<thead>
+<tr>
+<th style="text-align:center">名称</th>
+<th style="text-align:center">版本</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Python</td>
+<td style="text-align:center">3</td>
+</tr>
+</tbody>
+</table>
+<h4 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h4><p>Excel表读取、写入工具<br>使用了xlrd、xlwt，Excel表格处理包进行开发的lib工具包</p>
+<ul>
+<li><p>read</p>
+</li>
+<li><p>write<br>其中，在写入模块加入了表格样式处理，使其生成的表格自带cell样式，更加美观</p>
+</li>
+</ul>
+<h4 id="设计"><a href="#设计" class="headerlink" title="设计"></a>设计</h4><p>利用Python包开发的表格工具包。</p>
+<ul>
+<li>xlrd: 表格读取包</li>
+<li>xlwt: 表格写入包</li>
+</ul>
+<h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">excel_lib = ExcelLib()</span><br><span class="line"># 读取</span><br><span class="line">excel_lib.read(read_file)</span><br><span class="line"># 写入</span><br><span class="line">excel_res = self.excel_lib.beau_write(excel_file=excel_file, data=inspect_list)</span><br></pre></td></tr></table></figure>
+<h4 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br><span class="line">309</span><br><span class="line">310</span><br><span class="line">311</span><br><span class="line">312</span><br><span class="line">313</span><br><span class="line">314</span><br><span class="line">315</span><br><span class="line">316</span><br><span class="line">317</span><br><span class="line">318</span><br><span class="line">319</span><br><span class="line">320</span><br><span class="line">321</span><br><span class="line">322</span><br><span class="line">323</span><br><span class="line">324</span><br><span class="line">325</span><br><span class="line">326</span><br><span class="line">327</span><br><span class="line">328</span><br><span class="line">329</span><br><span class="line">330</span><br><span class="line">331</span><br><span class="line">332</span><br><span class="line">333</span><br><span class="line">334</span><br><span class="line">335</span><br><span class="line">336</span><br><span class="line">337</span><br><span class="line">338</span><br><span class="line">339</span><br><span class="line">340</span><br><span class="line">341</span><br><span class="line">342</span><br><span class="line">343</span><br><span class="line">344</span><br><span class="line">345</span><br><span class="line">346</span><br><span class="line">347</span><br><span class="line">348</span><br><span class="line">349</span><br><span class="line">350</span><br><span class="line">351</span><br><span class="line">352</span><br><span class="line">353</span><br><span class="line">354</span><br><span class="line">355</span><br><span class="line">356</span><br><span class="line">357</span><br><span class="line">358</span><br><span class="line">359</span><br><span class="line">360</span><br><span class="line">361</span><br><span class="line">362</span><br><span class="line">363</span><br><span class="line">364</span><br><span class="line">365</span><br><span class="line">366</span><br><span class="line">367</span><br><span class="line">368</span><br><span class="line">369</span><br><span class="line">370</span><br><span class="line">371</span><br><span class="line">372</span><br><span class="line">373</span><br><span class="line">374</span><br><span class="line">375</span><br><span class="line">376</span><br><span class="line">377</span><br><span class="line">378</span><br><span class="line">379</span><br><span class="line">380</span><br><span class="line">381</span><br><span class="line">382</span><br><span class="line">383</span><br><span class="line">384</span><br><span class="line">385</span><br><span class="line">386</span><br><span class="line">387</span><br><span class="line">388</span><br><span class="line">389</span><br><span class="line">390</span><br><span class="line">391</span><br><span class="line">392</span><br><span class="line">393</span><br><span class="line">394</span><br><span class="line">395</span><br><span class="line">396</span><br><span class="line">397</span><br><span class="line">398</span><br><span class="line">399</span><br><span class="line">400</span><br><span class="line">401</span><br><span class="line">402</span><br><span class="line">403</span><br><span class="line">404</span><br><span class="line">405</span><br><span class="line">406</span><br><span class="line">407</span><br><span class="line">408</span><br><span class="line">409</span><br><span class="line">410</span><br><span class="line">411</span><br><span class="line">412</span><br><span class="line">413</span><br><span class="line">414</span><br><span class="line">415</span><br><span class="line">416</span><br><span class="line">417</span><br><span class="line">418</span><br><span class="line">419</span><br><span class="line">420</span><br><span class="line">421</span><br><span class="line">422</span><br><span class="line">423</span><br><span class="line">424</span><br><span class="line">425</span><br><span class="line">426</span><br><span class="line">427</span><br><span class="line">428</span><br><span class="line">429</span><br><span class="line">430</span><br><span class="line">431</span><br><span class="line">432</span><br><span class="line">433</span><br><span class="line">434</span><br><span class="line">435</span><br><span class="line">436</span><br><span class="line">437</span><br><span class="line">438</span><br><span class="line">439</span><br><span class="line">440</span><br><span class="line">441</span><br><span class="line">442</span><br><span class="line">443</span><br><span class="line">444</span><br><span class="line">445</span><br><span class="line">446</span><br><span class="line">447</span><br><span class="line">448</span><br><span class="line">449</span><br><span class="line">450</span><br><span class="line">451</span><br><span class="line">452</span><br><span class="line">453</span><br><span class="line">454</span><br><span class="line">455</span><br><span class="line">456</span><br><span class="line">457</span><br><span class="line">458</span><br><span class="line">459</span><br><span class="line">460</span><br><span class="line">461</span><br><span class="line">462</span><br><span class="line">463</span><br><span class="line">464</span><br><span class="line">465</span><br><span class="line">466</span><br><span class="line">467</span><br><span class="line">468</span><br><span class="line">469</span><br><span class="line">470</span><br><span class="line">471</span><br><span class="line">472</span><br><span class="line">473</span><br><span class="line">474</span><br><span class="line">475</span><br><span class="line">476</span><br><span class="line">477</span><br><span class="line">478</span><br><span class="line">479</span><br><span class="line">480</span><br><span class="line">481</span><br><span class="line">482</span><br><span class="line">483</span><br><span class="line">484</span><br><span class="line">485</span><br><span class="line">486</span><br><span class="line">487</span><br><span class="line">488</span><br><span class="line">489</span><br><span class="line">490</span><br><span class="line">491</span><br><span class="line">492</span><br><span class="line">493</span><br><span class="line">494</span><br><span class="line">495</span><br><span class="line">496</span><br><span class="line">497</span><br><span class="line">498</span><br><span class="line">499</span><br><span class="line">500</span><br><span class="line">501</span><br><span class="line">502</span><br><span class="line">503</span><br><span class="line">504</span><br><span class="line">505</span><br><span class="line">506</span><br><span class="line">507</span><br><span class="line">508</span><br><span class="line">509</span><br><span class="line">510</span><br><span class="line">511</span><br><span class="line">512</span><br><span class="line">513</span><br><span class="line">514</span><br><span class="line">515</span><br><span class="line">516</span><br><span class="line">517</span><br><span class="line">518</span><br><span class="line">519</span><br><span class="line">520</span><br><span class="line">521</span><br><span class="line">522</span><br><span class="line">523</span><br><span class="line">524</span><br><span class="line">525</span><br><span class="line">526</span><br><span class="line">527</span><br><span class="line">528</span><br><span class="line">529</span><br><span class="line">530</span><br><span class="line">531</span><br><span class="line">532</span><br><span class="line">533</span><br><span class="line">534</span><br><span class="line">535</span><br><span class="line">536</span><br><span class="line">537</span><br><span class="line">538</span><br><span class="line">539</span><br><span class="line">540</span><br><span class="line">541</span><br><span class="line">542</span><br><span class="line">543</span><br><span class="line">544</span><br><span class="line">545</span><br><span class="line">546</span><br><span class="line">547</span><br><span class="line">548</span><br><span class="line">549</span><br><span class="line">550</span><br><span class="line">551</span><br><span class="line">552</span><br><span class="line">553</span><br><span class="line">554</span><br><span class="line">555</span><br><span class="line">556</span><br><span class="line">557</span><br><span class="line">558</span><br><span class="line">559</span><br><span class="line">560</span><br><span class="line">561</span><br><span class="line">562</span><br><span class="line">563</span><br><span class="line">564</span><br><span class="line">565</span><br><span class="line">566</span><br><span class="line">567</span><br><span class="line">568</span><br><span class="line">569</span><br><span class="line">570</span><br><span class="line">571</span><br><span class="line">572</span><br><span class="line">573</span><br><span class="line">574</span><br><span class="line">575</span><br><span class="line">576</span><br><span class="line">577</span><br><span class="line">578</span><br><span class="line">579</span><br><span class="line">580</span><br><span class="line">581</span><br><span class="line">582</span><br><span class="line">583</span><br><span class="line">584</span><br><span class="line">585</span><br><span class="line">586</span><br><span class="line">587</span><br><span class="line">588</span><br><span class="line">589</span><br><span class="line">590</span><br><span class="line">591</span><br><span class="line">592</span><br><span class="line">593</span><br><span class="line">594</span><br><span class="line">595</span><br><span class="line">596</span><br><span class="line">597</span><br><span class="line">598</span><br><span class="line">599</span><br><span class="line">600</span><br><span class="line">601</span><br><span class="line">602</span><br><span class="line">603</span><br><span class="line">604</span><br><span class="line">605</span><br><span class="line">606</span><br><span class="line">607</span><br><span class="line">608</span><br><span class="line">609</span><br><span class="line">610</span><br><span class="line">611</span><br><span class="line">612</span><br><span class="line">613</span><br><span class="line">614</span><br><span class="line">615</span><br><span class="line">616</span><br><span class="line">617</span><br><span class="line">618</span><br><span class="line">619</span><br><span class="line">620</span><br><span class="line">621</span><br><span class="line">622</span><br><span class="line">623</span><br><span class="line">624</span><br><span class="line">625</span><br><span class="line">626</span><br><span class="line">627</span><br><span class="line">628</span><br><span class="line">629</span><br><span class="line">630</span><br><span class="line">631</span><br><span class="line">632</span><br><span class="line">633</span><br><span class="line">634</span><br><span class="line">635</span><br><span class="line">636</span><br><span class="line">637</span><br><span class="line">638</span><br><span class="line">639</span><br><span class="line">640</span><br><span class="line">641</span><br><span class="line">642</span><br><span class="line">643</span><br><span class="line">644</span><br><span class="line">645</span><br><span class="line">646</span><br><span class="line">647</span><br><span class="line">648</span><br><span class="line">649</span><br><span class="line">650</span><br><span class="line">651</span><br><span class="line">652</span><br><span class="line">653</span><br><span class="line">654</span><br><span class="line">655</span><br><span class="line">656</span><br><span class="line">657</span><br><span class="line">658</span><br><span class="line">659</span><br><span class="line">660</span><br><span class="line">661</span><br><span class="line">662</span><br><span class="line">663</span><br><span class="line">664</span><br><span class="line">665</span><br><span class="line">666</span><br><span class="line">667</span><br><span class="line">668</span><br><span class="line">669</span><br><span class="line">670</span><br><span class="line">671</span><br><span class="line">672</span><br><span class="line">673</span><br><span class="line">674</span><br><span class="line">675</span><br><span class="line">676</span><br><span class="line">677</span><br><span class="line">678</span><br><span class="line">679</span><br><span class="line">680</span><br><span class="line">681</span><br><span class="line">682</span><br><span class="line">683</span><br><span class="line">684</span><br><span class="line">685</span><br><span class="line">686</span><br><span class="line">687</span><br><span class="line">688</span><br><span class="line">689</span><br><span class="line">690</span><br><span class="line">691</span><br><span class="line">692</span><br><span class="line">693</span><br><span class="line">694</span><br><span class="line">695</span><br><span class="line">696</span><br><span class="line">697</span><br><span class="line">698</span><br><span class="line">699</span><br><span class="line">700</span><br><span class="line">701</span><br><span class="line">702</span><br><span class="line">703</span><br><span class="line">704</span><br><span class="line">705</span><br><span class="line">706</span><br><span class="line">707</span><br><span class="line">708</span><br><span class="line">709</span><br><span class="line">710</span><br><span class="line">711</span><br><span class="line">712</span><br><span class="line">713</span><br><span class="line">714</span><br><span class="line">715</span><br><span class="line">716</span><br><span class="line">717</span><br><span class="line">718</span><br><span class="line">719</span><br><span class="line">720</span><br><span class="line">721</span><br><span class="line">722</span><br><span class="line">723</span><br><span class="line">724</span><br><span class="line">725</span><br><span class="line">726</span><br><span class="line">727</span><br><span class="line">728</span><br><span class="line">729</span><br><span class="line">730</span><br><span class="line">731</span><br><span class="line">732</span><br><span class="line">733</span><br><span class="line">734</span><br><span class="line">735</span><br><span class="line">736</span><br><span class="line">737</span><br><span class="line">738</span><br><span class="line">739</span><br><span class="line">740</span><br><span class="line">741</span><br><span class="line">742</span><br><span class="line">743</span><br><span class="line">744</span><br><span class="line">745</span><br><span class="line">746</span><br><span class="line">747</span><br><span class="line">748</span><br><span class="line">749</span><br><span class="line">750</span><br><span class="line">751</span><br><span class="line">752</span><br><span class="line">753</span><br><span class="line">754</span><br><span class="line">755</span><br><span class="line">756</span><br></pre></td><td class="code"><pre><span class="line"># -*- coding: utf-8 -*-</span><br><span class="line"></span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">------------------------------------------------</span><br><span class="line"></span><br><span class="line">describe:</span><br><span class="line">    Excel表读取、写入工具</span><br><span class="line">    使用了xlrd、xlwt，Excel表格处理包进行开发的lib工具包</span><br><span class="line">    - read</span><br><span class="line">    - write</span><br><span class="line">    其中，在写入模块加入了表格样式处理，使其生成的表格自带cell样式，更加美观</span><br><span class="line"></span><br><span class="line">base_info:</span><br><span class="line">    __author__ = &quot;PyGo&quot;</span><br><span class="line">    __time__ = &quot;2022/9/15&quot;</span><br><span class="line">    __version__ = &quot;v.1.0.0&quot;</span><br><span class="line">    __mail__ = &quot;gaoming971366@163.com&quot;</span><br><span class="line">    __project__ = &quot;quality-inspect&quot;</span><br><span class="line"></span><br><span class="line">usage:</span><br><span class="line">    excel_lib = ExcelLib()</span><br><span class="line">    # 读取</span><br><span class="line">    excel_lib.read(read_file)</span><br><span class="line">    # 写入</span><br><span class="line">    excel_res = self.excel_lib.beau_write(excel_file=excel_file, data=inspect_list)</span><br><span class="line"></span><br><span class="line">design:</span><br><span class="line">    - xlrd: 表格读取包</span><br><span class="line">    - xlwt: 表格写入包</span><br><span class="line">    利用Python包开发的表格工具包。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">reference urls:</span><br><span class="line"></span><br><span class="line">python version:</span><br><span class="line">    python3</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Enjoy the good time everyday！！!</span><br><span class="line">Life is short, I use python.</span><br><span class="line"></span><br><span class="line">------------------------------------------------</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line"># ------------------------------------------------------------</span><br><span class="line"># usage: /usr/bin/python excel_lib.py</span><br><span class="line"># ------------------------------------------------------------</span><br><span class="line">import os</span><br><span class="line">import xlwt</span><br><span class="line">import xlrd</span><br><span class="line"></span><br><span class="line">from deploy.utils import get_now, mk_dirs</span><br><span class="line">from deploy.status_msg import StatusMsgs</span><br><span class="line">from config import RESULT_EXCEL, DEBUG</span><br><span class="line">from deploy.logger import logger as LOG</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">class ExcelLib(object):</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    Excel class</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line">    # 类常量参数</span><br><span class="line">    DEFAULT_OLD_V_PREFIX = &apos;.xls&apos;</span><br><span class="line">    DEFAULT_NEW_V_PREFIX = &apos;.xlsx&apos;</span><br><span class="line">    DEFAULT_SHEET_NAME = &apos;Sheet1&apos;</span><br><span class="line"></span><br><span class="line">    # 表格样式 &gt; 文字横向方向</span><br><span class="line">    HORZ_DICT = &#123;</span><br><span class="line">        &apos;left&apos;: 0x01,</span><br><span class="line">        &apos;center&apos;: 0x02,</span><br><span class="line">        &apos;right&apos;: 0x03</span><br><span class="line">    &#125;</span><br><span class="line">    # 表格样式 &gt; 文字纵向方向</span><br><span class="line">    VERT_DICT = &#123;</span><br><span class="line">        &apos;top&apos;: 0x00,</span><br><span class="line">        &apos;center&apos;: 0x01,</span><br><span class="line">        &apos;bottom&apos;: 0x02</span><br><span class="line">    &#125;</span><br><span class="line">    # 表格样式 &gt; 单元格边框</span><br><span class="line">    BORDER_LINES = &#123;</span><br><span class="line">        &apos;NO_LINE&apos;: xlwt.Borders.NO_LINE,</span><br><span class="line">        &apos;THIN&apos;: xlwt.Borders.THIN,</span><br><span class="line">        &apos;MEDIUM&apos;: xlwt.Borders.MEDIUM,</span><br><span class="line">        &apos;DASHED&apos;: xlwt.Borders.DASHED,</span><br><span class="line">        &apos;DOTTED&apos;: xlwt.Borders.DOTTED,</span><br><span class="line">        &apos;THICK&apos;: xlwt.Borders.THICK,</span><br><span class="line">        &apos;DOUBLE&apos;: xlwt.Borders.DOUBLE,</span><br><span class="line">        &apos;HAIR&apos;: xlwt.Borders.HAIR</span><br><span class="line">    &#125;</span><br><span class="line">    # 表格样式 &gt; 单元格类型</span><br><span class="line">    FORMATTER = [</span><br><span class="line">        &apos;general&apos;,</span><br><span class="line">        &apos;0&apos;,</span><br><span class="line">        &apos;0.00&apos;,</span><br><span class="line">        &apos;#,##0&apos;,</span><br><span class="line">        &apos;#,##0.00&apos;,</span><br><span class="line">        &apos;&quot;$&quot;#,##0_);(&quot;$&quot;#,##&apos;,</span><br><span class="line">        &apos;&quot;$&quot;#,##0_);[Red](&quot;$&quot;#,##&apos;,</span><br><span class="line">        &apos;&quot;$&quot;#,##0.00_);(&quot;$&quot;#,##&apos;,</span><br><span class="line">        &apos;&quot;$&quot;#,##0.00_);[Red](&quot;$&quot;#,##&apos;,</span><br><span class="line">        &apos;0%&apos;,</span><br><span class="line">        &apos;0.00%&apos;,</span><br><span class="line">        &apos;0.00E+00&apos;,</span><br><span class="line">        &apos;# ?/?&apos;,</span><br><span class="line">        &apos;# ??/??&apos;,</span><br><span class="line">        &apos;M/D/YY&apos;,</span><br><span class="line">        &apos;D-MMM-YY&apos;,</span><br><span class="line">        &apos;D-MMM&apos;,</span><br><span class="line">        &apos;MMM-YY&apos;,</span><br><span class="line">        &apos;h:mm AM/PM&apos;,</span><br><span class="line">        &apos;h:mm:ss AM/PM&apos;,</span><br><span class="line">        &apos;h:mm&apos;,</span><br><span class="line">        &apos;h:mm:ss&apos;,</span><br><span class="line">        &apos;M/D/YY h:mm&apos;,</span><br><span class="line">        &apos;_(#,##0_);(#,##0)&apos;,</span><br><span class="line">        &apos;_(#,##0_);[Red](#,##0)&apos;,</span><br><span class="line">        &apos;_(#,##0.00_);(#,##0.00)&apos;,</span><br><span class="line">        &apos;_(#,##0.00_);[Red](#,##0.00)&apos;,</span><br><span class="line">        &apos;_(&quot;$&quot;* #,##0_);_(&quot;$&quot;* (#,##0);_(&quot;$&quot;* &quot;-&quot;_);_(@_)&apos;,</span><br><span class="line">        &apos;_(* #,##0_);_(* (#,##0);_(* &quot;-&quot;_);_(@_)&apos;,</span><br><span class="line">        &apos;_(&quot;$&quot;* #,##0.00_);_(&quot;$&quot;* (#,##0.00);_(&quot;$&quot;* &quot;-&quot;??_);_(@_)&apos;,</span><br><span class="line">        &apos;_(* #,##0.00_);_(* (#,##0.00);_(* &quot;-&quot;??_);_(@_)&apos;,</span><br><span class="line">        &apos;mm:ss&apos;,</span><br><span class="line">        &apos;[h]:mm:ss&apos;,</span><br><span class="line">        &apos;mm:ss.0&apos;,</span><br><span class="line">        &apos;##0.0E+0&apos;,</span><br><span class="line">        &apos;@&apos;</span><br><span class="line">    ]</span><br><span class="line"></span><br><span class="line">    def __init__(self, blank=0):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        class initialize parameters</span><br><span class="line">        :param blank: blank number</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        if DEBUG:</span><br><span class="line">            LOG.debug(&apos;Excel lib is loading.&apos;)</span><br><span class="line">        self.prefix_list = [&apos;.xlsx&apos;, &apos;.xls&apos;]</span><br><span class="line">        self.blank = 0  # 空行个数，默认值0行</span><br><span class="line"></span><br><span class="line">    def set_style(self, font=&apos;Times New Roman&apos;, size=11, color=0, bgcolor=&apos;white&apos;, horz=&apos;left&apos;, vert=&apos;center&apos;, **kwargs):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        set the excel cell style, to achieve customize style.</span><br><span class="line">        all parameters have default value.</span><br><span class="line">        parameters detail informations refer to the follow description.</span><br><span class="line">        :param font: font type</span><br><span class="line">            default value is &quot;Times New Roman&quot;</span><br><span class="line">            currently, the font is not use, font type function will be added later</span><br><span class="line">        :param size: font size</span><br><span class="line">            default value is 11</span><br><span class="line">        :param color: font color index</span><br><span class="line">            color value range is 0 ~ 100, default value is black(0)</span><br><span class="line">            this is only list 1-7:</span><br><span class="line">            0 黑 black</span><br><span class="line">            1 白 white</span><br><span class="line">            2 红 red</span><br><span class="line">            3 酸橙 lime</span><br><span class="line">            4 蓝 blue</span><br><span class="line">            5 黄 yellow</span><br><span class="line">            6 洋红 magenta</span><br><span class="line">            7 青 cyan</span><br><span class="line">        :param bgcolor: cell background</span><br><span class="line">            this value is english color, default value is white, color range:</span><br><span class="line">            aqua 0x31</span><br><span class="line">            black 0x08</span><br><span class="line">            blue 0x0C</span><br><span class="line">            blue_gray 0x36</span><br><span class="line">            bright_green 0x0B</span><br><span class="line">            brown 0x3C</span><br><span class="line">            coral 0x1D</span><br><span class="line">            cyan_ega 0x0F</span><br><span class="line">            dark_blue 0x12</span><br><span class="line">            dark_blue_ega 0x12</span><br><span class="line">            dark_green 0x3A</span><br><span class="line">            dark_green_ega 0x11</span><br><span class="line">            dark_purple 0x1C</span><br><span class="line">            dark_red 0x10</span><br><span class="line">            dark_red_ega 0x10</span><br><span class="line">            dark_teal 0x38</span><br><span class="line">            dark_yellow 0x13</span><br><span class="line">            gold 0x33</span><br><span class="line">            gray_ega 0x17</span><br><span class="line">            gray25 0x16</span><br><span class="line">            gray40 0x37</span><br><span class="line">            gray50 0x17</span><br><span class="line">            gray80 0x3F</span><br><span class="line">            green 0x11</span><br><span class="line">            ice_blue 0x1F</span><br><span class="line">            indigo 0x3E</span><br><span class="line">            ivory 0x1A</span><br><span class="line">            lavender 0x2E</span><br><span class="line">            light_blue 0x30</span><br><span class="line">            light_green 0x2A</span><br><span class="line">            light_orange 0x34</span><br><span class="line">            light_turquoise 0x29</span><br><span class="line">            light_yellow 0x2B</span><br><span class="line">            lime 0x32</span><br><span class="line">            magenta_ega 0x0E</span><br><span class="line">            ocean_blue 0x1E</span><br><span class="line">            olive_ega 0x13</span><br><span class="line">            olive_green 0x3B</span><br><span class="line">            orange 0x35</span><br><span class="line">            pale_blue 0x2C</span><br><span class="line">            periwinkle 0x18</span><br><span class="line">            pink 0x0E</span><br><span class="line">            plum 0x3D</span><br><span class="line">            purple_ega 0x14</span><br><span class="line">            red 0x0A</span><br><span class="line">            rose 0x2D</span><br><span class="line">            sea_green 0x39</span><br><span class="line">            silver_ega 0x16</span><br><span class="line">            sky_blue 0x28</span><br><span class="line">            tan 0x2F</span><br><span class="line">            teal 0x15</span><br><span class="line">            teal_ega 0x15</span><br><span class="line">            turquoise 0x0F</span><br><span class="line">            violet 0x14</span><br><span class="line">            white 0x09</span><br><span class="line">            yellow 0x0D</span><br><span class="line">        :param horz: cell horizontal（水平方向上）</span><br><span class="line">            default value is left</span><br><span class="line">            left = 0x01 左端对齐</span><br><span class="line">            center = 0x02 居中对齐</span><br><span class="line">            right = 0x03 右端对齐</span><br><span class="line">            if horz not in values dict, use default value(left)</span><br><span class="line">        :param vert: cell vertical（垂直方向上）</span><br><span class="line">            default value is center</span><br><span class="line">            top = 0x00 上端对齐</span><br><span class="line">            center = 0x01 居中对齐</span><br><span class="line">            bottom = 0x02 低端对齐</span><br><span class="line">            if vert not in values dict, use default value(center)</span><br><span class="line">        :param kwargs: other parameters, contain: bold, underline, italic, width, height, borders</span><br><span class="line">            bold: font bold</span><br><span class="line">                default is font no bold</span><br><span class="line">                value range is: True or False, default value is False</span><br><span class="line">            underline: font underline</span><br><span class="line">                default is font no underline</span><br><span class="line">                value range is: True or False, default value is False</span><br><span class="line">            italic: font italic</span><br><span class="line">                default is font no italic</span><br><span class="line">                value range is: True or False, default value is False</span><br><span class="line">            struck_out: font struck_out 字体删除符，字上加一横杠</span><br><span class="line">                default is font no struck_out</span><br><span class="line">                value range is: True or False, default value is False</span><br><span class="line">            width: cell width</span><br><span class="line">                default value is cell default width</span><br><span class="line">            height: cell height</span><br><span class="line">                default value is cell default height</span><br><span class="line">            borders: cell borders, contain left, right, top, bottom</span><br><span class="line">                default value is cell no borders</span><br><span class="line">                value range is True or False</span><br><span class="line">                border line, default is NO_LINE:</span><br><span class="line">                    NO_LINE = 0x00</span><br><span class="line">                    THIN    = 0x01</span><br><span class="line">                    MEDIUM  = 0x02</span><br><span class="line">                    DASHED  = 0x03</span><br><span class="line">                    DOTTED  = 0x04</span><br><span class="line">                    THICK   = 0x05</span><br><span class="line">                    DOUBLE  = 0x06</span><br><span class="line">                    HAIR    = 0x07</span><br><span class="line">                border color, default is 0x40.</span><br><span class="line">            borders_dict: customize to set border style</span><br><span class="line">                line: left, right, top, bottom</span><br><span class="line">                color: left, right, top, bottom</span><br><span class="line">                data frame:</span><br><span class="line">                    borders_dict = &#123;</span><br><span class="line">                        &apos;line&apos;: &#123;</span><br><span class="line">                            &apos;top&apos;: &apos;THIN&apos;,</span><br><span class="line">                            &apos;bottom&apos;: &apos;THIN&apos;,</span><br><span class="line">                            &apos;left&apos;: &apos;THIN&apos;,</span><br><span class="line">                            &apos;right&apos;: &apos;THIN&apos;</span><br><span class="line">                        &#125;,</span><br><span class="line">                        &apos;color&apos;: &#123;</span><br><span class="line">                            &apos;top&apos;: &apos;0x40&apos;,</span><br><span class="line">                            &apos;bottom&apos;: &apos;0x40&apos;,</span><br><span class="line">                            &apos;left&apos;: &apos;0x40&apos;,</span><br><span class="line">                            &apos;right&apos;: &apos;0x40&apos;</span><br><span class="line">                        &#125;,</span><br><span class="line">                    &#125;</span><br><span class="line">            warp: is or not auto wrap 自动换行</span><br><span class="line">                default value is False,</span><br><span class="line">                if True, cell value is auto wrap</span><br><span class="line">                if False, cell value is not warp</span><br><span class="line">            formatter: cell formatter</span><br><span class="line">                contain numbers, string, date, time and so on.</span><br><span class="line">                default value is general</span><br><span class="line">                detail scan FORMATTER values</span><br><span class="line">                    &apos;general&apos;,</span><br><span class="line">                    &apos;0&apos;,</span><br><span class="line">                    &apos;0.00&apos;,</span><br><span class="line">                    &apos;#,##0&apos;,</span><br><span class="line">                    &apos;#,##0.00&apos;,</span><br><span class="line">                    &apos;&quot;$&quot;#,##0_);(&quot;$&quot;#,##&apos;,</span><br><span class="line">                    &apos;&quot;$&quot;#,##0_);[Red](&quot;$&quot;#,##&apos;,</span><br><span class="line">                    &apos;&quot;$&quot;#,##0.00_);(&quot;$&quot;#,##&apos;,</span><br><span class="line">                    &apos;&quot;$&quot;#,##0.00_);[Red](&quot;$&quot;#,##&apos;,</span><br><span class="line">                    &apos;0%&apos;,</span><br><span class="line">                    &apos;0.00%&apos;,</span><br><span class="line">                    &apos;0.00E+00&apos;,</span><br><span class="line">                    &apos;# ?/?&apos;,</span><br><span class="line">                    &apos;# ??/??&apos;,</span><br><span class="line">                    &apos;M/D/YY&apos;,</span><br><span class="line">                    &apos;D-MMM-YY&apos;,</span><br><span class="line">                    &apos;D-MMM&apos;,</span><br><span class="line">                    &apos;MMM-YY&apos;,</span><br><span class="line">                    &apos;h:mm AM/PM&apos;,</span><br><span class="line">                    &apos;h:mm:ss AM/PM&apos;,</span><br><span class="line">                    &apos;h:mm&apos;,</span><br><span class="line">                    &apos;h:mm:ss&apos;,</span><br><span class="line">                    &apos;M/D/YY h:mm&apos;,</span><br><span class="line">                    &apos;_(#,##0_);(#,##0)&apos;,</span><br><span class="line">                    &apos;_(#,##0_);[Red](#,##0)&apos;,</span><br><span class="line">                    &apos;_(#,##0.00_);(#,##0.00)&apos;,</span><br><span class="line">                    &apos;_(#,##0.00_);[Red](#,##0.00)&apos;,</span><br><span class="line">                    &apos;_(&quot;$&quot;* #,##0_);_(&quot;$&quot;* (#,##0);_(&quot;$&quot;* &quot;-&quot;_);_(@_)&apos;,</span><br><span class="line">                    &apos;_(* #,##0_);_(* (#,##0);_(* &quot;-&quot;_);_(@_)&apos;,</span><br><span class="line">                    &apos;_(&quot;$&quot;* #,##0.00_);_(&quot;$&quot;* (#,##0.00);_(&quot;$&quot;* &quot;-&quot;??_);_(@_)&apos;,</span><br><span class="line">                    &apos;_(* #,##0.00_);_(* (#,##0.00);_(* &quot;-&quot;??_);_(@_)&apos;,</span><br><span class="line">                    &apos;mm:ss&apos;,</span><br><span class="line">                    &apos;[h]:mm:ss&apos;,</span><br><span class="line">                    &apos;mm:ss.0&apos;,</span><br><span class="line">                    &apos;##0.0E+0&apos;,</span><br><span class="line">                    &apos;@&apos;</span><br><span class="line"></span><br><span class="line">        :return: object</span><br><span class="line"></span><br><span class="line">        usge:</span><br><span class="line">            column_style = self.set_style(size=8, horz=&apos;center&apos;, vert=&apos;center&apos;, color=0, bgcolor=&apos;ice_blue&apos;, borders=True)</span><br><span class="line">            sheet.write(row, col, JG_ENUMS.get(jg), column_style)</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        style = xlwt.XFStyle()</span><br><span class="line">        font = xlwt.Font()</span><br><span class="line">        # font: type</span><br><span class="line">        # font.name = font or &apos;Times New Roman&apos;</span><br><span class="line">        # font: size</span><br><span class="line">        try:</span><br><span class="line">            size = int(size)</span><br><span class="line">        except:</span><br><span class="line">            size = 11</span><br><span class="line">        font.height = size * 20</span><br><span class="line">        # font: color</span><br><span class="line">        try:</span><br><span class="line">            color = int(color)</span><br><span class="line">        except:</span><br><span class="line">            color = 0</span><br><span class="line">        finally:</span><br><span class="line">            if color &gt; 100: color = 0</span><br><span class="line">        font.colour_index = color</span><br><span class="line">        # font: bold</span><br><span class="line">        bold = kwargs.get(&apos;bold&apos;) or False</span><br><span class="line">        if bold not in [True, False]:</span><br><span class="line">            bold = False</span><br><span class="line">        font.bold = bold</span><br><span class="line">        # font: underline</span><br><span class="line">        underline = kwargs.get(&apos;underline&apos;) or False</span><br><span class="line">        if underline not in [True, False]:</span><br><span class="line">            underline = False</span><br><span class="line">        font.underline = underline</span><br><span class="line">        # font: italic</span><br><span class="line">        italic = kwargs.get(&apos;italic&apos;) or False</span><br><span class="line">        if italic not in [True, False]:</span><br><span class="line">            italic = False</span><br><span class="line">        font.italic = italic</span><br><span class="line">        # font: struck_out</span><br><span class="line">        struck_out = kwargs.get(&apos;struck_out&apos;) or False</span><br><span class="line">        if struck_out not in [True, False]:</span><br><span class="line">            struck_out = False</span><br><span class="line">        font.struck_out = struck_out</span><br><span class="line">        style.font = font</span><br><span class="line"></span><br><span class="line">        # align: horz</span><br><span class="line">        horz_v = self.HORZ_DICT.get(horz.lower())</span><br><span class="line">        if not horz_v: horz_v = 0x02</span><br><span class="line">        # align: vert</span><br><span class="line">        vert_v = self.VERT_DICT.get(vert.lower())</span><br><span class="line">        if not vert_v: vert_v = 0x01</span><br><span class="line">        align = xlwt.Alignment()</span><br><span class="line">        align.horz = horz_v</span><br><span class="line">        align.vert = vert_v</span><br><span class="line">        # align: wrap</span><br><span class="line">        wrap = kwargs.get(&apos;wrap&apos;) or False</span><br><span class="line">        if wrap not in [True, False]:</span><br><span class="line">            wrap = False</span><br><span class="line">        align.wrap = wrap</span><br><span class="line">        style.alignment = align</span><br><span class="line"></span><br><span class="line">        # background color</span><br><span class="line">        pattern = xlwt.Pattern()</span><br><span class="line">        pattern.pattern = xlwt.Pattern.SOLID_PATTERN</span><br><span class="line">        try:</span><br><span class="line">            pattern.pattern_fore_colour = xlwt.Style.colour_map[bgcolor]</span><br><span class="line">        except:</span><br><span class="line">            pattern.pattern_fore_colour = xlwt.Style.colour_map[&apos;white&apos;]</span><br><span class="line">        style.pattern = pattern</span><br><span class="line"></span><br><span class="line">        # borders</span><br><span class="line">        is_border = kwargs.get(&apos;borders&apos;) or False</span><br><span class="line">        if is_border not in [True, False]:</span><br><span class="line">            is_border = False</span><br><span class="line">        if is_border:</span><br><span class="line">            border = xlwt.Borders()</span><br><span class="line">            border.top = xlwt.Borders.THIN  # 上</span><br><span class="line">            border.bottom = xlwt.Borders.THIN  # 下</span><br><span class="line">            border.left = xlwt.Borders.THIN  # 左</span><br><span class="line">            border.right = xlwt.Borders.THIN  # 右</span><br><span class="line">            border.left_colour = 0x40</span><br><span class="line">            border.right_colour = 0x40</span><br><span class="line">            border.top_colour = 0x40</span><br><span class="line">            border.bottom_colour = 0x40</span><br><span class="line">            style.borders = border</span><br><span class="line">        borders_dict = kwargs.get(&apos;borders_dict&apos;) or False</span><br><span class="line">        if borders_dict:</span><br><span class="line">            border = xlwt.Borders()</span><br><span class="line">            for k, v in borders_dict.get(&apos;line&apos;).items():</span><br><span class="line">                if k == &apos;top&apos;:</span><br><span class="line">                    border.top = self.BORDER_LINES.get(v.upper()) if v.upper() in self.BORDER_LINES.keys() \</span><br><span class="line">                        else xlwt.Borders.NO_LINE</span><br><span class="line">                elif k == &apos;bottom&apos;:</span><br><span class="line">                    border.bottom = self.BORDER_LINES.get(v.upper()) if v.upper() in self.BORDER_LINES.keys() \</span><br><span class="line">                        else xlwt.Borders.NO_LINE</span><br><span class="line">                elif k == &apos;left&apos;:</span><br><span class="line">                    border.left = self.BORDER_LINES.get(v.upper()) if v.upper() in self.BORDER_LINES.keys() \</span><br><span class="line">                        else xlwt.Borders.NO_LINE</span><br><span class="line">                elif k == &apos;right&apos;:</span><br><span class="line">                    border.right = self.BORDER_LINES.get(v.upper()) if v.upper() in self.BORDER_LINES.keys() \</span><br><span class="line">                        else xlwt.Borders.NO_LINE</span><br><span class="line">            border.left_colour = 0x40</span><br><span class="line">            border.right_colour = 0x40</span><br><span class="line">            border.top_colour = 0x40</span><br><span class="line">            border.bottom_colour = 0x40</span><br><span class="line">            style.borders = border</span><br><span class="line"></span><br><span class="line">        # formatter</span><br><span class="line">        num_format_str = kwargs.get(&apos;formatter&apos;) or &apos;general&apos;</span><br><span class="line">        if num_format_str not in self.FORMATTER:</span><br><span class="line">            num_format_str = &apos;general&apos;</span><br><span class="line">        style.num_format_str = num_format_str</span><br><span class="line">        return style</span><br><span class="line"></span><br><span class="line">    @staticmethod</span><br><span class="line">    def format_res(status_id: int, message: str, data: dict) -&gt; dict:</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        方法请求结果格式化</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        return &#123;</span><br><span class="line">            &apos;status_id&apos;: status_id,</span><br><span class="line">            &apos;message&apos;: message if message else StatusMsgs.get(status_id),</span><br><span class="line">            &apos;data&apos;: data</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    def read_headers(self, excel_file):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        get the headers information of excel file</span><br><span class="line">        :param excel_file: excel file real path</span><br><span class="line">        :return: dict</span><br><span class="line">        result content:</span><br><span class="line">            sheets: dict sheet base info, contain something. such as row.col.index.name</span><br><span class="line">            number sheet: int sheet number</span><br><span class="line">            names: sheets name dict</span><br><span class="line">            columns: sheet columns dict</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        # default value</span><br><span class="line">        res = &#123;&apos;sheets&apos;: &#123;&#125;, &apos;nsheet&apos;: 0, &apos;names&apos;: &#123;&#125;, &apos;columns&apos;: &#123;&#125;&#125;</span><br><span class="line">        # not exist excel file</span><br><span class="line">        if not excel_file \</span><br><span class="line">                or not os.path.exists(excel_file):</span><br><span class="line">            return res</span><br><span class="line"></span><br><span class="line">        excel = xlrd.open_workbook(excel_file)</span><br><span class="line">        nsheets = excel.nsheets</span><br><span class="line">        # sheet_names = excel.sheet_names()     # 获取所有excel sheet名称列表</span><br><span class="line">        sheets_dict = dict()</span><br><span class="line">        names_dict = dict()</span><br><span class="line">        columns_dict = dict()</span><br><span class="line">        for i in range(0, nsheets, 1):</span><br><span class="line">            sheet = excel.sheet_by_index(i)</span><br><span class="line">            names_dict[str(i)] = sheet.name</span><br><span class="line">            # sheet：row行数 col列数 index索引 name名称</span><br><span class="line">            sheets_dict[str(i)] = &#123;&apos;row&apos;: sheet.nrows, &apos;col&apos;: sheet.ncols, &apos;index&apos;: i, &apos;name&apos;: sheet.name&#125;</span><br><span class="line">            try:</span><br><span class="line">                # sheet column：key：value格式</span><br><span class="line">                row_values_0 = sheet.row_values(0)</span><br><span class="line">                new_column = list()</span><br><span class="line">                for _k, _v in enumerate(row_values_0):</span><br><span class="line">                    new_column.append(&#123;&apos;key&apos;: str(_k), &apos;value&apos;: str(_v)&#125;)</span><br><span class="line">                columns_dict[str(i)] = new_column</span><br><span class="line">            except:</span><br><span class="line">                pass</span><br><span class="line">        return &#123;&apos;sheets&apos;: sheets_dict, &apos;nsheet&apos;: nsheets, &apos;names&apos;: names_dict, &apos;columns&apos;: columns_dict&#125;</span><br><span class="line"></span><br><span class="line">    def check_real_file(self, real_file: str, _type=1, clean=False):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        生成存储excel文件的绝对路径，以及新文件名称</span><br><span class="line">        加了文件已存在的check</span><br><span class="line">        结果采用绝对路径+新文件名称，新文件名称</span><br><span class="line">        如果存在用新的时间戳创建文件</span><br><span class="line">        generate to store real path of excel file</span><br><span class="line">        if file exist dir, the file name rename file name + now(%Y-%m-%d-%H-%M-%S)</span><br><span class="line">        the result is path file</span><br><span class="line">        :param clean: 是否删除已存在</span><br><span class="line">        :param real_file: all path excel file</span><br><span class="line">        :param _type: excel file version type</span><br><span class="line">        :return: sting</span><br><span class="line"></span><br><span class="line">        _type为默认格式：</span><br><span class="line">            - 1为.xls</span><br><span class="line">            - 2为.xlsx</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        if not _type or _type not in [1, 2]:    # 默认xls</span><br><span class="line">            _type = 1</span><br><span class="line"></span><br><span class="line">        # 存在 &amp;&amp; 删除</span><br><span class="line">        if clean and os.path.exists(real_file):</span><br><span class="line">            os.remove(real_file)</span><br><span class="line">            return real_file</span><br><span class="line"></span><br><span class="line">        # 文件已存在，加上时间戳</span><br><span class="line">        if os.path.exists(real_file):</span><br><span class="line">            file_name = &apos;%s%s&apos; % (get_now(format=&quot;%Y-%m-%d-%H-%M-%S&quot;), self.DEFAULT_OLD_V_PREFIX)</span><br><span class="line">            real_file = os.path.join(self._default_folder(), file_name)</span><br><span class="line">            return real_file</span><br><span class="line">        return real_file</span><br><span class="line"></span><br><span class="line">    @staticmethod</span><br><span class="line">    def _default_folder():</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        new excel file folder</span><br><span class="line">        :return: string</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        if not os.path.exists(RESULT_EXCEL):</span><br><span class="line">            mk_dirs(RESULT_EXCEL)</span><br><span class="line">        return RESULT_EXCEL</span><br><span class="line"></span><br><span class="line">    def read(self, read_file: str, sheet: int = 0, rows: list = [], columns: list = [], **kwargs) -&gt; dict:</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        read excel data</span><br><span class="line">        :param read_file: excel文件abs全路径</span><br><span class="line">        :param sheet: 读取的sheet数，从0开始，default value is 0</span><br><span class="line">        :param rows: 读取数据的rows行列表，如果为空，默认读取全部行</span><br><span class="line">        :param columns: 读取数据的columns列列表，如果为空，默认读取全部列</span><br><span class="line">        :param kwargs: 读取excel数据的其他参数配置</span><br><span class="line">            request_title: 读取的表格是否包含title行，默认是true（bool类型）</span><br><span class="line">            response_title: 返回的数据是否包含title说明，默认是true（bool类型）</span><br><span class="line"></span><br><span class="line">        :return: dict result</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        # ================== parameters check start ==================</span><br><span class="line">        if not read_file or not os.path.exists(read_file) \</span><br><span class="line">                or not os.path.isfile(read_file):</span><br><span class="line">            return self.format_res(</span><br><span class="line">                206, &apos;读取的excel数据不存在&apos;, &#123;&#125;)</span><br><span class="line">        request_title = False if kwargs.get(&apos;request_title&apos;) is False else True</span><br><span class="line">        # 初始化数据读取开始的行数</span><br><span class="line">        start_row = 1 if request_title else 0</span><br><span class="line">        response_title = False if kwargs.get(&apos;response_title&apos;) is False else True</span><br><span class="line">        excel_object = xlrd.open_workbook(filename=read_file)   # xlrd可以读取xls、xlsx</span><br><span class="line">        excel_sheet_names = excel_object.sheet_names()</span><br><span class="line">        if not str(sheet):          # 添加无sheet index，默认读取首页</span><br><span class="line">            sheet = 0</span><br><span class="line">        # 添加sheet为整型处理</span><br><span class="line">        try:</span><br><span class="line">            if not isinstance(sheet, int):</span><br><span class="line">                sheet = int(sheet)</span><br><span class="line">        except:</span><br><span class="line">            sheet = 0</span><br><span class="line">        if sheet &gt; len(excel_sheet_names) or sheet &lt; 0:</span><br><span class="line">            return self.format_res(</span><br><span class="line">                207, &apos;读取的sheet页不存在&apos;, &#123;&#125;)</span><br><span class="line">        excel_sheet = excel_object.sheet_by_index(sheet)</span><br><span class="line">        # 读取指定行</span><br><span class="line">        new_rows = list()</span><br><span class="line">        if rows:</span><br><span class="line">            for r in rows:</span><br><span class="line">                try:</span><br><span class="line">                    new_rows.append(int(r))</span><br><span class="line">                except: pass</span><br><span class="line">        # 读取指定列</span><br><span class="line">        new_cols = list()</span><br><span class="line">        if columns:</span><br><span class="line">            for c in columns:</span><br><span class="line">                try:</span><br><span class="line">                    new_cols.append(int(c))</span><br><span class="line">                except: pass</span><br><span class="line">        # ================== parameters check end ==================</span><br><span class="line"></span><br><span class="line">        # 指定行</span><br><span class="line">        read_rows = new_rows if new_rows else range(start_row, excel_sheet.nrows, 1)</span><br><span class="line">        # 指定列</span><br><span class="line">        read_cols = new_cols if new_cols else range(0, excel_sheet.ncols, 1)</span><br><span class="line">        # 读取表头</span><br><span class="line">        resp_header = list()</span><br><span class="line">        if response_title and request_title:</span><br><span class="line">            for col in read_cols:</span><br><span class="line">                if col &lt; 0: continue</span><br><span class="line">                # TODO 是否添加空标题、重复标题等标题判断</span><br><span class="line">                # 目前，定位空活着列值重复均可以</span><br><span class="line">                # if not excel_sheet.cell_value(0, col) or excel_sheet.cell_value(0, col) in resp_header:</span><br><span class="line">                #     return self.format_res(</span><br><span class="line">                #         208, &apos;读取的第%s列值为空&apos; % col, &#123;&#125;)</span><br><span class="line">                resp_header.append(excel_sheet.cell_value(0, col))</span><br><span class="line">        # 读取表数据</span><br><span class="line">        resp_data = list()</span><br><span class="line">        for row in read_rows:</span><br><span class="line">            if not row: continue</span><br><span class="line">            _d = list()</span><br><span class="line">            for col in read_cols:</span><br><span class="line">                if col &lt; 0: continue</span><br><span class="line">                _d.append(excel_sheet.cell_value(row, col))</span><br><span class="line">            if _d: resp_data.append(_d)</span><br><span class="line">        return self.format_res(</span><br><span class="line">            100, &apos;success&apos;, &#123;&apos;header&apos;: resp_header, &apos;data&apos;: resp_data&#125;)</span><br><span class="line"></span><br><span class="line">    def write(self, excel_file, data, sheet=&quot;Sheet1&quot;, **kwargs):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        写入的通用方法，xlwt、xlrd:</span><br><span class="line">            .xls表格行数限制65535</span><br><span class="line">        写入的数据为list格式，里面的元素也为list类型数据，以元素list顺序进行表格row的写入</span><br><span class="line"></span><br><span class="line">        use xlwt、xlrd to merge excel, it are to deal .xls、.xlsx formatter excel file</span><br><span class="line">        the deal excel style is cell values(row + col)</span><br><span class="line">        :param excel_file: excel file, if not exist to create</span><br><span class="line">        :param data: excel data</span><br><span class="line">        :param sheet: excel sheet name</span><br><span class="line">        :param kwargs: multiple parameters, is dict type</span><br><span class="line">            - title: 是否为标题，如果是标题样式采用标题样式</span><br><span class="line">            - start_row: 写入excel的起始行，默认为0</span><br><span class="line">            - *** extra parameters ***</span><br><span class="line">        :return: json object</span><br><span class="line">            status_id: result id, except status_id is 1 is success, others is failure</span><br><span class="line">            message: the result message</span><br><span class="line">            data:</span><br><span class="line">                path: the new excel path + name, real path</span><br><span class="line">                name: the new excel file name, not contain path</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        # if not excel file, auto rename by timestamp</span><br><span class="line">        # new excel file format xlrd xlwt: xls</span><br><span class="line">        if not excel_file:</span><br><span class="line">            return self.format_res(214, &apos;请求参数为file必须信息&apos;, &#123;&#125;)</span><br><span class="line">        if not data:</span><br><span class="line">            return self.format_res(401, &apos;数据不存在&apos;, &#123;&#125;)</span><br><span class="line"></span><br><span class="line">        try:</span><br><span class="line">            new_excel = xlwt.Workbook(encoding=&apos;utf-8&apos;)</span><br><span class="line">            new_sheet = new_excel.add_sheet(sheet or self.DEFAULT_SHEET_NAME, cell_overwrite_ok=True)</span><br><span class="line">            start_row = kwargs.get(&apos;start_row&apos;) or 0    # 写入的起始行</span><br><span class="line">            row = 0</span><br><span class="line">            for _d in data:</span><br><span class="line">                if not _d: continue</span><br><span class="line">                for col in range(0, len(_d), 1):</span><br><span class="line">                    new_sheet.write((start_row + row), col, _d[col])    # 单元格的方式写入</span><br><span class="line">                row += 1</span><br><span class="line">            # excel_file = self.check_real_file(excel_file, clean=True)</span><br><span class="line">            new_excel.save(excel_file)</span><br><span class="line">            return self.format_res(</span><br><span class="line">                100, &apos;success&apos;, &#123;&apos;name&apos;: os.path.split(excel_file)[1], &apos;path&apos;: excel_file&#125;)</span><br><span class="line">        except Exception as e:</span><br><span class="line">            return self.format_res(998, str(e), &#123;&#125;)</span><br><span class="line"></span><br><span class="line">    def beau_write(self, excel_file, data, sheet_name=&quot;Sheet1&quot;, **kwargs):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        针对于质量考核检查结果直接带样式的表格，xlwt、xlrd:</span><br><span class="line">            .xls表格行数限制65535</span><br><span class="line">        特殊方法，写死数据以及样式</span><br><span class="line"></span><br><span class="line">        use xlwt、xlrd to merge excel, it are to deal .xls、.xlsx formatter excel file</span><br><span class="line">        the deal excel style is cell values(row + col)</span><br><span class="line">        :param excel_file: excel file, if not exist to create</span><br><span class="line">        :param data: excel data</span><br><span class="line">        :param sheet_name: excel sheet name</span><br><span class="line">        :param kwargs: multiple parameters, is dict type</span><br><span class="line">            - *** extra parameters ***</span><br><span class="line">        :return: json object</span><br><span class="line">            status_id: result id, except status_id is 1 is success, others is failure</span><br><span class="line">            message: the result message</span><br><span class="line">            data:</span><br><span class="line">                path: the new excel path + name, real path</span><br><span class="line">                name: the new excel file name, not contain path</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        # if not excel file, auto rename by timestamp</span><br><span class="line">        # new excel file format xlrd xlwt: xls</span><br><span class="line">        if not excel_file:</span><br><span class="line">            return self.format_res(214, &apos;请求参数为Excel file必须信息&apos;, &#123;&#125;)</span><br><span class="line">        if not data:</span><br><span class="line">            return self.format_res(401, &apos;数据不存在&apos;, &#123;&#125;)</span><br><span class="line"></span><br><span class="line">        try:</span><br><span class="line">            new_excel = xlwt.Workbook(encoding=&apos;utf-8&apos;)</span><br><span class="line">            new_sheet = new_excel.add_sheet(sheet_name or self.DEFAULT_SHEET_NAME, cell_overwrite_ok=True)</span><br><span class="line"></span><br><span class="line">            # initialize cell style</span><br><span class="line">            headline_border = &#123;</span><br><span class="line">                &apos;line&apos;: &#123;</span><br><span class="line">                    &apos;top&apos;: &apos;NO_LINE&apos;,</span><br><span class="line">                    &apos;bottom&apos;: &apos;DASHED&apos;,</span><br><span class="line">                    &apos;left&apos;: &apos;NO_LINE&apos;,</span><br><span class="line">                    &apos;right&apos;: &apos;NO_LINE&apos;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            headline_style = self.set_style(size=16, horz=&apos;center&apos;, vert=&apos;center&apos;, bold=True,</span><br><span class="line">                                            borders_dict=headline_border, wrap=True)</span><br><span class="line">            title_style = self.set_style(size=10, bold=True, horz=&apos;center&apos;, vert=&apos;center&apos;, color=1,</span><br><span class="line">                                         bgcolor=&apos;periwinkle&apos;, borders=True)</span><br><span class="line">            column_style = self.set_style(size=8, bold=True, horz=&apos;center&apos;, vert=&apos;center&apos;, color=0, bgcolor=&apos;ice_blue&apos;,</span><br><span class="line">                                          borders=True)</span><br><span class="line">            cell_style = self.set_style(size=8, horz=&apos;center&apos;, vert=&apos;center&apos;, borders=True)</span><br><span class="line">            cell_per_style = self.set_style(size=8, horz=&apos;center&apos;, vert=&apos;center&apos;, borders=True, formatter=&apos;0.00%&apos;)</span><br><span class="line">            special_cell_style = self.set_style(size=8, horz=&apos;center&apos;, vert=&apos;center&apos;, bgcolor=&apos;yellow&apos;, borders=True)</span><br><span class="line">            special_per_style = self.set_style(size=8, horz=&apos;center&apos;, vert=&apos;center&apos;, bgcolor=&apos;yellow&apos;, borders=True,</span><br><span class="line">                                               formatter=&apos;0.00%&apos;)</span><br><span class="line">            # excel title</span><br><span class="line">            new_sheet.write_merge(0, 1, 0, 0, &quot;项目编号&quot;, title_style)</span><br><span class="line">            new_sheet.write_merge(0, 1, 1, 1, &quot;项目名称&quot;, title_style)</span><br><span class="line">            new_sheet.write_merge(0, 0, 2, 6, &quot;测试记录&quot;, title_style)</span><br><span class="line">            new_sheet.write_merge(0, 0, 7, 11, &quot;工资确认单&quot;, title_style)</span><br><span class="line">            new_sheet.write(1, 2, &apos;提交次数&apos;, title_style)</span><br><span class="line">            new_sheet.write(1, 3, &apos;版本&apos;, title_style)</span><br><span class="line">            new_sheet.write(1, 4, &apos;用户&apos;, title_style)</span><br><span class="line">            new_sheet.write(1, 5, &apos;时间&apos;, title_style)</span><br><span class="line">            new_sheet.write(1, 6, &apos;备注&apos;, title_style)</span><br><span class="line">            new_sheet.write(1, 7, &apos;提交次数&apos;, title_style)</span><br><span class="line">            new_sheet.write(1, 8, &apos;版本&apos;, title_style)</span><br><span class="line">            new_sheet.write(1, 9, &apos;用户&apos;, title_style)</span><br><span class="line">            new_sheet.write(1, 10, &apos;时间&apos;, title_style)</span><br><span class="line">            new_sheet.write(1, 11, &apos;备注&apos;, title_style)</span><br><span class="line"></span><br><span class="line">            start_row = 2    # 数据写入的起始行</span><br><span class="line">            row = 0</span><br><span class="line">            for _d in data:</span><br><span class="line">                if not _d: continue</span><br><span class="line">                for col in range(0, len(_d), 1):</span><br><span class="line">                    style = column_style if col &lt; 2 else cell_style</span><br><span class="line">                    new_sheet.write((start_row + row), col, _d[col], style)    # 单元格的方式写入</span><br><span class="line">                row += 1</span><br><span class="line">            &quot;&quot;&quot;</span><br><span class="line">            end write and save</span><br><span class="line">            &quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line">            # 设置列宽, 256为基准数</span><br><span class="line">            for col in [1]:</span><br><span class="line">                new_sheet.col(col).width_mismatch = True</span><br><span class="line">                new_sheet.col(col).width = 256 * 24  # 标准256 * 12</span><br><span class="line">            for col in [5, 6, 10, 11]:</span><br><span class="line">                new_sheet.col(col).width_mismatch = True</span><br><span class="line">                new_sheet.col(col).width = 256 * 18  # 标准256 * 12</span><br><span class="line">            # 设置行高, 20为基准数 50为50磅</span><br><span class="line">            he_rows = [0, 1]</span><br><span class="line">            for row in he_rows:</span><br><span class="line">                new_sheet.row(row).height_mismatch = True  # 标题</span><br><span class="line">                new_sheet.row(row).height = 20 * 20</span><br><span class="line"></span><br><span class="line">            # excel_file = self.check_real_file(excel_file, clean=True)</span><br><span class="line">            new_excel.save(excel_file)</span><br><span class="line">            return self.format_res(</span><br><span class="line">                100, &apos;success&apos;, &#123;&apos;name&apos;: os.path.split(excel_file)[1], &apos;path&apos;: excel_file&#125;)</span><br><span class="line">        except Exception as e:</span><br><span class="line">            return self.format_res(998, str(e), &#123;&#125;)</span><br></pre></td></tr></table></figure>
+<h4 id="系列"><a href="#系列" class="headerlink" title="系列"></a>系列</h4><p><a href="http://pygo2.top/articles/26110/">Python模块之command系统命令</a><br><a href="http://pygo2.top/articles/19275/">Python模块之excel模块</a><br><a href="http://pygo2.top/articles/5145/">Python模块之logger日志</a><br><a href="http://pygo2.top/articles/61799/">Python模块之utils公共方法</a><br><a href="http://pygo2.top/articles/31232/">Python模块之watcher打点</a><br><a href="http://pygo2.top/articles/51787/">Python模块之config配置解析</a><br><a href="http://pygo2.top/articles/58292/">Python模块之dtalk钉钉消息</a><br><a href="http://pygo2.top/articles/33254/">Python模块之企业微信</a></p>
+<p>更多模块请参考文章TAG进行查看。</p>
+<font size="6.5" color="red"><strong><em>Python模块系列，持续更新中。。。。。。</em></strong></font>
+
+      
+    </div>
+
+    <!-- 版权声明 -->
+    <div>
+     
+        <ul class="post-copyright">
+          <li class="post-copyright-author">
+              <strong>本文作者：</strong>mingliang.gao【一个爱<font size="5" color="#BF0060">老婆</font>的<font size="5" color="#FF4500">Python</font>程序猿。。。。。。】
+          </li>
+          <li class="post-copyright-link">
+            <strong>本文链接：</strong>
+            <a href="http://pygo2.top/articles/19275/" title="Python模块之excel模块">http://pygo2.top/articles/19275/</a>
+          </li>
+          <li class="post-copyright-license">
+            <strong>版权声明：</strong>
+            本博客所有文章欢迎转载，转载请注明出处！
+          </li>
+        </ul>
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+      <div>
+        <div id="reward-container">
+  <div>觉得有帮助 <i class="fa fa-paw" style="color:red"></i> 请偶坐个公交车</div>
+  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/wechatpay.png" alt="mingliang.gao 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/alipay.png" alt="mingliang.gao 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Python/" rel="tag"><i class="fa fa-bomb"></i> Python</a>
+          
+            <a href="/tags/Python模块系列/" rel="tag"><i class="fa fa-bomb"></i> Python模块系列</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/articles/26110/" rel="next" title="Python模块之command系统命令">
+                <i class="fa fa-chevron-left"></i> Python模块之command系统命令
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/articles/5145/" rel="prev" title="Python模块之logger日志">
+                Python模块之logger日志 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/timg.gif" alt="mingliang.gao">
+            
+              <p class="site-author-name" itemprop="name">mingliang.gao</p>
+              <div class="site-description motion-element" itemprop="description"><font size="5" color="#FF4500">直男</font><br><font size="4.5" color="#FF8C00">双鱼座</font><br><font size="3" color="#000000">Python开发工程师</font></div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">221</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">32</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">102</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+
+            </nav>
+          
+
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/GIS90" title="GitHub &rarr; https://github.com/GIS90" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i></a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="https://weibo.com/u/1989571513" title="WeiBo &rarr; https://weibo.com/u/1989571513" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i></a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="/gaoming971366@163.com" title="E-Mail &rarr; gaoming971366@163.com"><i class="fa fa-fw fa-at"></i></a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="https://my.oschina.net/u/2259452" title="OsChina &rarr; https://my.oschina.net/u/2259452" rel="noopener" target="_blank"><i class="fa fa-fw fa-fire"></i></a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                <font size="5.5" color="#0080FF">友情链接</font>
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.json.cn/" title="https://www.json.cn/" rel="noopener" target="_blank">json格式化</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.yasuotu.com/" title="https://www.yasuotu.com/" rel="noopener" target="_blank">picture压缩</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.baidu.com/" title="https://www.baidu.com/" rel="noopener" target="_blank">baidu一下</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+<script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
+<script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
+<script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
+<div class="widget-wrap">
+    <h4 class="widget-title" style="font-size:21px;text-align:center;color:#0080FF;margin:20px 0px 0px;">Tag Cloud</h4>
+    <div id="myCanvasContainer" class="widget tagcloud" style="font-size:18px;">
+        <canvas width="220" height="200" id="resCanvas" style="width=100%">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ADB/">ADB</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/API/">API</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ArcGIS/">ArcGIS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Atom/">Atom</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bash/">Bash</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bash脚本系列/">Bash脚本系列</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bootstrap/">Bootstrap</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CkEditor/">CkEditor</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Conda/">Conda</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Crontab/">Crontab</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DB2/">DB2</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DNS/">DNS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DingTalk/">DingTalk</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ERROR集/">ERROR集</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Element-UI/">Element-UI</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Excel/">Excel</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Flask/">Flask</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/FreeFileSync/">FreeFileSync</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Github/">Github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/">HTML</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hadoop/">Hadoop</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hashcat/">Hashcat</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">31</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo插件/">Hexo插件</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo美化/">Hexo美化</a><span class="tag-list-count">14</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IDE/">IDE</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JSON/">JSON</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/">Javascript</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LDAP/">LDAP</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Libreoffice/">Libreoffice</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a><span class="tag-list-count">26</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux其他篇/">Linux其他篇</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux基础篇/">Linux基础篇</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux增强篇/">Linux增强篇</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux番外篇/">Linux番外篇</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MacOS/">MacOS</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mysql/">Mysql</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NODE/">NODE</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NPM/">NPM</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nginx/">Nginx</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Oracle/">Oracle</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PIP/">PIP</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Postgresql/">Postgresql</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">42</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python包/">Python包</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python基础篇/">Python基础篇</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python实战/">Python实战</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python模块系列/">Python模块系列</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python程序篇/">Python程序篇</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Rsync/">Rsync</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SSH/">SSH</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Shell/">Shell</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tomcat/">Tomcat</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/">Ubuntu</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VIM/">VIM</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VUE/">VUE</a><span class="tag-list-count">18</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WIKI/">WIKI</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Window-Server/">Window Server</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Windows/">Windows</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/brew/">brew</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/etherpad/">etherpad</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ffmpeg/">ffmpeg</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gitea/">gitea</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/seo优化/">seo优化</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/svn/">svn</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vant/">vant</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/中国节/">中国节</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端其他分类/">前端其他分类</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端组件/">前端组件</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/办公工具/">办公工具</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/动漫/">动漫</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/协议类/">协议类</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/历史/">历史</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/回忆录/">回忆录</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/国际节/">国际节</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/域名/">域名</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/存储过程/">存储过程</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/富文本编辑器/">富文本编辑器</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/抓娃娃/">抓娃娃</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/文件传输/">文件传输</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/旅行记/">旅行记</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/烧脑剧/">烧脑剧</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/爬虫/">爬虫</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/爬虫系列/">爬虫系列</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/生活/">生活</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/电视剧/">电视剧</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/看图笑话/">看图笑话</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/纯文笑话/">纯文笑话</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/美国大片/">美国大片</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/美食/">美食</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/节日/">节日</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/英语学习/">英语学习</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/西方节/">西方节</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/证书/">证书</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/运维工具/">运维工具</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/部署教程系列/">部署教程系列</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/音乐/">音乐</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/项目/">项目</a><span class="tag-list-count">1</span></li></ul>
+        </canvas>
+    </div>
+</div>
+
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#版本"><span class="nav-number">1.</span> <span class="nav-text">版本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#描述"><span class="nav-number">2.</span> <span class="nav-text">描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设计"><span class="nav-number">3.</span> <span class="nav-text">设计</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用"><span class="nav-number">4.</span> <span class="nav-text">使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#源码"><span class="nav-number">5.</span> <span class="nav-text">源码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#系列"><span class="nav-number">6.</span> <span class="nav-text">系列</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 – <span itemprop="copyrightYear">2023</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user-circle"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">mingliang.gao</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="站点总字数">660k</span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+    <span title="站点阅读时长">10:01</span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+<span id="sitetime" class="footer-sitetime"></span>
+<script language="javascript">
+	function siteTime(){
+		window.setTimeout("siteTime()", 1000);
+		var seconds = 1000;
+		var minutes = seconds * 60;
+		var hours = minutes * 60;
+		var days = hours * 24;
+		var years = days * 365;
+		var today = new Date();
+		var todayYear = today.getFullYear();
+		var todayMonth = today.getMonth()+1;
+		var todayDate = today.getDate();
+		var todayHour = today.getHours();
+		var todayMinute = today.getMinutes();
+		var todaySecond = today.getSeconds();
+		/* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+		year - 作为date对象的年份，为4位年份值
+		month - 0-11之间的整数，做为date对象的月份
+		day - 1-31之间的整数，做为date对象的天数
+		hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+		minutes - 0-59之间的整数，做为date对象的分钟数
+		seconds - 0-59之间的整数，做为date对象的秒数
+		microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+		var t1 = Date.UTC(2018,10,22,23,00,00);
+		var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+		var diff = t2-t1;
+		var diffYears = Math.floor(diff/years);
+		var diffDays = Math.floor((diff/days)-diffYears*365);
+		var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+		var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+		var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+		document.getElementById("sitetime").innerHTML=" 已运行"+diffYears+" 年 "+diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒 | 备案编号：<a href='http://beian.miit.gov.cn/' target='_blank'><font size=4.5 color='red'>蒙ICP备2021000415号</font></a>";
+	}
+	siteTime();
+</script>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+      本站访客总量：
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+  
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+      本站总访问量：
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+      <div id="needsharebutton-float">
+        <span class="btn">
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </span>
+      </div>
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=7.0.1"></script>
+
+  <script src="/js/src/motion.js?v=7.0.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=7.0.1"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=7.0.1"></script>
+
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
+<script src="/js/src/post-details.js?v=7.0.1"></script>
+
+
+
+  
+
+
+  <script src="/js/src/next-boot.js?v=7.0.1"></script>
+
+
+  
+  <script src="/js/src/js.cookie.js?v=7.0.1"></script>
+  <script src="/js/src/scroll-cookie.js?v=7.0.1"></script>
+
+
+  
+
+  
+
+  
+  
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'nKAaXD2tmTHEFQRsCIhlVh5c-gzGzoHsz',
+    appKey: 'rsNeXIqkLjqwrVmtKkf4nYl5',
+    placeholder: '欢迎吐槽 ！！！',
+    avatar: 'monsterid',
+    meta: guest,
+    pageSize: '12' || 10,
+    visitor: false,
+    lang: '' || 'zh-cn'
+  });
+</script>
+
+
+
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+<script>
+if ($('body').find('div.pdf').length) {
+  $.ajax({
+    type: 'GET',
+    url: '//cdn.jsdelivr.net/npm/pdfobject@2/pdfobject.min.js',
+    dataType: 'script',
+    cache: true,
+    success: function() {
+      $('body').find('div.pdf').each(function(i, o) {
+        PDFObject.embed($(o).attr('target'), $(o), {
+          pdfOpenParams: {
+            navpanes: 0,
+            toolbar: 0,
+            statusbar: 0,
+            pagemode: 'thumbs',
+            view: 'FitH'
+          },
+          PDFJS_URL: '/lib/pdf/web/viewer.html',
+          height: $(o).attr('height') || '500px'
+        });
+      });
+    },
+  });
+}
+</script>
+
+
+  
+<script>
+if ($('body').find('pre.mermaid').length) {
+  $.ajax({
+    type: 'GET',
+    url: '//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js',
+    dataType: 'script',
+    cache: true,
+    success: function() {
+      mermaid.initialize({
+        theme: 'forest',
+        logLevel: 3,
+        flowchart: { curve: 'linear' },
+        gantt: { axisFormat: '%m/%d/%Y' },
+        sequence: { actorMargin: 50 }
+      });
+    }
+  });
+}
+</script>
+
+
+  
+
+  
+
+  
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+  <script>
+    
+    
+      flOptions = {};
+      
+        flOptions.iconStyle = "box";
+      
+        flOptions.boxForm = "vertical";
+      
+        flOptions.position = "topCenter";
+      
+        flOptions.networks = "Weibo,Wechat,Douban,QQZone";
+      
+      new needShareButton('#needsharebutton-float', flOptions);
+    
+  </script>
+
+
+  
+
+  
+
+  
+
+  
+<script>
+  $('.highlight').each(function(i, e) {
+    var $wrap = $('<div>').addClass('highlight-wrap');
+    $(e).after($wrap);
+    $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+      var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+        return $(e).text();
+      }).toArray().join('\n');
+      var ta = document.createElement('textarea');
+      var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+      ta.style.top = yPosition + 'px'; // Prevent page scroll
+      ta.style.position = 'absolute';
+      ta.style.opacity = '0';
+      ta.readOnly = true;
+      ta.value = code;
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, code.length);
+      ta.readOnly = false;
+      var result = document.execCommand('copy');
+      
+        if (result) $(this).text('复制成功');
+        else $(this).text('复制失败');
+      
+      ta.blur(); // For iOS
+      $(this).blur();
+    })).on('mouseleave', function(e) {
+      var $b = $(this).find('.copy-btn');
+      setTimeout(function() {
+        $b.text('复制');
+      }, 300);
+    }).append(e);
+  })
+</script>
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/click_magic.js"></script>
+  <script type="text/javascript" src="/js/src/theme_change.js"></script>
+  <script type="text/javascript" src="/js/src/float_box.js" language="javascript"></script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pNluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/haru02.model.json"},"display":{"position":"right","width":230,"height":480,"hOffset":10,"vOffset":-20},"mobile":{"show":false,"scale":0.2},"react":{"opacity":0.8},"log":false,"pluginModelPath":"assets/"});</script></body>
+</html>

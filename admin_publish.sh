@@ -16,7 +16,7 @@ fi
 if [ $flag -eq 1 ];then
     hexo clean
     hexo g
-    python file_deal.py && python tag_cloud.py
+    python3 file_deal.py && python3 tag_cloud.py
     gulp
 else
     hexo g
