@@ -2,7 +2,7 @@
 title: Element-UI【Form组件】unpected-width报错的解决
 comments: false
 categories:
-  - [VUE]
+  - [前端]
 tags: [VUE, Element-UI]
 top: false
 abbrlink: 16084

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://pygo2.top/"/>
-  <updated>2023-02-18T11:46:20.000Z</updated>
+  <updated>2023-02-22T14:13:33.000Z</updated>
   <id>http://pygo2.top/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Oracle备份expdp与恢复impdp</title>
+    <link href="http://pygo2.top/articles/48068/"/>
+    <id>http://pygo2.top/articles/48068/</id>
+    <published>2023-02-22T14:13:33.000Z</published>
+    <updated>2023-02-22T14:13:33.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/images/article_oracle_2.png" alt></p><a id="more"></a><hr><h4 id="主备恢复流程摘要"><a href="#主备恢复流程摘要" class="headerlink" title="主备恢复流程摘要"></a>主备恢复流程摘要</h4><p>1、停止【主服务器】tomcat服务(./shutdown.sh)</p><p>2、停止【主服务器】oracle监听服务（lsnrctl stop）</p><p>3、【主服务器】切换oracle用户进行expdp备份</p><p>4、主备服务器传输备份文件（MD5SUM查看是否文件完整）</p><p>5、【备服务器】impdp数据恢复</p><p>6、启动tomcat服务(./start.sh)</p><p>7、启动oracle监听服务（lsnrctl start）</p><h4 id="备份前数据库参数设置"><a href="#备份前数据库参数设置" class="headerlink" title="备份前数据库参数设置"></a>备份前数据库参数设置</h4><blockquote><p>备份参数DEFERRED_SEGMENT_CREATION {true | flase}【非必须设置参数】</p></blockquote><p>–true 当该参数值等于true的时候，我们数据库中新创建的表，并且没有insert过任何数据的情况下，采用导出时不会将该表导出， 因为在dba_segments和user_segments是查不到该表的信息，只有当我们插入记录才会在两表中生成段的信息，并能导出该表。</p><p>–flase 当此参数为false时，不存在dba_segments和user_segments中的段表也可以通过导出的方式将该表导出。</p><p>查询：show parameter DEFERRED_SEGMENT_CREATION;</p><p>更改：alter system set DEFERRED_SEGMENT_CREATION=false scope=both;</p><p>﻿</p><blockquote><p>expdp备份目录【必须设置参数】</p></blockquote><p>select * from dba_directories;</p><p>创建/修改：create or replace directory 备份目录名称 as ‘备份绝对路径’;</p><p>授权：grant read,write on dirrectory 备份目录名称 to 用户;</p><p>删除：drop directory 备份目录名称;</p><p>﻿</p><blockquote><p>普通用户授权导出全库【非必要设置参数】：</p></blockquote><p>grant datadump_exp_full_database to test;</p><p>﻿</p><h4 id="备份命令"><a href="#备份命令" class="headerlink" title="备份命令"></a>备份命令</h4><p>普通用户：expdp 账户/密码 directory=备份目录名称 dumpfile=备份文件名称.dmp logfile=备份日志名称.log compression=all reuse_dumpfiles=y</p><p>例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">expdp pas/pas directory=DMPDID_PAS dumpfile=AESPAS_20230213_01.dmp logfile=AESPAS_20230213_01.log compression=all reuse_dumpfiles=y</span><br></pre></td></tr></table></figure></p><p>system用户：expdp system/密码 directory=备份目录名称 schema=策略名称 dumpfile=备份文件名称.dmp logfile=备份日志名称.log compression=all reuse_dumpfiles=y</p><p>﻿<br>– directory：指定转储文件和日志文件所在的目录（数据库设置）</p><p>– dumpfile：备份文件的名称</p><p>– schema：策略名称，如果system导出全库去掉schema参数，加上full=y</p><p>– logfile：备份日志名称</p><p>– reuse_dumpfiles：是否覆盖备份文件，Y覆盖N不覆盖</p><p>– FULL：指定数据库模式导出,默认为N，{Y | N}为Y时,标识执行数据库导出</p><p>– tables：导出指定的表名，%代表通配符，如果是system可以加上：策略名称.表名</p><p>– exclude：排除指定的表名不导出</p><p>– content：导出内容{ALL | DATA_ONLY | METADATA_ONLY}当设置CONTENT为ALL时,将导出对象定义及其所有数据.为DATA_ONLY时,只导出对象数据,为METADATA_ONLY时,只导出对象定义</p><p>– FLASHBACK_TIME：指定导出特定时间点的表数据（FLASHBACK_TIME=“TO_TIMESTAMP(’25-08-2004 14:35:00’,’DD-MM-YYYY HH24:MI:SS’)”）</p><p>– FILESIZE：指定导出文件的最大尺寸,默认为0</p><p>– NOLOGFILE：该选项用于指定禁止生成导出日志文件,默认值为N</p><p>– QUERY：用于指定过滤导出数据的where条件</p><p>– compression：ALL ：对导出的元数据和表数据都进行压缩，得到的导出文件是最小的，耗时也是最长的。DATA_ONLY ：仅对表数据进行压缩，对于大数据量的导出效果明显，会比METADATA_ONLY方式得到更小的压缩文件。METADATA_ONLY ：仅对元数据进行压缩，而不会对表数据进行压缩，这种压缩执行后效果一般不是很明显，不过速度比较快。NONE ：不进行任何的压缩，导出后的文件也是最大的。DEFAULT ：默认方式，即不指定COMPRESSION参数，会采用默认的压缩方式METADATA_ONLY。</p><p>﻿</p><p>导出表：<br>expdp 账户/密码 directory=备份目录名称 dumpfile=备份文件名称.dmp logfile=备份日志名称.log compression=all reuse_dumpfiles=y tables=表名称1,表名称2,表名称N</p><p>﻿</p><h4 id="恢复命令"><a href="#恢复命令" class="headerlink" title="恢复命令"></a>恢复命令</h4><p>impdp 账户/密码 directory=备份目录名称 dumpfile=备份文件名称.dmp exclude=statistics table_exists_action=replace<br>例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">impdp pas/pas directory=DMPDID_PAS dumpfile=AESPAS_20230213_01.dmp exclude=statistics table_exists_action=replace</span><br></pre></td></tr></table></figure></p><h4 id="查看存在的job："><a href="#查看存在的job：" class="headerlink" title="查看存在的job："></a>查看存在的job：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM DBA_DATAPUMP_JOBS;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/images/article_oracle_2.png&quot; alt&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="数据库" scheme="http://pygo2.top/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+      <category term="Oracle" scheme="http://pygo2.top/tags/Oracle/"/>
+    
+  </entry>
   
   <entry>
     <title>NODE17或者18版本启动NODE16版本的项目:0308010C:digital envelope routines::unsupported</title>
@@ -528,33 +550,6 @@
       <category term="Oracle" scheme="http://pygo2.top/tags/Oracle/"/>
     
       <category term="部署教程系列" scheme="http://pygo2.top/tags/%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B%E7%B3%BB%E5%88%97/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Windows Server2012R2安装TOMCAT</title>
-    <link href="http://pygo2.top/articles/2013/"/>
-    <id>http://pygo2.top/articles/2013/</id>
-    <published>2022-07-21T15:15:51.000Z</published>
-    <updated>2022-07-21T15:15:51.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="/images/article_tomcat.jpeg" alt></p><blockquote class="blockquote-center"><p>Windows安装Tomcat7与配置</p></blockquote><span class="label primary">Tomcat</span> <span class="label info">Windows</span><a id="more"></a><hr><h4 id="版本说明"><a href="#版本说明" class="headerlink" title="版本说明"></a>版本说明</h4><table><thead><tr><th style="text-align:center">名称</th><th style="text-align:center">版本</th></tr></thead><tbody><tr><td style="text-align:center">服务器系统</td><td style="text-align:center">Windows Server2012 R2 Standard</td></tr><tr><td style="text-align:center">Tomcat</td><td style="text-align:center">7</td></tr></tbody></table><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>1、打开Tomcat下载地址，根据项目选择对应的版本进行下载，本文选择Tomcat7：<br><a href="https://archive.apache.org/dist/tomcat/" target="_blank" rel="noopener">https://archive.apache.org/dist/tomcat/</a><br><img src="581662566099_.pic.jpg" alt></p><p>2、选择bin，进入之后会有各种版本，本文选择7.0.99最后一个7版本<br><img src="591662566115_.pic.jpg" alt></p><p>3、Windows版本，下载的时候根据安装系统选择对应的版本、位数，本文选择了：apache-tomcat-7.0.99-windows-x64.zip<br>这种包的好处在于不用安装，直接能用，也可以选择exe安装版本。<br><img src="601662566140_.pic.jpg" alt></p><p>4、下载好之后，直接copy到服务器，直接解压放在D盘根目录。<br>建议：安装的路径选择英文路径。<br><img src="611662566156_.pic.jpg" alt></p><p>5、环境变量配置<br>安装以后需要进行环境变量配置。<br>5.1 我的电脑（右键）-&gt;选择属性-&gt;高级系统设置-&gt;环境变量。<br><img src="621662566171_.pic.jpg" alt></p><p>5.2 环境变量配置<br>5.2.1 新建CATALINA_HOME变量<br>变量名：CATALINA_HOME<br>变量值：Tomcat安装的绝对路径（D:\apache-tomcat-7.0.99）<br><img src="631662566186_.pic.jpg" alt></p><p>5.2.2 修改Path变量<br>PATH变量在末尾添加：;%CATALINA_HOME%\bin</p><p>6 测试变量<br>打开cmd窗口（win+R），输入echo %CATALINA_HOME%，如果是Tomcat安装路径，否则就是环境变量配置问题。<br><img src="641662566202_.pic.jpg" alt></p><p>7 启动Tomcat<br>7.1 进入到Tomcat安装路径下的bin目录<br>7.2 shift + 右键-&gt;选择-&gt;在此文件夹打开命令窗口<br><img src="651662566218_.pic.jpg" alt></p><p>7.3 输入startup.bat，启动tomcat<br><img src="661662566262_.pic.jpg" alt></p><p>7.4 打开浏览器：127.0.0.7:8080，出现tomcat服务<br><img src="671662566275_.pic.jpg" alt></p><h4 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h4><blockquote><p>1、cmd控制台乱码</p></blockquote><p>1.1 Tomcat安装路径 -&gt; conf -&gt; logging.properties<br><img src="681662566322_.pic.jpg" alt><br>修改以下内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># java.util.logging.ConsoleHandler.encoding = UTF-8</span><br><span class="line">java.util.logging.ConsoleHandler.encoding = CBK</span><br></pre></td></tr></table></figure></p><p>1.2 重启Tomcat，解决乱码问题<br>乱码解析：<br>Cmd控制台编码与Tomcat日志编码不一致，查看cmd控制台编码：<br><img src="691662566345_.pic.jpg" alt><br>cmd控制台为GBK编码，Tomcat日志编码默认UTF-8编码，统一编码就解决了</p><blockquote><p>2、Tomcat修改内存</p></blockquote><p>在部署PSA4.3.4系统运行后，发现系统Tomcat控制台报错：<br>java.lang.OutOfMemoryError：PermGen space，意思就是内存不足，<br>由于Windows服务器主要用来做应用服务所用，所以手动分配Tomcat内存大小。</p><p>2.1 Windows找到D:\apache-tomcat-7.0.99\bin下的catalina.bat文件<br>（Linux：D:\apache-tomcat-7.0.99\bin\catalina.sh文件）<br><img src="701662566387_.pic.jpg" alt></p><p>2.2 用notepad打开，在111行setlocal后面加上：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">set JAVA_OPTS=%JAVA_OPTS% -server -XX:PermSize=8192M -XX:MaxPermSize=8192M</span><br><span class="line">8G</span><br></pre></td></tr></table></figure></p><p>服务器总大小为32G，就一个tomcat，分的大了点，根据服务器项目情况可以适当调整。<br>不过，Xms与Xmx参数之间的差值建议不要太大，不然会造成内存浪费，这里设置相等。<br>JAVA_OPTS配置文件上面搜索JAVA_OPTS，有说明。<br><img src="711662566416_.pic.jpg" alt></p><p>2.3 重启Tomcat解决OutOfMemoryError</p><div class="post_cus_note"> =========== END =========== </div><h4 id="部署教程系列"><a href="#部署教程系列" class="headerlink" title="部署教程系列"></a>部署教程系列</h4><ul><li>LINUX+ORACLE部署安装：<a href="http://pygo2.top/articles/40987/">http://pygo2.top/articles/40987/</a></li><li>Linux安装JAVA1.7与配置：<a href="http://pygo2.top/articles/13502/">http://pygo2.top/articles/13502/</a></li><li>Windows安装JAVA1.7与配置：<a href="http://pygo2.top/articles/1151/">http://pygo2.top/articles/1151/</a></li><li>Windows安装Tomcat7与配置：<a href="http://pygo2.top/articles/2013/">http://pygo2.top/articles/2013/</a></li><li>Windows安装PLSQL与配置：<a href="http://pygo2.top/articles/47618/">http://pygo2.top/articles/47618/</a></li></ul><font size="6.5" color="red">部署系列持续更新中。。。。。。</font>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;/images/article_tomcat.jpeg&quot; alt&gt;&lt;/p&gt;
-&lt;blockquote class=&quot;blockquote-center&quot;&gt;&lt;p&gt;Windows安装Tomcat7与配置&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;span class=&quot;label primary&quot;&gt;Tomcat&lt;/span&gt; &lt;span class=&quot;label info&quot;&gt;Windows&lt;/span&gt;
-    
-    </summary>
-    
-      <category term="服务器" scheme="http://pygo2.top/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
-    
-    
-      <category term="部署教程系列" scheme="http://pygo2.top/tags/%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B%E7%B3%BB%E5%88%97/"/>
-    
-      <category term="Tomcat" scheme="http://pygo2.top/tags/Tomcat/"/>
     
   </entry>
   

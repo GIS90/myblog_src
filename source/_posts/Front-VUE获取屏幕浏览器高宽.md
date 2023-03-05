@@ -2,7 +2,7 @@
 title: JavaScript获取屏幕浏览器高宽
 comments: false
 categories:
-  - [VUE]
+  - [前端]
 tags: [VUE, JavaScript]
 top: false
 abbrlink: 56199
