@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Element-ui框架el-date-picker的清除之后NULL的问题]]></title>
+    <url>%2Farticles%2F63642%2F</url>
+    <content type="text"><![CDATA[问题描述在写一个高级筛选的VUE代码，使用到了el-date-picker日期选择器组件，设置了daterange类型，并且设置了可以清除的功能。但是使用清除之后，在提交高级筛选的查询，发现报错了，查了好久的问题所在，记录一下。 VUE Element-UI 下面是VUE开发的高级筛选，el-date-picker日期选择器组件使用清除功能之后，组件变量会设置NULL。 报错报错的截图。 123456789101112131415161718192021222324252627282930313233343536vue.runtime.esm.js?2b0e:619 [Vue warn]: Error in v-on handler: &quot;TypeError: Cannot read properties of null (reading &apos;0&apos;)&quot;found in---&gt; &lt;ElButton&gt; at packages/button/src/button.vue &lt;ElRow&gt; &lt;ElForm&gt; at packages/form/src/form.vue &lt;ApiFilter&gt; at src/services/info/ApiFilter.vue &lt;Api&gt; at src/views/info/api.vue &lt;AppMain&gt; at src/layout/components/AppMain.vue &lt;Layout&gt; at src/layout/index.vue &lt;App&gt; at src/App.vue &lt;Root&gt;warn @ vue.runtime.esm.js?2b0e:619logError @ vue.runtime.esm.js?2b0e:1884globalHandleError @ vue.runtime.esm.js?2b0e:1879handleError @ vue.runtime.esm.js?2b0e:1839invokeWithErrorHandling @ vue.runtime.esm.js?2b0e:1862invoker @ vue.runtime.esm.js?2b0e:2179invokeWithErrorHandling @ vue.runtime.esm.js?2b0e:1854Vue.$emit @ vue.runtime.esm.js?2b0e:3882handleClick @ element-ui.common.js?5c96:9417invokeWithErrorHandling @ vue.runtime.esm.js?2b0e:1854invoker @ vue.runtime.esm.js?2b0e:2179original._wrapper @ vue.runtime.esm.js?2b0e:6911vue.runtime.esm.js?2b0e:1888 TypeError: Cannot read properties of null (reading &apos;0&apos;) at VueComponent.filterQuery (ApiFilter.vue?9380:279:1) at click (ApiFilter.vue?f585:309:1) at invokeWithErrorHandling (vue.runtime.esm.js?2b0e:1854:1) at VueComponent.invoker (vue.runtime.esm.js?2b0e:2179:1) at invokeWithErrorHandling (vue.runtime.esm.js?2b0e:1854:1) at Vue.$emit (vue.runtime.esm.js?2b0e:3882:1) at VueComponent.handleClick (element-ui.common.js?5c96:9417:1) at invokeWithErrorHandling (vue.runtime.esm.js?2b0e:1854:1) at HTMLButtonElement.invoker (vue.runtime.esm.js?2b0e:2179:1) at original._wrapper (vue.runtime.esm.js?2b0e:6911:1) 原因直接说问题所在，使用el-date-picker日期选择器组件的清除功能，会把组件的变量设置NULL，所以导致在获取时间的时候报错。 解决方案1234567if (this.create_date !== null &amp;&amp; this.create_date !== &apos;&apos; &amp;&amp; this.create_date !== undefined) &#123; this.searchData.create_time_start = this.create_date[0] + &apos; 00:00:00&apos; this.searchData.create_time_end = this.create_date[1] + &apos; 23:59:59&apos;&#125; else &#123; this.searchData.create_time_start = &apos;&apos; this.searchData.create_time_end = &apos;&apos;&#125;]]></content>
+      <categories>
+        <category>VUE</category>
+      </categories>
+      <tags>
+        <tag>VUE</tag>
+        <tag>Element-UI</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[前端脚手架管理系统模板]]></title>
     <url>%2Farticles%2F38070%2F</url>
     <content type="text"><![CDATA[记录下前端好用的管理系统模板脚手架（引用参考） https://mp.weixin.qq.com/s/j6Nwmn-f9L2w83sy_t71Pg https://mp.weixin.qq.com/s/NOoGMkF3Ct2OobCopltTsg 持续更新中。。。。。。]]></content>
@@ -15,7 +27,7 @@
   <entry>
     <title><![CDATA[Oracle数据库连接工具PLSQL快捷配置]]></title>
     <url>%2Farticles%2F13254%2F</url>
-    <content type="text"><![CDATA[PLSQL工具日常快捷配置说明 正所谓“功先利其事，必先利其器”，把PLSQL的快捷方式设置好，在写SQL以及操作方面会大大提高效率，分享下本人PLSQL的快捷配置： 显示行号延时tip设置SQL快捷语句快捷键配置PLSQL自带了许多快捷键配置，但是习惯了IDE写代码的快捷键，所以对部分配置、以及未配置的功能进行了更改，快捷键配置说明【修改部分】： 序号 功能 快捷键 1 文件/打开/新建(N)/SQL窗口(S) Ctrl+Alt+A 2 文件/关闭/关闭(C) Ctrl+Alt+W 3 编辑/选择/缩进(I) Tab 4 编辑/选择/取消缩进(U) Shift+Tab 5 编辑/选择/注释(O) Ctrl+/ 6 编辑/选择/取消注释(N) Ctrl+Shift+/ 7 编辑/选择/转到行(G) Ctrl+G 8 工具/源/PL/SQL Beautifier Ctrl+Shift+F 9 删除行(Editor:Delete Line) Ctrl+Y 10 PLSQL切换窗口(Editor:Navigate Forward) Alt+Left上一个窗口 11 PLSQL切换窗口(Editor:Navigate Back) Alt+Right下一个窗口 持续更新中。。。。。。]]></content>
+    <content type="text"><![CDATA[PLSQL工具日常快捷配置说明 正所谓“功先利其事，必先利其器”，把PLSQL的快捷方式设置好，在写SQL以及操作方面会大大提高效率，分享下本人PLSQL的快捷配置： 显示行号 用户界面 &gt; 编辑器 &gt; 显示行号 可以显示SQL窗口的行号。 关键词大写 用户界面 &gt; 编辑器 &gt; 关键词大小写 &gt; 大写 这个看个人喜好，如果想把关键字都大写可以进行设置，这样写出来的SQL也比较好看，关键字都是大写并且带颜色。 高亮显示编辑行 用户界面 &gt; 编辑器 &gt; 高亮显示编辑行 可以高亮SQL窗口的编辑行，一下子就找到鼠标在哪，方便继续编辑SQL。 延时tip设置 用户界面 &gt; 代码助手 &gt; 延时 设置自动提示的时间，最小值100，不喜欢立马提示的可以值设置的打点。 不自动提交 窗口类型 &gt; SQL窗口 &gt; 自动提交SQL 设置不自动提交，否则一下子做的危险UPDATE、DELETE等操作，想想都是泪，千万别设置自动提交。 SQL快捷语句 用户界面 &gt; 编辑器 &gt; 自动替换 设置之后，写SQL非常的高效，只需要把缩写写完一个空格，就可以替换设定的SQL语句或关键字。 12345678910111213sf=SELECT * FROMsw=SELECT * FROM WHEREw=WHEREor=ORDER BYorder=ORDER BYij=INNER JOINin=INNER JOINinn=INNER JOINlj=LEFT JOINle=LEFT JOINrj=RIGHT JOINri=RIGHT JOINdrop=DROP TABLE 快捷键配置PLSQL自带了许多快捷键配置，但是习惯了IDE写代码的快捷键，所以对部分配置、以及未配置的功能进行了更改，快捷键配置说明【修改部分】： 序号 功能 快捷键 1 文件/打开/新建(N)/SQL窗口(S) Ctrl+Alt+A 2 文件/关闭/关闭(C) Ctrl+Alt+W 3 编辑/选择/缩进(I) Tab 4 编辑/选择/取消缩进(U) Shift+Tab 5 编辑/选择/注释(O) Ctrl+/ 6 编辑/选择/取消注释(N) Ctrl+Shift+/ 7 编辑/选择/转到行(G) Ctrl+G 8 工具/源/PL/SQL Beautifier Ctrl+Shift+F 9 删除行(Editor:Delete Line) Ctrl+Y 10 PLSQL切换窗口(Editor:Navigate Forward) Alt+Left上一个窗口 11 PLSQL切换窗口(Editor:Navigate Back) Alt+Right下一个窗口 持续更新中。。。。。。]]></content>
       <categories>
         <category>数据库</category>
       </categories>
