@@ -22,6 +22,8 @@ keywords: hexo, Hexo, 常用语, markdown
 <font size=6.5 color='red'>持续更新中。。。。。。</font>
 
 
+<img src="/images/article_xinxinxiangying.gif" align=center style="border:3px solid red"/>
+
 ### 三级标题
 
 #### 四级标题
