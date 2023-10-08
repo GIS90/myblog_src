@@ -25,5 +25,6 @@ keywords: VUE, REACT
 
 - https://mp.weixin.qq.com/s/j6Nwmn-f9L2w83sy_t71Pg
 - https://mp.weixin.qq.com/s/NOoGMkF3Ct2OobCopltTsg
+- https://mp.weixin.qq.com/s/sznpqdGGWLffI8pnBdGB4w
 
 <font size=6.5 color='red'>持续更新中。。。。。。</font>

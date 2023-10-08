@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://pygo2.top/"/>
-  <updated>2023-07-24T14:23:54.000Z</updated>
+  <updated>2023-10-08T14:10:57.000Z</updated>
   <id>http://pygo2.top/</id>
   
   <author>
@@ -15,6 +15,81 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>VUE开源前端低代码平台</title>
+    <link href="http://pygo2.top/articles/19243/"/>
+    <id>http://pygo2.top/articles/19243/</id>
+    <published>2023-10-08T14:10:57.000Z</published>
+    <updated>2023-10-08T14:10:57.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/images/article_vue.jpeg" alt></p><span class="label danger">VUE</span> <span class="label info">低代码平台</span><a id="more"></a><hr><p>在微信公众号中学习看到，收藏一下，日后学习。</p><ul><li><a href="https://mp.weixin.qq.com/s/6w5Njegv1FgGAkMMujmeFg" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/6w5Njegv1FgGAkMMujmeFg</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/images/article_vue.jpeg&quot; alt&gt;&lt;/p&gt;
+&lt;span class=&quot;label danger&quot;&gt;VUE&lt;/span&gt; &lt;span class=&quot;label info&quot;&gt;低代码平台&lt;/span&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="http://pygo2.top/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="VUE" scheme="http://pygo2.top/tags/VUE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VUE组件库</title>
+    <link href="http://pygo2.top/articles/63670/"/>
+    <id>http://pygo2.top/articles/63670/</id>
+    <published>2023-08-14T13:46:32.000Z</published>
+    <updated>2023-08-14T13:46:32.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/images/article_vue.jpeg" alt></p><div class="note primary">            <p>前端框架出现之后，组件化成为了前端开发的趋势，对于开发者来说，尤其是初学者，直接引用别人封装好的组件，在开发成本、样式上会节省一把时间，记录一下VUE学习过程中使用过的第三方组件。</p>          </div><span class="label danger">VUE</span> <span class="label info">第三方组件</span><a id="more"></a><hr><p>组件库使用方式都一样，就看自己喜欢什么风格。</p><ul><li><a href="https://mp.weixin.qq.com/s/75dc4GRk53Ylg8SeN87GfA" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/75dc4GRk53Ylg8SeN87GfA</a></li><li><a href="https://mp.weixin.qq.com/s/HyPGgXdtDFJQPaXB0ifi2Q" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/HyPGgXdtDFJQPaXB0ifi2Q</a></li></ul><font size="5.5" color="red"><strong><em>持续更新中。。。。。。</em></strong></font>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/images/article_vue.jpeg&quot; alt&gt;&lt;/p&gt;
+&lt;div class=&quot;note primary&quot;&gt;
+            &lt;p&gt;前端框架出现之后，组件化成为了前端开发的趋势，对于开发者来说，尤其是初学者，直接引用别人封装好的组件，在开发成本、样式上会节省一把时间，记录一下VUE学习过程中使用过的第三方组件。&lt;/p&gt;
+          &lt;/div&gt;
+&lt;span class=&quot;label danger&quot;&gt;VUE&lt;/span&gt; &lt;span class=&quot;label info&quot;&gt;第三方组件&lt;/span&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="http://pygo2.top/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="VUE" scheme="http://pygo2.top/tags/VUE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Oracle数据库一次异常处理的解决经历</title>
+    <link href="http://pygo2.top/articles/29163/"/>
+    <id>http://pygo2.top/articles/29163/</id>
+    <published>2023-08-03T14:23:18.000Z</published>
+    <updated>2023-08-03T14:23:18.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/images/article_oracle.jpeg" alt></p><div class="note info">            <p>记录一次Oracle数据库挂载mount数据库失败的经历，过程中除了多次问题，在错误中寻找解决方案。</p>          </div><span class="label info">Oracle</span><a id="more"></a><hr><h4 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h4><p>去了一个新项目，发现用sqlplus和sqlldr导出dat数据报错，接二连三的报了好几个，下面是解决遇到的问题与解决方案。</p><h4 id="问题一"><a href="#问题一" class="headerlink" title="问题一"></a>问题一</h4><blockquote><p>问题</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ORA-01078: failure in processingsystem parameters</span><br><span class="line">LRM-00109: could not openparameterfile &apos;/u01/app/oracle/product/11.2.0/db_1/dbs/initORA10G.ora&apos;</span><br></pre></td></tr></table></figure><blockquote><p>解决方案</p></blockquote><p>找到$ORACLE_BASE/admin/数据库名称/pfile目录下的init.ora形式的文件，复制到$ORACLE_HOME/dbs目录下，并且改成wlhtpas.ora文件名称，其中wlhtpas.ora是oracle数据库实例名ORACLE_SID。</p><blockquote><p>原因</p></blockquote><p>文件初始化spfile缺失，具体原因不详，可能是安装问题，也可能是异常断电导致。</p><h4 id="问题二"><a href="#问题二" class="headerlink" title="问题二"></a>问题二</h4><p>解决了之后，重新startup启动数据的时候，又有新问题。</p><blockquote><p>问题</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ORA-01102: cannot mount database in EXCLUSIVE mode</span><br></pre></td></tr></table></figure><p><img src="1.png" alt></p><p>查看Oracle数据库日志，发现文件被占用。</p><blockquote><p>解决方案</p></blockquote><p>1.进入/u01/app/oracle/product/11.2.0/db_1/dbs/目录<br>2.删除lkPOD文件</p><p>在这里有个小技巧，用lsof去查看哪些进程使用了lkPOD文件，需要kill掉。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">lsof lkPOD</span><br><span class="line">kill -9 进程ID</span><br></pre></td></tr></table></figure><blockquote><p>原因</p></blockquote><p>文件被重复占用，导致启动失败。</p><h4 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h4><font size="6.5" color="red">坚持学习。。。。。。</font>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/images/article_oracle.jpeg&quot; alt&gt;&lt;/p&gt;
+&lt;div class=&quot;note info&quot;&gt;
+            &lt;p&gt;记录一次Oracle数据库挂载mount数据库失败的经历，过程中除了多次问题，在错误中寻找解决方案。&lt;/p&gt;
+          &lt;/div&gt;
+&lt;span class=&quot;label info&quot;&gt;Oracle&lt;/span&gt;
+    
+    </summary>
+    
+      <category term="数据库" scheme="http://pygo2.top/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+      <category term="Oracle" scheme="http://pygo2.top/tags/Oracle/"/>
+    
+  </entry>
   
   <entry>
     <title>VUE3的watch和watchEffect区别</title>
@@ -122,6 +197,53 @@
   </entry>
   
   <entry>
+    <title>免费的网站工具</title>
+    <link href="http://pygo2.top/articles/34113/"/>
+    <id>http://pygo2.top/articles/34113/</id>
+    <published>2023-05-28T14:10:20.000Z</published>
+    <updated>2023-05-28T14:10:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/images/article_tool.png" alt></p><blockquote class="blockquote-center"><p>收藏一下网上好用、免费的网站。</p></blockquote><span class="label danger">网站工具</span><a id="more"></a><hr><table><thead><tr><th style="text-align:center">序号</th><th style="text-align:center">名称</th><th style="text-align:center">地址</th></tr></thead><tbody><tr><td style="text-align:center">1</td><td style="text-align:center">代码转图片</td><td style="text-align:center"><a href="https://carbon.now.sh/" target="_blank" rel="noopener">https://carbon.now.sh/</a></td></tr><tr><td style="text-align:center">2</td><td style="text-align:center">JavaScript正则表达式可视化工具</td><td style="text-align:center"><a href="https://jex.im/regulex/#!flags=&amp;re=%5E(a%7Cb)*%3F%24" target="_blank" rel="noopener">https://jex.im/regulex/#!flags=&amp;re=%5E(a%7Cb)*%3F%24</a></td></tr><tr><td style="text-align:center">3</td><td style="text-align:center">图片压缩</td><td style="text-align:center"><a href="https://tinypng.com/" target="_blank" rel="noopener">https://tinypng.com/</a></td></tr><tr><td style="text-align:center">4</td><td style="text-align:center">Codepen</td><td style="text-align:center"><a href="https://codepen.io/" target="_blank" rel="noopener">https://codepen.io/</a></td></tr><tr><td style="text-align:center">5</td><td style="text-align:center">阿里开源图标</td><td style="text-align:center"><a href="https://www.iconfont.cn/" target="_blank" rel="noopener">https://www.iconfont.cn/</a></td></tr><tr><td style="text-align:center">6</td><td style="text-align:center">在线调色板</td><td style="text-align:center"><a href="https://colorhunt.co/palettes/pastel" target="_blank" rel="noopener">https://colorhunt.co/palettes/pastel</a></td></tr><tr><td style="text-align:center">7</td><td style="text-align:center">开发文档</td><td style="text-align:center"><a href="https://devdocs.io/" target="_blank" rel="noopener">https://devdocs.io/</a></td></tr><tr><td style="text-align:center">8</td><td style="text-align:center">一键抠图</td><td style="text-align:center"><a href="https://www.remove.bg/zh" target="_blank" rel="noopener">https://www.remove.bg/zh</a></td></tr><tr><td style="text-align:center">9</td><td style="text-align:center">自述文件</td><td style="text-align:center"><a href="https://readme.so/editor" target="_blank" rel="noopener">https://readme.so/editor</a></td></tr><tr><td style="text-align:center">10</td><td style="text-align:center">测试网站加载速度</td><td style="text-align:center"><a href="https://gtmetrix.com/" target="_blank" rel="noopener">https://gtmetrix.com/</a></td></tr><tr><td style="text-align:center">11</td><td style="text-align:center"></td><td style="text-align:center"></td></tr><tr><td style="text-align:center">12</td><td style="text-align:center"></td></tr></tbody></table><font size="5.5" color="red"><strong><em>持续更新中。。。。。。</em></strong></font>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/images/article_tool.png&quot; alt&gt;&lt;/p&gt;
+&lt;blockquote class=&quot;blockquote-center&quot;&gt;&lt;p&gt;收藏一下网上好用、免费的网站。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;span class=&quot;label danger&quot;&gt;网站工具&lt;/span&gt;
+    
+    </summary>
+    
+      <category term="工具" scheme="http://pygo2.top/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="工具" scheme="http://pygo2.top/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端JavaScript全局对象获取通用方法</title>
+    <link href="http://pygo2.top/articles/19661/"/>
+    <id>http://pygo2.top/articles/19661/</id>
+    <published>2023-04-08T14:07:23.000Z</published>
+    <updated>2023-04-08T14:07:23.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/images/article_javascript.jpeg" alt></p><a id="more"></a><hr><p>在学习ES6语法的过程中，看到了JavaScript获取全局对象的通用方法，记录上，以防日后用的上。</p><h4 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">(typeof window !== &apos;undefined&apos;</span><br><span class="line">   ? window</span><br><span class="line">   : (typeof process === &apos;object&apos; &amp;&amp;</span><br><span class="line">      typeof require === &apos;function&apos; &amp;&amp;</span><br><span class="line">      typeof global === &apos;object&apos;)</span><br><span class="line">     ? global</span><br><span class="line">     : this);</span><br></pre></td></tr></table></figure><h4 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var getGlobal = function () &#123;</span><br><span class="line">  if (typeof self !== &apos;undefined&apos;) &#123; return self; &#125;</span><br><span class="line">  if (typeof window !== &apos;undefined&apos;) &#123; return window; &#125;</span><br><span class="line">  if (typeof global !== &apos;undefined&apos;) &#123; return global; &#125;</span><br><span class="line">  throw new Error(&apos;unable to locate global object&apos;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><font size="6.5" color="red">坚持学习。。。。。。</font>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/images/article_javascript.jpeg&quot; alt&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="http://pygo2.top/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="JavaScript" scheme="http://pygo2.top/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
     <title>七牛API上传文件发送ProtocolError-Connection-aborted错误</title>
     <link href="http://pygo2.top/articles/43878/"/>
     <id>http://pygo2.top/articles/43878/</id>
@@ -206,7 +328,7 @@
     <published>2023-03-04T06:53:03.000Z</published>
     <updated>2023-03-04T06:53:03.000Z</updated>
     
-    <content type="html"><![CDATA[<blockquote class="blockquote-center"><p>记录下前端好用的管理系统模板脚手架（引用参考）</p></blockquote><a id="more"></a><hr><ul><li><a href="https://mp.weixin.qq.com/s/j6Nwmn-f9L2w83sy_t71Pg" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/j6Nwmn-f9L2w83sy_t71Pg</a></li><li><a href="https://mp.weixin.qq.com/s/NOoGMkF3Ct2OobCopltTsg" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/NOoGMkF3Ct2OobCopltTsg</a></li></ul><font size="6.5" color="red">持续更新中。。。。。。</font>]]></content>
+    <content type="html"><![CDATA[<blockquote class="blockquote-center"><p>记录下前端好用的管理系统模板脚手架（引用参考）</p></blockquote><a id="more"></a><hr><ul><li><a href="https://mp.weixin.qq.com/s/j6Nwmn-f9L2w83sy_t71Pg" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/j6Nwmn-f9L2w83sy_t71Pg</a></li><li><a href="https://mp.weixin.qq.com/s/NOoGMkF3Ct2OobCopltTsg" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/NOoGMkF3Ct2OobCopltTsg</a></li><li><a href="https://mp.weixin.qq.com/s/sznpqdGGWLffI8pnBdGB4w" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/sznpqdGGWLffI8pnBdGB4w</a></li></ul><font size="6.5" color="red">持续更新中。。。。。。</font>]]></content>
     
     <summary type="html">
     
@@ -402,144 +524,6 @@
     
     
       <category term="VUE" scheme="http://pygo2.top/tags/VUE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>VUE富文本编辑器学习</title>
-    <link href="http://pygo2.top/articles/8950/"/>
-    <id>http://pygo2.top/articles/8950/</id>
-    <published>2022-12-24T04:58:49.000Z</published>
-    <updated>2022-12-24T04:58:49.000Z</updated>
-    
-    <content type="html"><![CDATA[<span class="label primary">VUE</span> <span class="label info">富文本编辑器</span><h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><div class="note primary">            <p>最近的OpenTool平台集成了SQLBase功能，大致就是采集日常用的SQL语句，供使用的人参考，所以在富文本这搜索一下，自己使用的是wangeditor（国产）。</p>          </div><p><img src="/images/article_vue.jpeg" alt></p><a id="more"></a><hr><h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p>下面2个文章是</p><ul><li>11款vue富文本编辑器推荐：<a href="https://www.geekku.com/spec/vue/1574.html" target="_blank" rel="noopener">https://www.geekku.com/spec/vue/1574.html</a></li><li>最好用的8款Vue富文本编辑器测评与推荐：<a href="https://kalacloud.com/blog/vue-richtext-editor/" target="_blank" rel="noopener">https://kalacloud.com/blog/vue-richtext-editor/</a></li></ul><h3 id="学习"><a href="#学习" class="headerlink" title="学习"></a>学习</h3><p>国内外有很多VUE富文本组件，有TinyMCE、CKEditor5等等，太多了，在本次开发中我使用的wangeditor，是一位国内友人开源的一款富文本，总体来说文档、使用还是很方便的。</p><p>官网：<a href="https://www.wangeditor.com/" target="_blank" rel="noopener">https://www.wangeditor.com/</a></p><p>具体的代码、ISSUE、API都有很详细的说明，而且还支持二次开发。</p><font size="5.5" color="red"><strong><em>坚持每天学习。。。。。。</em></strong></font>]]></content>
-    
-    <summary type="html">
-    
-      &lt;span class=&quot;label primary&quot;&gt;VUE&lt;/span&gt; &lt;span class=&quot;label info&quot;&gt;富文本编辑器&lt;/span&gt;
-&lt;h3 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h3&gt;&lt;div class=&quot;note primary&quot;&gt;
-            &lt;p&gt;最近的OpenTool平台集成了SQLBase功能，大致就是采集日常用的SQL语句，供使用的人参考，所以在富文本这搜索一下，自己使用的是wangeditor（国产）。&lt;/p&gt;
-          &lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;/images/article_vue.jpeg&quot; alt&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="前端" scheme="http://pygo2.top/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="VUE" scheme="http://pygo2.top/tags/VUE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Pycharm出现Non-Project-Files-Protection的解决方法</title>
-    <link href="http://pygo2.top/articles/62345/"/>
-    <id>http://pygo2.top/articles/62345/</id>
-    <published>2022-12-15T15:22:37.000Z</published>
-    <updated>2022-12-15T15:22:37.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="/images/article_pycharm.jpeg" alt></p><div class="note primary">            <font color="red" size="4.5">Pycharm打开Python项目出现Non Project Files Protection提示，并且处理项目文件需要确认，度娘上找了下解决方案，记录一下</font>          </div><span class="label default">Python</span> <span class="label primary">Pycharm</span><a id="more"></a><hr><p>从远程git仓库clone项目的时候，如果项目包含<strong><em><font color="red" size="5.5">.idea文件夹</font></em></strong>，直接用Pycharm工具打开的时候，会提示：Non Project Files Protection。<br>关闭Pycharm，找到项目目录，删除.idea文件夹即可。</p><blockquote><p>win</p></blockquote><p>1.需要设置文件夹显示隐藏文件、文件夹<br>2.资源管理器删除.idea文件夹</p><blockquote><p>MacOS</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd 项目目录</span><br><span class="line">ll</span><br><span class="line">rm -rf .idea</span><br></pre></td></tr></table></figure><p>Pycharm工具重新打开项目。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;/images/article_pycharm.jpeg&quot; alt&gt;&lt;/p&gt;
-&lt;div class=&quot;note primary&quot;&gt;
-            &lt;font color=&quot;red&quot; size=&quot;4.5&quot;&gt;Pycharm打开Python项目出现Non Project Files Protection提示，并且处理项目文件需要确认，度娘上找了下解决方案，记录一下&lt;/font&gt;
-          &lt;/div&gt;
-&lt;span class=&quot;label default&quot;&gt;Python&lt;/span&gt; &lt;span class=&quot;label primary&quot;&gt;Pycharm&lt;/span&gt;
-    
-    </summary>
-    
-      <category term="IDE" scheme="http://pygo2.top/categories/IDE/"/>
-    
-    
-      <category term="Python" scheme="http://pygo2.top/tags/Python/"/>
-    
-      <category term="IDE" scheme="http://pygo2.top/tags/IDE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>前端栅格布局xs sm md lg xl详解</title>
-    <link href="http://pygo2.top/articles/6149/"/>
-    <id>http://pygo2.top/articles/6149/</id>
-    <published>2022-10-08T15:12:19.000Z</published>
-    <updated>2022-10-08T15:12:19.000Z</updated>
-    
-    <content type="html"><![CDATA[<div class="note primary">            <p>在写VUE的时候用到了Layout布局组件，el-col里面有多个属性是控制大小的，一直都是搞后台的，css基本是小白，查阅资料记录一下学习的内容。</p>          </div><span class="label info">前端</span><a id="more"></a><hr><p>看下官网实例，响应式设计：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-row :gutter=&quot;10&quot;&gt;</span><br><span class="line">  &lt;el-col :xs=&quot;8&quot; :sm=&quot;6&quot; :md=&quot;4&quot; :lg=&quot;3&quot; :xl=&quot;1&quot;&gt;&lt;div class=&quot;grid-content bg-purple&quot;&gt;&lt;/div&gt;&lt;/el-col&gt;</span><br><span class="line">  &lt;el-col :xs=&quot;4&quot; :sm=&quot;6&quot; :md=&quot;8&quot; :lg=&quot;9&quot; :xl=&quot;11&quot;&gt;&lt;div class=&quot;grid-content bg-purple-light&quot;&gt;&lt;/div&gt;&lt;/el-col&gt;</span><br><span class="line">  &lt;el-col :xs=&quot;4&quot; :sm=&quot;6&quot; :md=&quot;8&quot; :lg=&quot;9&quot; :xl=&quot;11&quot;&gt;&lt;div class=&quot;grid-content bg-purple&quot;&gt;&lt;/div&gt;&lt;/el-col&gt;</span><br><span class="line">  &lt;el-col :xs=&quot;8&quot; :sm=&quot;6&quot; :md=&quot;4&quot; :lg=&quot;3&quot; :xl=&quot;1&quot;&gt;&lt;div class=&quot;grid-content bg-purple-light&quot;&gt;&lt;/div&gt;&lt;/el-col&gt;</span><br><span class="line">&lt;/el-row&gt;</span><br></pre></td></tr></table></figure></p><p>里面包含了xs sm md lg xl属性来控制宽度，对这几个值进行详解：</p><ul><li>xl【extra large】：屏幕 &gt;= 1920px，超大显示器</li><li>lg【large】：1200px &lt;= 屏幕 &lt;= 1920px，台式1920*1080显示器</li><li>md【middle】：992px&lt;= 屏幕 &lt;= 1200px，适合笔记本</li><li>sm【small】：768px &lt;= 屏幕 &lt;= 992px，适合平板</li><li>xs【extra small】：屏幕&lt;=768，手机端屏幕</li></ul><blockquote><p>优点</p></blockquote><p>如果屏幕的大小发生改变，系统会根据设置的大小进行分别显示，感觉挺好用的。</p><blockquote><p>测试</p></blockquote><p>正常分辨率</p><p><img src="1.png" alt></p><p>更改分辨率</p><p><img src="2.png" alt></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;div class=&quot;note primary&quot;&gt;
-            &lt;p&gt;在写VUE的时候用到了Layout布局组件，el-col里面有多个属性是控制大小的，一直都是搞后台的，css基本是小白，查阅资料记录一下学习的内容。&lt;/p&gt;
-          &lt;/div&gt;
-&lt;span class=&quot;label info&quot;&gt;前端&lt;/span&gt;
-    
-    </summary>
-    
-      <category term="前端" scheme="http://pygo2.top/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="HTML" scheme="http://pygo2.top/tags/HTML/"/>
-    
-      <category term="CSS" scheme="http://pygo2.top/tags/CSS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Bash脚本之自动解压zip</title>
-    <link href="http://pygo2.top/articles/42651/"/>
-    <id>http://pygo2.top/articles/42651/</id>
-    <published>2022-09-24T01:00:12.000Z</published>
-    <updated>2022-09-24T01:00:12.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="/images/article_bash.jpeg" alt></p><span class="label primary">Bash</span> <span class="label info">Bash脚本系列</span><div class="post_cus_note">Bash脚本系列</div><a id="more"></a><hr><p>记录日常服务器运维用到的Bash脚本。</p><h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>每天新接收新的zip文件，并且zip文件压缩的时候是直接集成了文件，没有把文件放在一个目录里面在进行压缩。</p><h4 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/bash</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">LDIR=/home/mingliang.gao/newdir</span><br><span class="line">cd $LDIR</span><br><span class="line">files=$(ls | grep &quot;.zip&quot;)</span><br><span class="line"></span><br><span class="line">for file in $files</span><br><span class="line">do</span><br><span class="line">  echo $file</span><br><span class="line">  NAME=`echo &quot;$file&quot; | cut -d&apos;.&apos; -f1`</span><br><span class="line">  #EXTENSION=`echo &quot;$file&quot; | cut -d&apos;.&apos; -f2`</span><br><span class="line">  if [ ! -e &quot;$&#123;NAME&#125;&quot; ]; then</span><br><span class="line">    unzip $&#123;LDIR&#125;/$&#123;file&#125; -d $&#123;LDIR&#125;/$&#123;NAME&#125;</span><br><span class="line">  fi</span><br><span class="line">done</span><br></pre></td></tr></table></figure><h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><p>LDIR：*.zip文件所在的目录</p><h4 id="系列"><a href="#系列" class="headerlink" title="系列"></a>系列</h4><p>其他Bash系列请点击tag标签进行查看。</p><font size="6.5" color="red">Bash脚本系列，持续更新中。。。。。。</font>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;/images/article_bash.jpeg&quot; alt&gt;&lt;/p&gt;
-&lt;span class=&quot;label primary&quot;&gt;Bash&lt;/span&gt; &lt;span class=&quot;label info&quot;&gt;Bash脚本系列&lt;/span&gt;
-
-&lt;div class=&quot;post_cus_note&quot;&gt;Bash脚本系列&lt;/div&gt;
-    
-    </summary>
-    
-      <category term="Linux" scheme="http://pygo2.top/categories/Linux/"/>
-    
-      <category term="Bash" scheme="http://pygo2.top/categories/Linux/Bash/"/>
-    
-    
-      <category term="Linux" scheme="http://pygo2.top/tags/Linux/"/>
-    
-      <category term="Bash" scheme="http://pygo2.top/tags/Bash/"/>
-    
-      <category term="Bash脚本系列" scheme="http://pygo2.top/tags/Bash%E8%84%9A%E6%9C%AC%E7%B3%BB%E5%88%97/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Oracle手工导入dat数据</title>
-    <link href="http://pygo2.top/articles/30542/"/>
-    <id>http://pygo2.top/articles/30542/</id>
-    <published>2022-09-18T15:33:04.000Z</published>
-    <updated>2022-09-18T15:33:04.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="/images/article_oracle.jpeg" alt></p><div class="note info">            <p>最近开始搞Oracle数据库，看存储过程学习了一下Oracle怎么导入dat数据的，这里记录一下，方便日后查询使用。</p>          </div><span class="label info">Oracle</span> <span class="label primary">sqlplus</span> <span class="label default">sqlldr</span><a id="more"></a><hr><h4 id="SQL语句"><a href="#SQL语句" class="headerlink" title="SQL语句"></a>SQL语句</h4><blockquote><p>第一步：生成ctl文件</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/u01/app/oracle/product/11.2.0/dbhome_1/bin/sqlplus pas/pas @/home/oracle/pas_control/control.sql T01_CPCT_BSC_INF_FILE_H T01_CPCT_BSC_INF_FILE_H.dat /data/gtp/20220830/</span><br></pre></td></tr></table></figure><ul><li>/u01/app/oracle/product/11.2.0/dbhome_1/bin/sqlplus：为sqlplus命令的绝对路径，根据环境不同进行更改</li><li>pas/pas：账户/密码</li><li>@/home/oracle/pas_control/control.sql：下面会有control.sql文件详解，这里也是绝对路径</li><li>T01_CPCT_BSC_INF_FILE_H：表名，control.sql文件会用到列举表字段信息</li><li>T01_CPCT_BSC_INF_FILE_H.dat：dat文件名称</li><li>/data/gtp/20220830/：dat数据存放的绝对路径</li></ul><blockquote><p>第二步：根据生成的ctl导入数据</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/u01/app/oracle/product/11.2.0/dbhome_1/bin/sqlldr userid=pas/pas control=/data/gtp/20220830/T01_CPCT_BSC_INF_FILE_H.ctl log=/data/gtp/20220830/T01_CPCT_BSC_INF_FILE_H.log direct=true</span><br></pre></td></tr></table></figure><ul><li>/u01/app/oracle/product/11.2.0/dbhome_1/bin/sqlldr：sqlldr命令的绝对路径</li><li>userid=pas/pas：账户/密码</li><li>control=/data/gtp/20220830/T01_CPCT_BSC_INF_FILE_H.ctl：执行第一步sqlplus会生成新的ctl文件，存放的导入命令</li><li>log=/data/gtp/20220830/T01_CPCT_BSC_INF_FILE_H.log：导入日志</li><li>direct=true：是否为直接路径</li></ul><p>sqlldr是Oracle数据加载工具，还有bad、data、discard、skip等很多参数，详细查看man命令或者官网。</p><h4 id="control-sql"><a href="#control-sql" class="headerlink" title="control.sql"></a>control.sql</h4><p>目的产生新的ctl文件，导入数据时候使用。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">set echo off</span><br><span class="line">set heading off</span><br><span class="line">set verify off</span><br><span class="line">set feedback off</span><br><span class="line">set show off</span><br><span class="line">set trim off</span><br><span class="line">set pages 0</span><br><span class="line">set concat on</span><br><span class="line">set lines 300</span><br><span class="line">set trimspool on</span><br><span class="line">set trimout on</span><br><span class="line">spool &amp;3&amp;1..ctl</span><br><span class="line"></span><br><span class="line">select &apos;LOAD DATA&apos;||chr (10)||</span><br><span class="line">       &apos;CHARACTERSET ZHS16GBK&apos;||chr (10)||</span><br><span class="line">       &apos;INFILE &apos;&apos;&amp;3&amp;2&apos;&apos;&apos;||chr (10)||</span><br><span class="line">       &apos;APPEND INTO TABLE &apos;||table_name||chr (10)||</span><br><span class="line">       &apos;FIELDS TERMINATED BY &quot;&quot; optionally enclosed by &apos;&apos;&quot;&apos;&apos;&apos;||chr (10)||</span><br><span class="line">       &apos;TRAILING NULLCOLS&apos;||chr (10)||&apos;(&apos;</span><br><span class="line">from   USER_TABLES</span><br><span class="line">where  table_name = upper (&apos;&amp;1&apos;);</span><br><span class="line"></span><br><span class="line">select decode (column_id, 1, &apos;   &apos;, &apos; , &apos;)||</span><br><span class="line">       rpad (column_name, 33, &apos; &apos;)||</span><br><span class="line">       decode (data_type,</span><br><span class="line">               &apos;VARCHAR2&apos;, &apos;CHAR(2000) NULLIF (&apos;||column_name||&apos;=BLANKS)&apos;,</span><br><span class="line">               &apos;FLOAT&apos;,    &apos;DECIMAL EXTERNAL NULLIF(&apos;||column_name||&apos;=BLANKS)&apos;,</span><br><span class="line">               &apos;NUMBER&apos;,   decode (data_precision, 0,</span><br><span class="line">                           &apos;INTEGER EXTERNAL NULLIF (&apos;||column_name||</span><br><span class="line">                           &apos;=BLANKS)&apos;, decode (data_scale, 0,</span><br><span class="line">                           &apos;INTEGER EXTERNAL NULLIF (&apos;||</span><br><span class="line">                           column_name||&apos;=BLANKS)&apos;,</span><br><span class="line">                           &apos;DECIMAL EXTERNAL NULLIF (&apos;||</span><br><span class="line">                           column_name||&apos;=BLANKS)&apos;)),</span><br><span class="line">               &apos;DATE&apos;,     &apos;DATE &quot;MM/DD/YY&quot;  NULLIF (&apos;||column_name||&apos;=BLANKS)&apos;,</span><br><span class="line">               null)</span><br><span class="line">from   user_tab_columns</span><br><span class="line">where  table_name = upper (&apos;&amp;1&apos;)</span><br><span class="line">order  by column_id;</span><br><span class="line">select &apos;)&apos;</span><br><span class="line">from sys.dual;</span><br><span class="line">spool off</span><br><span class="line">exit</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;/images/article_oracle.jpeg&quot; alt&gt;&lt;/p&gt;
-&lt;div class=&quot;note info&quot;&gt;
-            &lt;p&gt;最近开始搞Oracle数据库，看存储过程学习了一下Oracle怎么导入dat数据的，这里记录一下，方便日后查询使用。&lt;/p&gt;
-          &lt;/div&gt;
-&lt;span class=&quot;label info&quot;&gt;Oracle&lt;/span&gt; &lt;span class=&quot;label primary&quot;&gt;sqlplus&lt;/span&gt; &lt;span class=&quot;label default&quot;&gt;sqlldr&lt;/span&gt;
-    
-    </summary>
-    
-      <category term="数据库" scheme="http://pygo2.top/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-    
-      <category term="Oracle" scheme="http://pygo2.top/tags/Oracle/"/>
     
   </entry>
   
