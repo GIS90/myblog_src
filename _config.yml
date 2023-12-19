@@ -89,7 +89,7 @@ theme: next
 deploy:
   type: git
   #repository: https://github.com/GIS90/GIS90.github.io.git
-  repository: mingliang.gao@121.4.56.169:/home/mingliang.gao/git/blog.git
+  repository: mingliang.gao@110.40.141.32:/home/mingliang.gao/git/blog.git
   branch: master
 
 # seo

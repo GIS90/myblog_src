@@ -31,6 +31,25 @@ CentOS Linux release 7.5.1804 (Core)
 Linux查看系统版本：
 ```
 cat /etc/*release*
+
+
+CentOS Stream release 8
+NAME="CentOS Stream"
+VERSION="8"
+ID="centos"
+ID_LIKE="rhel fedora"
+VERSION_ID="8"
+PLATFORM_ID="platform:el8"
+PRETTY_NAME="CentOS Stream 8"
+ANSI_COLOR="0;31"
+CPE_NAME="cpe:/o:centos:centos:8"
+HOME_URL="https://centos.org/"
+BUG_REPORT_URL="https://bugzilla.redhat.com/"
+REDHAT_SUPPORT_PRODUCT="Red Hat Enterprise Linux 8"
+REDHAT_SUPPORT_PRODUCT_VERSION="CentOS Stream"
+CentOS Stream release 8
+CentOS Stream release 8
+cpe:/o:centos:centos:8
 ```
 
 ### 初始化
@@ -63,6 +82,39 @@ mingliang.gao    ALL=(ALL)    ALL
 ```
 删除用户：userdel 用户名
 删除组：groupdel 组名
+```
+
+#### 环境编码
+
+修改服务器系统环境编码，执行vim /etc/profile，加入一下内容：
+```
+# 编码
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+```
+
+查看环境编码：
+```
+[root@VM-4-7-centos mingliang.gao]# echo $LANG
+en_US.UTF-8
+
+[root@VM-4-7-centos mingliang.gao]# locale
+locale: Cannot set LC_CTYPE to default locale: No such file or directory
+locale: Cannot set LC_ALL to default locale: No such file or directory
+LANG=en_US.UTF-8
+LC_CTYPE=zh_CN.UTF-8
+LC_NUMERIC="en_US.UTF-8"
+LC_TIME="en_US.UTF-8"
+LC_COLLATE="en_US.UTF-8"
+LC_MONETARY="en_US.UTF-8"
+LC_MESSAGES="en_US.UTF-8"
+LC_PAPER="en_US.UTF-8"
+LC_NAME="en_US.UTF-8"
+LC_ADDRESS="en_US.UTF-8"
+LC_TELEPHONE="en_US.UTF-8"
+LC_MEASUREMENT="en_US.UTF-8"
+LC_IDENTIFICATION="en_US.UTF-8"
+LC_ALL=
 ```
 
 #### VIM
@@ -124,7 +176,7 @@ swapoff /var/swap
 
 vim /proc/sys/vm/swappiness，范围是0～100，指数越大使用的活跃度越大，建议30-50即可。
 
-#### git
+#### GIT
 
 > 查看
 
@@ -155,9 +207,66 @@ git config --list
 
 <a href="/articles/3296/" target="_blank" class="block_project_a">MariaDB安装与配置</a>
 
-#### gunicorn
+#### Miniconda
 
-python项目需要用到，提前建好，用来存放日志。
+> 下载
+
+这里介绍2种方式，第一种就是直接去官网下载：https://docs.conda.io/projects/miniconda/en/latest/
+第二种方式直接在服务器上执行wget：
+```
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+```
+
+> 安装
+
+```
+base Miniconda3-latest-Linux-x86_64.sh
+```
+- Do you accept the license terms? [yes|no] 输入yes接受许可条款
+- 配置安装路径，默认安装到根目录下的，可自定义路径（建议/usr/local/miniconda）
+- 等待安装后，出现Do you wish the installer to initialize Miniconda3，如果输入yes会对~/.bashrc文件添加一下内容
+```
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/usr/local/miniconda/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/usr/local/miniconda/etc/profile.d/conda.sh" ]; then
+        . "/usr/local/miniconda/etc/profile.d/conda.sh"
+    else
+        export PATH="/usr/local/miniconda/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+```
+
+> 配置
+
+生效：
+```
+source ~/.bashrc
+```
+禁止用户登录后自动激活base环境：
+```
+conda config --set auto_activate_base
+```
+
+具体conda命令请参考学习官网或者baidu。
+
+#### Gunicorn
+
+> 安装
+
+在python项目运行环境中会进行安装，单独安装命令：
+```
+pip install gunicorn
+```
+
+> 日志配置
+
+python项目需要用到，提前建好，用来存放日志，root用户执行。
 ```
 mkdir -p /var/log/gunicorn
 ```
@@ -242,18 +351,19 @@ ps -ef | grep supervisord | grep -v grep | awk -F " " '{print $2}' | xargs kill
 
 贴一下自己的supervisord项目配置文件。
 ```
-[program:htinfo_mngs]
-directory=/home/ht/projects/htinfo_mngs
-command=.venv/bin/gunicorn -c etc/prod/gunicorn.conf wsgi:app  ;; 如果ERROR (no such file)，把gunicorn启动命令写全
-autostart=False                         ;; 是否开机自动启动
-autorestart=False                       ;; 是否挂了自动重启
+[program:open2lisapi]
+directory=/home/mingliang.gao/projects/open2lisapi
+command=/home/mingliang.gao/projects/open2lisapi/.venv/bin/gunicorn -c /home/mingliang.gao/projects/open2lisapi/etc/prod/gunicorn.conf wsgi:app   ;; ERROR (no such file)，把gunicorn启动命令写全，绝对路径
+autostart=True                          ;; 是否开机自动启动
+autorestart=True                        ;; 是否挂了自动重启
+startretries = 3                        ;; 启动失败自动重试次数，默认是 3
 redirect_stderr=True                    ;; 是否把stderr定向到stdout
 stopasgroup=True
 ;;user=mingliang.gao                    ;;用哪个用户启动进程，默认是root
 priority=999                            ;;进程启动优先级，默认999，值小的优先启动
 stdout_logfile_maxbytes=20MB            ;;stdout 日志文件大小，默认50MB
 stdout_logfile_backups = 20             ;;stdout 日志文件备份数，默认是10
-stdout_logfile=/var/log/supervisord/supervisor_htinfo_mngs.log
+stdout_logfile=/var/log/supervisord/supervisor_open2lisapi.log
 ```
 
 #### Nginx

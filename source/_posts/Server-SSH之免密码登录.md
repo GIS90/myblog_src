@@ -50,6 +50,24 @@ ssh-copy-id 用户@服务器IP
 
 这样就实现SSH免密码登录服务器，加上上篇SSH配置中config，以后直接ssh XXXX即可登录服务器。
 
+> SSH长连接配置
+
+第一步 编辑服务器的 sshd_config
+```
+vim  /etc/ssh/sshd_config
+```
+第二步 找到如下配置并且修改参数
+```
+ClientAliveInterval 60      ## 这个属性表示超时时间(单位是秒)，修改为 60,需要可以加到600
+ClientAliveCountMax 10     ## 这个属性是超时链接次数，允许你超时的次数 10
+```
+这个配置表示超时时间为一分钟，超时连接次数为10次，也就是允许长连接十分钟不操作
+第三步 保存配置并生效
+```
+systemctl restart sshd
+```
+
+
 #### 特别说明
 
 服务器ssh目录以及authorized_keys文件的权限：

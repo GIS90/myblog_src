@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://pygo2.top/"/>
-  <updated>2023-10-08T14:10:57.000Z</updated>
+  <updated>2023-11-02T14:07:03.000Z</updated>
   <id>http://pygo2.top/</id>
   
   <author>
@@ -15,6 +15,56 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Oracle数据库ORA32001问题的解决</title>
+    <link href="http://pygo2.top/articles/47484/"/>
+    <id>http://pygo2.top/articles/47484/</id>
+    <published>2023-11-02T14:07:03.000Z</published>
+    <updated>2023-11-02T14:07:03.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/images/article_oracle.jpeg" alt></p><span class="label info">Oracle</span> <span class="label danger">ORA32001</span><a id="more"></a><hr><h4 id="环境信息"><a href="#环境信息" class="headerlink" title="环境信息"></a>环境信息</h4><ul><li>Oracle 版本：11g Enterprise Edition Release 11.2.0.4.0 - 64bit</li><li>Linux 版本：Red Hat Enterprise Linux Server release 7.6</li></ul><h4 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h4><p>在进行Oracle数据库备份的时候，执行DEFERRED_SEGMENT_CREATION参数报错。<br>备份参数DEFERRED_SEGMENT_CREATION {true | flase}【必须设置参数】<br>–true 当该参数值等于true的时候，我们数据库中新创建的表，并且没有insert过任何数据的情况下，采用导出时不会将该表导出， 因为在dba_segments和user_segments是查不到该表的信息，只有当我们插入记录才会在两表中生成段的信息，并能导出该表。<br>–flase 当此参数为false时，不存在dba_segments和user_segments中的段表也可以通过导出的方式将该表导出。<br>设置false导出所有表：<br>查询：show parameter DEFERRED_SEGMENT_CREATION;<br>更改：alter system set DEFERRED_SEGMENT_CREATION=false scope=both;</p><p><img src="3811698934174_.pic.jpg" alt></p><h4 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h4><p>数据库服务器Oracle数据库缺少spfile文件，需要新建配置文件。</p><h4 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h4><p>1、切换oracle<br>su - oracle<br>2、执行创建spfile文件的命令<br>create spfile from pfile;<br>3、重启数据库<br>停止数据库：shutdown immediate<br>启动数据库：startup<br>4、查看系统是否有spfile配置文件<br>show parameter spfile;</p><h4 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h4><font size="6.5" color="red">坚持学习。。。。。。</font>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/images/article_oracle.jpeg&quot; alt&gt;&lt;/p&gt;
+&lt;span class=&quot;label info&quot;&gt;Oracle&lt;/span&gt; &lt;span class=&quot;label danger&quot;&gt;ORA32001&lt;/span&gt;
+    
+    </summary>
+    
+      <category term="数据库" scheme="http://pygo2.top/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+      <category term="Oracle" scheme="http://pygo2.top/tags/Oracle/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python模块之装饰器</title>
+    <link href="http://pygo2.top/articles/29210/"/>
+    <id>http://pygo2.top/articles/29210/</id>
+    <published>2023-10-21T15:13:04.000Z</published>
+    <updated>2023-10-21T15:33:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/images/article_python_module.jpeg" alt></p><span class="label primary">Python</span> <span class="label info">Python模块系列</span><div class="post_cus_note">Python模块系列</div><a id="more"></a><hr><p>Python项目常用的模块代码。</p><h4 id="版本"><a href="#版本" class="headerlink" title="版本"></a>版本</h4><table><thead><tr><th style="text-align:center">名称</th><th style="text-align:center">版本</th></tr></thead><tbody><tr><td style="text-align:center">Python</td><td style="text-align:center">3</td></tr></tbody></table><h4 id="语法糖"><a href="#语法糖" class="headerlink" title="语法糖"></a>语法糖</h4><p>个人的理解，总结起来一句话就是把方法作为参数的方法。</p><h4 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br></pre></td><td class="code"><pre><span class="line"># -*- coding: utf-8 -*-</span><br><span class="line"></span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">------------------------------------------------</span><br><span class="line"></span><br><span class="line">describe:</span><br><span class="line">    Decorators</span><br><span class="line"></span><br><span class="line">base_info:</span><br><span class="line">    __author__ = &quot;PyGo&quot;</span><br><span class="line">    __time__ = &quot;2023/10/22 20:58&quot;</span><br><span class="line">    __version__ = &quot;v.1.0.0&quot;</span><br><span class="line">    __mail__ = &quot;gaoming971366@163.com&quot;</span><br><span class="line">    __blog__ = &quot;www.pygo2.top&quot;</span><br><span class="line">    __project__ = &quot;open2lisapi&quot;</span><br><span class="line"></span><br><span class="line">usage:</span><br><span class="line"></span><br><span class="line">    @deprecated</span><br><span class="line">    @timer</span><br><span class="line">    @debug</span><br><span class="line">    def add(a, b, *args, **kwargs):</span><br><span class="line">        for i in range(10):</span><br><span class="line">            print(i)</span><br><span class="line"></span><br><span class="line">    add(100, 300, 1000, c=2000, d=2000)</span><br><span class="line"></span><br><span class="line">design:</span><br><span class="line"></span><br><span class="line">reference urls:</span><br><span class="line"></span><br><span class="line">python version:</span><br><span class="line">    python3</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Enjoy the good life everyday！！!</span><br><span class="line">Life is short, I use python.</span><br><span class="line"></span><br><span class="line">------------------------------------------------</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line"># ------------------------------------------------------------</span><br><span class="line"># usage: /usr/bin/python decorators.py</span><br><span class="line"># ------------------------------------------------------------</span><br><span class="line">from datetime import datetime</span><br><span class="line">from functools import wraps</span><br><span class="line">import warnings</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def decorator(func):</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    装饰器模板</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    @wraps(func)</span><br><span class="line">    def __wrapper(*args, **kwargs):</span><br><span class="line">        # 额外功能</span><br><span class="line">        result = func(*args, **kwargs)</span><br><span class="line">        # 额外功能</span><br><span class="line">        print(&quot;[Decorator] &gt;&gt;&gt;&gt;&gt; %s.&quot; % func.__name__)</span><br><span class="line">        return result</span><br><span class="line">    return __wrapper</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *</span><br><span class="line">def timer(func):</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    方法执行时间装饰器</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    @wraps(func)</span><br><span class="line">    def __wrapper(*args, **kwargs):</span><br><span class="line">        start_time = datetime.now()</span><br><span class="line">        result = func(*args, **kwargs)</span><br><span class="line">        end_time = datetime.now()</span><br><span class="line">        cost = round((end_time - start_time).microseconds * pow(0.1, 6), 3)</span><br><span class="line">        print(&quot;[timer] &gt;&gt;&gt;&gt;&gt; %s cost %s seconds.&quot; % (func.__name__, cost))</span><br><span class="line">        return result</span><br><span class="line">    return __wrapper</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *</span><br><span class="line">def debug(func):</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    debug装饰器</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    @wraps(func)</span><br><span class="line">    def __wrapper(*args, **kwargs):</span><br><span class="line">        print(&apos;* &apos; * 55)</span><br><span class="line">        print(&quot;[Debugging] &gt;&gt;&gt;&gt;&gt; %s - args: %s, kwargs: %s&quot; % (func.__name__, args, kwargs))</span><br><span class="line">        print(&apos;* &apos; * 55)</span><br><span class="line">        return func(*args, **kwargs)</span><br><span class="line">    return __wrapper</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *</span><br><span class="line">def deprecated(func):</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    方法过时提示</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    @wraps(func)</span><br><span class="line">    def __wrapper(*args, **kwargs):</span><br><span class="line">        warnings.warn(&quot;[%s] is deprecated and will be removed in future versions.&quot; % func.__name__, DeprecationWarning)</span><br><span class="line">        return func(*args, **kwargs)</span><br><span class="line">    return __wrapper</span><br></pre></td></tr></table></figure><font size="6.5" color="red"><strong><em>坚持学习。。。。。。</em></strong></font>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/images/article_python_module.jpeg&quot; alt&gt;&lt;/p&gt;
+&lt;span class=&quot;label primary&quot;&gt;Python&lt;/span&gt; &lt;span class=&quot;label info&quot;&gt;Python模块系列&lt;/span&gt;
+
+&lt;div class=&quot;post_cus_note&quot;&gt;Python模块系列&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="Python" scheme="http://pygo2.top/categories/Python/"/>
+    
+    
+      <category term="Python" scheme="http://pygo2.top/tags/Python/"/>
+    
+      <category term="Python模块系列" scheme="http://pygo2.top/tags/Python%E6%A8%A1%E5%9D%97%E7%B3%BB%E5%88%97/"/>
+    
+  </entry>
   
   <entry>
     <title>VUE开源前端低代码平台</title>
@@ -470,60 +520,6 @@
     
     
       <category term="Oracle" scheme="http://pygo2.top/tags/Oracle/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Windows安装2个Tomcat</title>
-    <link href="http://pygo2.top/articles/27869/"/>
-    <id>http://pygo2.top/articles/27869/</id>
-    <published>2023-01-13T07:35:46.000Z</published>
-    <updated>2023-01-13T07:35:46.000Z</updated>
-    
-    <content type="html"><![CDATA[<span class="label primary">Java</span> <span class="label success">Tomcat</span><h4 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h4><div class="note primary">            <p>在Windows上运行Tomcat6、Tomcat8，Tomcat与对应的Java有版本关系。</p>          </div><p><img src="/images/article_youzan.jpeg" alt></p><a id="more"></a><hr><h4 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h4><table><thead><tr><th style="text-align:center">id</th><th style="text-align:center">Tomcat版本</th><th style="text-align:center">Java版本</th></tr></thead><tbody><tr><td style="text-align:center">1</td><td style="text-align:center">6</td><td style="text-align:center">1.6</td></tr><tr><td style="text-align:center">2</td><td style="text-align:center">8</td><td style="text-align:center">1.8</td></tr></tbody></table><h4 id="特殊说明"><a href="#特殊说明" class="headerlink" title="特殊说明"></a>特殊说明</h4><p>第一套Tomcat6与Java1.6正常配置，这里不做详细描述</p><h4 id="操作方式"><a href="#操作方式" class="headerlink" title="操作方式"></a>操作方式</h4><p>安装JDK1.8与TOMCAT8，环境已经已存在tomcat6，如果只有一个tomcat不需要设置。<br>TOMCAT8/Bin/startup.bat、TOMCAT8/bin/setclasspath.bat最上面添加：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">rem =====================================================================</span><br><span class="line">rem tomcat</span><br><span class="line">SET CATALINA_HOME=D:\apache-tomcat-8.5.59</span><br><span class="line">SET CATALINA_BASE=D:\apache-tomcat-8.5.59</span><br><span class="line">SET CATALINA_TMPDIR=D:\apache-tomcat-8.5.59\temp</span><br><span class="line"></span><br><span class="line">rem java</span><br><span class="line">SET JAVA_HOME=C:\Program Files\Java\jdk1.8.0_271</span><br><span class="line">rem =====================================================================</span><br></pre></td></tr></table></figure></p><p><font color="red" size="4.5">坚持学习。。。。。。</font>！！！。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;span class=&quot;label primary&quot;&gt;Java&lt;/span&gt; &lt;span class=&quot;label success&quot;&gt;Tomcat&lt;/span&gt;
-&lt;h4 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h4&gt;&lt;div class=&quot;note primary&quot;&gt;
-            &lt;p&gt;在Windows上运行Tomcat6、Tomcat8，Tomcat与对应的Java有版本关系。&lt;/p&gt;
-          &lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;/images/article_youzan.jpeg&quot; alt&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Java" scheme="http://pygo2.top/categories/Java/"/>
-    
-    
-      <category term="Java" scheme="http://pygo2.top/tags/Java/"/>
-    
-      <category term="Tomcat" scheme="http://pygo2.top/tags/Tomcat/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>VUE之input只允许输入数字</title>
-    <link href="http://pygo2.top/articles/18893/"/>
-    <id>http://pygo2.top/articles/18893/</id>
-    <published>2023-01-06T13:48:38.000Z</published>
-    <updated>2023-01-06T13:48:38.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="/images/INPUT图片" alt></p><div class="note primary">            <p>加工INPUT标签，只允许输入数字</p>          </div><span class="label primary">VUE</span> <span class="label info">INPUT</span><a id="more"></a><hr><p>在写前端代码的时候，经常会遇到手机号的input输入框，除了位数限制，还有数字等判断，对input进行加工，满足纯数字输入：</p><p>方式一：<br>直接用oninput事件处理输入的内容，正则匹配内容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-input</span><br><span class="line">    v-model.trim=&quot;formData.start&quot;</span><br><span class="line">    placeholder=&quot;文档转换的起始页码，默认首页开始&quot;</span><br><span class="line">    :size=&quot;inputAttrs.size&quot;</span><br><span class="line">    :maxlength=&quot;formDataLimit.start&quot;</span><br><span class="line">    :clearable=&quot;inputAttrs.clear&quot;</span><br><span class="line">    :show-word-limit=&quot;inputAttrs.limit&quot;</span><br><span class="line">    :prefix-icon=&quot;inputAttrs.prefixIcon&quot;</span><br><span class="line">    :disabled=&quot;!formData.mode&quot;</span><br><span class="line">    oninput=&quot;this.value=this.value.replace(/[^\d]/g,&apos;&apos;);&quot;</span><br><span class="line">/&gt;</span><br></pre></td></tr></table></figure></p><p>方式二：<br>直接使用Element-UI的el-input-number组件。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-input-number v-model=&quot;num&quot; @change=&quot;handleChange&quot; :min=&quot;1&quot; :max=&quot;10&quot; label=&quot;描述文字&quot;&gt;&lt;/el-input-number&gt;</span><br></pre></td></tr></table></figure></p><div class="post_cus_note">END</div>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;/images/INPUT图片&quot; alt&gt;&lt;/p&gt;
-&lt;div class=&quot;note primary&quot;&gt;
-            &lt;p&gt;加工INPUT标签，只允许输入数字&lt;/p&gt;
-          &lt;/div&gt;
-&lt;span class=&quot;label primary&quot;&gt;VUE&lt;/span&gt; &lt;span class=&quot;label info&quot;&gt;INPUT&lt;/span&gt;
-    
-    </summary>
-    
-      <category term="前端" scheme="http://pygo2.top/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="VUE" scheme="http://pygo2.top/tags/VUE/"/>
     
   </entry>
   
